@@ -1,0 +1,49 @@
+.padding {
+  padding: 545px 0;
+}
+
+.border {
+  border-left: 1px solid black;
+}
+
+img {
+  max-width: 380px;
+}
+
+.company {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: 0.5px;
+  color: black;
+  padding: 25px 80px;
+  border-radius: 160px;
+  background-color: #E9E9E9B2;
+
+  &:hover {
+    background-color: black;
+    color: white;
+
+    .description {
+      display: flex;
+    }
+  }
+}
+
+.gap-60 {
+  gap: 60px;
+}
+
+.description {
+  margin-left: 40px;
+  display: none;
+}
+
+.description.visible {
+  display: flex;
+}
+
+.description.hidden {
+  display: none;
+}
+

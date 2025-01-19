@@ -1,0 +1,42 @@
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+
+}
+
+.video-background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.content {
+  color: white;
+  backdrop-filter: blur(40px);
+  position: relative;
+  height: 100vh;
+
+  .border {
+    border-left: 1px solid white;
+    margin-left: 42px;
+    height: calc(100% - 84px);
+  }
+
+  .bottom-container {
+    position: absolute;
+    bottom: 42px;
+    left: 75px;
+
+    .circles {
+      width: 80px;
+      height: 20px;
+    }
+  }
+}
+

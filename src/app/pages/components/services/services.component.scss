@@ -1,0 +1,25 @@
+.item {
+  height: 415px;
+  border-left: 1px solid black;
+  padding: 40px;
+}
+
+.h2 {
+  margin-top: 62px;
+  margin-bottom: 75px;
+}
+
+.w-28 {
+  width: 28%;
+}
+
+.hover {
+  opacity: 0.00;
+  transition: 1s all ease-in-out;
+  -moz-transition: 1s all ease-in-out;
+  -webkit-transition: 1s all ease-in-out;
+
+  &:hover {
+    opacity: 1.00;
+  }
+}

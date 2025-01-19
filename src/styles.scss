@@ -1,0 +1,190 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'SuisseIntl', serif;
+}
+
+h2 {
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 80px;
+  color: black;
+  letter-spacing: -2px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+a {
+  text-decoration: transparent;
+  color: var(--black);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  color: var(--black);
+
+  &:hover {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+input {
+  outline: none;
+  text-decoration: none;
+  border: transparent;
+
+  &:hover, &:active, &:focus {
+    border: transparent;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.a-i-center {
+  align-items: center;
+}
+
+.a-i-start {
+  align-items: start;
+}
+
+.a-i-end {
+  align-items: end;
+}
+
+.a-c-space-between {
+  align-content: space-between;
+}
+
+.j-c-center {
+  justify-content: center;
+}
+
+.j-c-start {
+  justify-content: start;
+}
+
+.j-c-end {
+  justify-content: end;
+}
+
+.j-c-space-between {
+  justify-content: space-between;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+.direction-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-45 {
+  width: 45%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.text-black {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 45px;
+  color: black;
+}
+
+.text-gray {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 45px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.text-title {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 85px;
+  letter-spacing: -2px;
+
+  span {
+    font-style: italic;
+  }
+}

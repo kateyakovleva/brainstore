@@ -1,0 +1,35 @@
+.header {
+  color: white;
+  z-index: 9;
+  position: fixed;
+
+  .header-container {
+    margin: 42px;
+    width: auto;
+
+    .logo {
+      position: relative;
+      margin-top: -20px;
+      margin-left: 36px;
+      font-weight: 900;
+      font-size: 90px;
+      font-style: italic;
+
+      .sub-logo {
+        position: absolute;
+        top: 20px;
+        right: -40px;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 23px;
+      }
+    }
+
+    .menu-item {
+      font-weight: 400;
+      font-size: 34px;
+      letter-spacing: 0.25px;
+      line-height: 40px;
+    }
+  }
+}

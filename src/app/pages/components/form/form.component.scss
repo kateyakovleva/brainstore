@@ -1,0 +1,42 @@
+.padding {
+  padding-top: 544px;
+  padding-bottom: 80px;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.form-item {
+  border-bottom: 1px solid black;
+
+  input {
+    width: 80%;
+    height: 40px;
+    font-size: 30px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.btn {
+  margin-top: 100px;
+  background-color: black;
+  border-radius: 40px;
+  color: white;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 40px;
+}
+
+textarea {
+  height: 200px;
+
+  &::placeholder {
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+  }
+}
+

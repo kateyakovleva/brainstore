@@ -1,0 +1,22 @@
+<div class="w-100 background-white">
+  <div class="container d-flex direction-column padding">
+    <h2 class="mb-60">Клиенты</h2>
+    <div class="direction-column d-flex j-c-space-between border" style="height: 760px">
+      <div class="d-flex w-80 flex-wrap direction-row gap-10" style="margin-left: 40px">
+        <div class="company"
+             *ngFor="let customer of customers"
+             (mouseenter)="showDescription(customer)"
+             (mouseleave)="hideDescription(customer)">{{customer.company}}</div>
+      </div>
+      <div class="description d-flex direction-column gap-60"
+           *ngFor="let customer of customers"
+           [ngClass]="{'visible': customer.showDescription, 'hidden': !customer.showDescription}">
+        <img [src]="customer.logo" alt="logo"/>
+        <div class="text-gray">{{customer.description}}</div>
+        <div class="d-flex direction-row gap-10">
+          <div class="text-black" *ngFor="let service of customer.services">{{service.service}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
