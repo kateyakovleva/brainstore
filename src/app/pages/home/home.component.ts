@@ -7,6 +7,7 @@ import {CustomersComponent} from '../components/customers/customers.component';
 import {StatisticsComponent} from '../components/statistics/statistics.component';
 import {FormComponent} from '../components/form/form.component';
 import {HeaderComponent} from "../../components/header/header.component";
+import {MerchComponent} from '../components/merch/merch.component';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ import {HeaderComponent} from "../../components/header/header.component";
     CustomersComponent,
     StatisticsComponent,
     FormComponent,
-    HeaderComponent
+    HeaderComponent,
+    MerchComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

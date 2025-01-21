@@ -1,0 +1,25 @@
+.merch {
+  position: relative;
+  border-radius: 50px;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  overflow: auto;
+
+  .border {
+    width: 1%;
+    border-left: 1px solid black;
+    height: calc(100% - 84px);
+    position: fixed;
+    left: 42px;
+    top: 42px
+  }
+
+  .fixed {
+    position: fixed;
+    bottom: 42px;
+    left: 75px;
+    width: 80%;
+    z-index: 999;
+  }
+}

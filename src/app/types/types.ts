@@ -18,3 +18,9 @@ export interface IService {
   service: string;
 }
 
+export interface ICard {
+  img: string;
+  title: string;
+  status: string;
+}
+

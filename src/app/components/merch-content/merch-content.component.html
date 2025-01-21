@@ -1,0 +1,9 @@
+<div class="d-flex direction-column a-i-center w-100 merch-content">
+  <div class="d-flex direction-column a-i-center j-c-center merch-item" *ngFor="let item of items">
+    <img [src]="item.img" alt="logo" class="merch-img"/>
+    <div class="sub-text-img">{{item.title}} BS
+      <div class="tm">TM</div>
+    </div>
+    <div class="sub-text-img sub-text-img-gray">{{item.status}}</div>
+  </div>
+</div>
