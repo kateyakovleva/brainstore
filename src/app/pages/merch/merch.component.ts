@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {MerchContentComponent} from '../../../components/merch-content/merch-content.component';
+import {Component} from '@angular/core';
+import {MerchContentComponent} from '../../components/merch-content/merch-content.component';
 
 
 @Component({
@@ -7,10 +7,9 @@ import {MerchContentComponent} from '../../../components/merch-content/merch-con
   standalone: true,
   imports: [
     MerchContentComponent
-
   ],
   templateUrl: './merch.component.html',
-  styleUrl: './merch.component.scss'
+  // styleUrl: './merch.component.scss'
 })
 export class MerchComponent {
 

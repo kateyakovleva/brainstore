@@ -1,14 +1,17 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {CarouselModule} from "primeng/carousel";
 import {ISlide} from '../../types/types';
 import {NgForOf} from '@angular/common';
+import {RouterLink} from '@angular/router';
+import {NgScrollbar} from 'ngx-scrollbar';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CarouselModule, NgForOf],
+  imports: [CarouselModule, NgForOf, RouterLink, NgScrollbar],
   templateUrl: './slider.component.html',
-  styleUrl: './slider.component.scss'
+  styleUrl: './slider.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class SliderComponent {
 
@@ -60,4 +63,7 @@ export class SliderComponent {
     },
   ]
 
+  page = 0;
+
+  protected readonly Math = Math;
 }

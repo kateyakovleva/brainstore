@@ -1,22 +1,12 @@
-<p-carousel
-  [value]="slider"
-  [numVisible]="2"
-  [numScroll]="1"
-  [circular]="false"
-  [showNavigators]="false"
->
-  <ng-template let-slide pTemplate="slide">
-    <div class="d-flex direction-column slide">
-      <img [src]="slide.banner" class="banner" alt="banner"/>
-      <div class="d-flex direction-row gap-10 services">
-        <div class="service" *ngFor="let service of slide.services">{{service.service}}</div>
-      </div>
-      <div class="text-gray">
-        <span class="text-black">{{slide.company}}</span>
-        {{slide.description}}
-      </div>
+<div class="projects-slider">
+  <div *ngFor="let slide of slider" class="d-flex direction-column slide">
+    <img [src]="slide.banner" class="banner" alt="banner"/>
+    <div class="d-flex direction-row gap-10 services">
+      <div class="service" *ngFor="let service of slide.services">{{service.service}}</div>
     </div>
-  </ng-template>
-</p-carousel>
-
-
+    <div class="text-gray">
+      <a routerLink="/projects/1" class="text-black">{{slide.company}}</a>
+      {{slide.description}}
+    </div>
+  </div>
+</div>

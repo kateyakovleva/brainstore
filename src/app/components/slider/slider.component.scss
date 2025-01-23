@@ -1,35 +1,40 @@
-.slide {
-  width: 900px;
-  margin-right: 40px;
+.projects-slider {
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
 
-  .banner {
+  .slide {
     position: relative;
-    border-radius: 60px;
-    margin-bottom: 36px;
-  }
+    width: 900px;
+    min-width: 900px;
+    margin-right: 40px;
 
-  .services {
-    position: absolute;
-    top: 40px;
-    left: 40px;
+    .banner {
+      position: relative;
+      border-radius: 60px;
+      margin-bottom: 36px;
+    }
 
-    .service {
-      background-color: white;
-      border-radius: 20px;
-      padding: 12px 36px;
-      color: black;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 25px;
-      letter-spacing: 0.5px;
+    .services {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+
+      .service {
+        background-color: white;
+        border-radius: 20px;
+        padding: 12px 36px;
+        color: black;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 25px;
+        letter-spacing: 0.5px;
+      }
     }
   }
 }
 
-.p-carousel-item:last-child {
-  .slide {
-    margin-right: 0;
-  }
-}
+
 
 
