@@ -24,3 +24,18 @@ export interface ICard {
   status: string;
 }
 
+export interface IProject {
+  title: string;
+  services: IService[];
+  tasks: string;
+  img_main: string;
+  results: string;
+  img_results: string;
+  research: string;
+  img_research: string;
+  naming: string;
+  img_naming: string;
+}
+
+
+

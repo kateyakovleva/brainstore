@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {MerchContentComponent} from '../../components/merch-content/merch-content.component';
 
-
 @Component({
   selector: 'app-merch',
   standalone: true,
@@ -9,7 +8,7 @@ import {MerchContentComponent} from '../../components/merch-content/merch-conten
     MerchContentComponent
   ],
   templateUrl: './merch.component.html',
-  // styleUrl: './merch.component.scss'
+  styleUrl: '../../styles.scss'
 })
 export class MerchComponent {
 

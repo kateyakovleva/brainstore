@@ -3,12 +3,11 @@ import {CarouselModule} from "primeng/carousel";
 import {ISlide} from '../../types/types';
 import {NgForOf} from '@angular/common';
 import {RouterLink} from '@angular/router';
-import {NgScrollbar} from 'ngx-scrollbar';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CarouselModule, NgForOf, RouterLink, NgScrollbar],
+  imports: [CarouselModule, NgForOf, RouterLink],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
   encapsulation: ViewEncapsulation.None,

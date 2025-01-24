@@ -5,7 +5,7 @@ import {SliderComponent} from '../../../components/slider/slider.component';
   selector: 'app-works',
   standalone: true,
   imports: [
-    SliderComponent
+    SliderComponent,
   ],
   templateUrl: './works.component.html',
   styleUrl: './works.component.scss'

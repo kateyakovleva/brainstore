@@ -5,10 +5,10 @@
       <div class="sub-logo">ТМ</div>
     </a>
     <div class="d-flex a-i-center gap-15 menu-item">
-      <div>Услуги</div>
-      <div>Работы</div>
-      <div>Контакты</div>
-      <div>Команда</div>
+      <div (click)="toSection('services')">Услуги</div>
+      <div (click)="toSection('works')">Работы</div>
+      <a routerLink="/contacts">Контакты</a>
+      <a routerLink="/team">Команда</a>
       <a routerLink="/merch">Стор</a>
     </div>
   </div>
