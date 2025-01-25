@@ -1,4 +1,10 @@
-<div class="projects-slider">
+<div class="projects-slider"
+     [ngClass]="{'isMouseDown': isMouseDown}"
+     (mousedown)="onMouseDown($event)"
+     (mouseup)="onMouseUp()"
+     (mouseleave)="onMouseLeave()"
+     (mousemove)="onMouseMove($event)"
+>
   <div *ngFor="let slide of slider" class="d-flex direction-column slide">
     <img [src]="slide.banner" class="banner" alt="banner"/>
     <div class="d-flex direction-row gap-10 services">

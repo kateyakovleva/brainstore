@@ -231,3 +231,89 @@ img {
     z-index: 999;
   }
 }
+
+@media (max-width: 999px) {
+  .bottom-container {
+    position: absolute;
+    bottom: 42px;
+    left: 20px;
+
+    .circles {
+      width: 40px;
+      height: 10px;
+    }
+  }
+
+  .text-title {
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .text-black {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .text-gray {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .merch {
+    border-radius: 0;
+
+    .border {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .bottom-container {
+    position: absolute;
+    bottom: 42px;
+    left: 75px;
+
+    .circles {
+      width: 60px;
+      height: 15px;
+    }
+  }
+
+  .text-title {
+    font-size: 45px;
+    line-height: 40px;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-size: 60px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .text-black {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .text-gray {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .merch {
+    border-radius: 0;
+
+    .border {
+      display: none;
+    }
+  }
+}

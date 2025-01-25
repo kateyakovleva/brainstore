@@ -49,3 +49,67 @@
     }
   }
 }
+
+@media (max-width: 999px) {
+  .card-content {
+    color: black;
+    background-color: white;
+
+    .card-content-container {
+      padding: 200px 0 0 20px;
+
+      .mb-70 {
+        margin-bottom: 20px;
+      }
+
+      .gap-10 {
+        gap: 5px;
+      }
+
+      .w-50 {
+        width: 90%;
+      }
+
+      .flex-wrap {
+        flex-wrap: nowrap;
+      }
+
+      .mb-50 {
+        margin-bottom: 10px;
+      }
+
+      .mb-80 {
+        margin-bottom: 20px;
+      }
+
+      .w-94, .w-70 {
+        width: 100%;
+        margin-left: -20px;
+      }
+
+      .ml5 {
+        margin-left: -5%;
+      }
+
+      .ml7 {
+        margin-bottom: 0 !important;
+        margin-left: -7%;
+      }
+
+      .service {
+        font-size: 19px;
+        line-height: 23px;
+        padding: 15px 30px;
+        border-radius: 68px;
+      }
+
+      .mb-400 {
+        margin-bottom: 150px;
+      }
+
+      .mb-300 {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}

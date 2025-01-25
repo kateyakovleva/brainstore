@@ -3,10 +3,15 @@
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
+  cursor: grab;
+
+  &.isMouseDown {
+    cursor: grabbing;
+  }
 
   .slide {
     position: relative;
-    width: 900px;
+    width: 300px;
     min-width: 900px;
     margin-right: 40px;
 
@@ -35,6 +40,33 @@
   }
 }
 
+@media (max-width: 999px) {
+  .projects-slider {
 
+    .slide {
+      width: 300px;
+      height: 320px;
+      min-width: 300px;
+      margin-right: 10px;
 
+      .banner {
+        height: 270px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+
+      .services {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+        .service {
+          padding: 3px 15px;
+          border-radius: 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
 

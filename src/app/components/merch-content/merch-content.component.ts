@@ -1,11 +1,13 @@
 import {Component} from '@angular/core';
 import {ICard} from '../../types/types';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
+import {isMobile} from '../../utils/utils';
 
 @Component({
   selector: 'app-merch-content',
   imports: [
-    NgForOf
+    NgForOf,
+    NgIf
   ],
   standalone: true,
   templateUrl: './merch-content.component.html',
@@ -13,13 +15,7 @@ import {NgForOf} from '@angular/common';
 })
 export class MerchContentComponent {
 
-
   items: ICard[] = [
-    {
-      img: '/images/merch/merch-logo.svg',
-      title: 'Label 2025.',
-      status: ''
-    },
     {
       img: '/images/merch/m7.png',
       title: 'Scarf 2025.',
@@ -57,4 +53,5 @@ export class MerchContentComponent {
     }
   ]
 
+  protected readonly isMobile = isMobile;
 }

@@ -4,12 +4,15 @@
       брейнстор
       <div class="sub-logo">ТМ</div>
     </a>
-    <div class="d-flex a-i-center gap-15 menu-item">
+    <div class="d-flex a-i-center gap-15 menu-item" *ngIf="!isMobile">
       <div (click)="toSection('services')">Услуги</div>
       <div (click)="toSection('works')">Работы</div>
       <a routerLink="/contacts">Контакты</a>
       <a routerLink="/team">Команда</a>
       <a routerLink="/merch">Стор</a>
     </div>
+    <img src="images/menu.png" alt="menu" *ngIf="isMobile" style="width: 40px; height: 17px"
+         (click)="openMobileHeader()"/>
   </div>
 </div>
+<app-mobile-header *ngIf="mobile_header"></app-mobile-header>

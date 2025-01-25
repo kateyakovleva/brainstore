@@ -1,4 +1,13 @@
 <div class="d-flex direction-column a-i-center w-100 merch-content">
+  <div class="d-flex direction-column a-i-center j-c-center merch-item">
+    <img src="images/merch/merch-logo.svg" alt="logo" class="merch-img"/>
+    <div class="sub-text-img">Label 2025. BS
+      <div class="tm">TM</div>
+    </div>
+  </div>
+  <div class="text-title container" *ngIf="isMobile">
+    <span>Мерч для созидателей,</span> художников, дизайнеров и стратегов
+  </div>
   <div class="d-flex direction-column a-i-center j-c-center merch-item" *ngFor="let item of items">
     <img [src]="item.img" alt="logo" class="merch-img"/>
     <div class="sub-text-img">{{item.title}} BS

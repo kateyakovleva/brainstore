@@ -33,5 +33,52 @@
       margin-left: -7%;
     }
   }
+}
 
+@media (max-width: 999px) {
+  .team-content {
+    color: black;
+    background-color: white;
+
+    .team-content-container {
+      padding: 150px 0 0 20px;
+
+      .mb-60 {
+        margin-bottom: 30px;
+      }
+
+      .mb-80 {
+        margin-bottom: 20px;
+      }
+
+      .mb-400 {
+        margin-bottom: 200px;
+      }
+
+      .w-50 {
+        width: 80%;
+      }
+
+      .mobile-margin {
+        margin-bottom: 0;
+      }
+
+      .mb-200 {
+        margin-bottom: 0;
+      }
+
+      .w-94 {
+        width: 100%;
+        margin-left: -20px;
+      }
+
+      .ml5 {
+        margin-left: -5%;
+      }
+
+      .ml7 {
+        margin-left: -7%;
+      }
+    }
+  }
 }

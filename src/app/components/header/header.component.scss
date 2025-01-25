@@ -1,6 +1,6 @@
 .header {
-  color: white;
-  z-index: 9;
+  color: #090909;
+  z-index: 99999;
   position: fixed;
 
   .header-container {
@@ -30,6 +30,50 @@
       font-size: 34px;
       letter-spacing: 0.25px;
       line-height: 40px;
+    }
+  }
+}
+
+@media (max-width: 999px) {
+  .header {
+
+    .header-container {
+      margin: 30px 20px;
+      width: auto;
+
+      .logo {
+        margin-left: 0;
+        position: relative;
+        font-size: 37px;
+
+        .sub-logo {
+          top: 10px;
+          right: -20px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .header {
+
+    .header-container {
+      margin: 30px 40px 0 75px;
+      width: auto;
+
+      .logo {
+        margin-left: 0;
+        position: relative;
+        font-size: 45px;
+
+        .sub-logo {
+          top: 10px;
+          right: -20px;
+          font-size: 15px;
+        }
+      }
     }
   }
 }

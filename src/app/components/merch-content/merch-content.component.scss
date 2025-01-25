@@ -30,10 +30,43 @@
     }
 
     .sub-text-img-gray {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(0, 0, 0, 0.25);
     }
   }
 }
 
+@media (max-width: 999px) {
+  .merch-content {
 
+    .merch-item {
+      padding-top: 150px;
+      padding-bottom: 80px;
+
+      .merch-img {
+        width: 60%;
+        margin-bottom: 10px;
+      }
+
+      .sub-text-img {
+        margin-bottom: 10px;
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        line-height: 13px;
+
+        .tm {
+          position: absolute;
+          top: -8px;
+          right: -12px;
+          font-size: 8px;
+          font-weight: 400;
+          letter-spacing: 0.2px;
+        }
+      }
+
+      .sub-text-img-gray {
+        color: rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
 

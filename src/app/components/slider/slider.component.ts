@@ -1,16 +1,14 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import {CarouselModule} from "primeng/carousel";
+import {Component} from '@angular/core';
 import {ISlide} from '../../types/types';
-import {NgForOf} from '@angular/common';
 import {RouterLink} from '@angular/router';
+import {NgClass, NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CarouselModule, NgForOf, RouterLink],
+  imports: [RouterLink, NgForOf, NgClass],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
-  encapsulation: ViewEncapsulation.None,
 })
 export class SliderComponent {
 
@@ -20,11 +18,11 @@ export class SliderComponent {
       services: [
         {
           id: 1,
-          service: 'креатив'
+          service: 'Креатив'
         },
         {
           id: 2,
-          service: 'стратегия'
+          service: 'Стратегия'
         }
       ],
       company: 'Инбриг',
@@ -35,11 +33,11 @@ export class SliderComponent {
       services: [
         {
           id: 3,
-          service: 'креатив'
+          service: 'Креатив'
         },
         {
           id: 4,
-          service: 'стратегия'
+          service: 'Стратегия'
         }
       ],
       company: 'Danaflex',
@@ -50,11 +48,11 @@ export class SliderComponent {
       services: [
         {
           id: 5,
-          service: 'креатив'
+          service: 'Креатив'
         },
         {
           id: 6,
-          service: 'стратегия'
+          service: 'Стратегия'
         }
       ],
       company: 'ВкусВилл',
@@ -62,7 +60,33 @@ export class SliderComponent {
     },
   ]
 
-  page = 0;
+  isMouseDown = false;
+  // @ts-ignore
+  startX: number;
+  // @ts-ignore
+  scrollLeft: number;
 
-  protected readonly Math = Math;
+  onMouseDown(event: MouseEvent) {
+    this.isMouseDown = true;
+    this.startX = event.pageX - (event.currentTarget as HTMLElement).offsetLeft;
+    this.scrollLeft = (event.currentTarget as HTMLElement).scrollLeft;
+  }
+
+  onMouseLeave() {
+    this.isMouseDown = false;
+  }
+
+  onMouseUp() {
+    this.isMouseDown = false;
+  }
+
+  onMouseMove(event: MouseEvent) {
+    if (!this.isMouseDown) return;
+    event.preventDefault();
+    const x = event.pageX - (event.currentTarget as HTMLElement).offsetLeft;
+    const walk = (x - this.startX) * 2; // Скорость прокрутки
+    (event.currentTarget as HTMLElement).scrollLeft = this.scrollLeft - walk;
+  }
+
+
 }

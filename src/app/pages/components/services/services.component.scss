@@ -23,3 +23,52 @@
     opacity: 1.00;
   }
 }
+
+@media (max-width: 1250px) {
+
+  .flex-wrap {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .item {
+    height: 90px;
+    border-left: none;
+    border-top: 1px solid black;
+    padding: 0;
+  }
+
+  .w-25, .w-80 {
+    width: 100%;
+  }
+
+  .j-c-space-between {
+    justify-content: center;
+  }
+
+  .text-black {
+    width: 80%;
+  }
+
+  .mb-60 {
+    margin-bottom: 0;
+  }
+
+  .hover {
+    display: none;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 999px) {
+  .h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1250px) {
+  .h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+}

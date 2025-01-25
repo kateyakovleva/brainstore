@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
 import {IProject} from '../../types/types';
 import {MarkdownComponent} from 'ngx-markdown';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 import {StatisticsComponent} from '../../pages/components/statistics/statistics.component';
 import {WorksComponent} from '../../pages/components/works/works.component';
 import {FormComponent} from '../../pages/components/form/form.component';
+import {isMobile} from '../../utils/utils';
 
 @Component({
   selector: 'app-project-content',
@@ -14,12 +15,15 @@ import {FormComponent} from '../../pages/components/form/form.component';
     NgForOf,
     StatisticsComponent,
     WorksComponent,
-    FormComponent
+    FormComponent,
+    NgIf
   ],
   templateUrl: './project-content.component.html',
   styleUrl: './project-content.component.scss'
 })
 export class ProjectContentComponent {
+
+  isMobile = isMobile;
 
   project: IProject = {
     title: '_ИНБРИГ — Строительная компания,_ которая возводит частные дома из камня по всему Татарстану',
@@ -34,6 +38,18 @@ export class ProjectContentComponent {
       },
       {
         id: 3,
+        service: 'дизайн'
+      },
+      {
+        id: 4,
+        service: 'креатив'
+      },
+      {
+        id: 5,
+        service: 'стратегия'
+      },
+      {
+        id: 6,
         service: 'дизайн'
       }
     ],

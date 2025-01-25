@@ -3,8 +3,20 @@
   padding-bottom: 80px;
 }
 
+.h-936 {
+  height: 936px;
+}
+
 .gap-50 {
   gap: 50px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
 }
 
 .form-item {
@@ -17,6 +29,15 @@
     font-weight: 400;
     color: rgba(0, 0, 0, 0.5);
   }
+}
+
+.logo {
+  width: 400px;
+}
+
+.dot {
+  width: 36px;
+  height: 36px;
 }
 
 .btn {
@@ -38,5 +59,78 @@ textarea {
     font-weight: 400;
     color: black;
   }
+}
+
+@media (max-width: 1300px) {
+  .padding {
+    flex-direction: column;
+    padding-top: 170px;
+    padding-bottom: 0;
+  }
+
+  .gap-50, .gap-30 {
+    gap: 20px;
+  }
+
+  .h-936 {
+    height: 0;
+  }
+
+  .w-45 {
+    width: 100%;
+
+  }
+
+  .text-black, .text-gray {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  textarea {
+    height: 100px;
+
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+
+  .min-text {
+    font-size: 12px;
+    width: 80%;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+
+  .mt-40 {
+    margin-top: 140px;
+    margin-bottom: 160px;
+  }
+
+  .a-i-center {
+    align-items: start;
+  }
+
+  .btn {
+    margin-top: 0;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+
+  .container {
+    width: 65%;
+  }
+
 }
 
