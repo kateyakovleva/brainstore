@@ -36,11 +36,6 @@ video {
 @media (max-width: 999px) {
 
   .content {
-    color: white;
-    backdrop-filter: blur(40px);
-    position: relative;
-    height: 100vh;
-
     .border {
       border-left: none;
       margin-left: 0;
@@ -50,18 +45,29 @@ video {
 
 }
 
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .content {
+    .logo {
+      width: 40%;
+    }
+  }
+}
+
 @media (min-width: 768px) and (max-width: 999px) {
 
-  .logo {
-    width: 65%;
+  .content {
+    .logo {
+      width: 65%;
+    }
   }
-
 }
 
 @media (min-width: 370px) and (max-width: 767px) {
 
-  .logo {
-    width: 80%;
+  .content {
+    .logo {
+      width: 80%;
+    }
   }
 
 }

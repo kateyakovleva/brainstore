@@ -11,7 +11,7 @@
 
   .slide {
     position: relative;
-    width: 300px;
+    width: 900px;
     min-width: 900px;
     margin-right: 40px;
 
@@ -65,6 +65,41 @@
           border-radius: 12px;
           font-size: 12px;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .projects-slider {
+
+    .slide {
+      width: 537px;
+      height: 380px;
+      min-width: 537px;
+      margin-right: 20px;
+
+      .banner {
+        height: 310px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+
+      .services {
+        top: 20px;
+        left: 20px;
+
+        .service {
+          padding: 1px 20px;
+          border-radius: 10px;
+          font-size: 12px;
+        }
+      }
+
+      .text-gray {
+        font-size: 17px;
+        line-height: 22px;
+        width: 70%;
       }
     }
   }

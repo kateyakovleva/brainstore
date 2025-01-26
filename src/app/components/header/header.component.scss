@@ -56,12 +56,18 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1450px) {
   .header {
 
     .header-container {
       margin: 30px 40px 0 75px;
       width: auto;
+
+      .menu-item {
+        font-size: 17px;
+        letter-spacing: 0.13px;
+        line-height: 20px;
+      }
 
       .logo {
         margin-left: 0;
@@ -77,3 +83,4 @@
     }
   }
 }
+

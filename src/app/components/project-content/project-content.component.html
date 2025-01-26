@@ -1,7 +1,7 @@
 <div class="d-flex w-100 card-content">
   <div class="card-content-container d-flex direction-column a-i-start w-100">
     <markdown class="text-title w-80 mb-70" [data]="project.title"></markdown>
-    <div *ngIf="isMobile" class="container-slider">
+    <div class="container-slider">
       <div class="d-flex direction-row flex-wrap w-100 gap-10 mb-400">
         <div class="service" *ngFor="let service of project.services">{{service.service}}</div>
       </div>

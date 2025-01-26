@@ -17,3 +17,14 @@
     width: 80%;
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .padding {
+    padding-top: 300px;
+    padding-bottom: 110px;
+  }
+
+  .w-95 {
+    width: 70%;
+  }
+}

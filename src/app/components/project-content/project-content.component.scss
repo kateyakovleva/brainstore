@@ -113,3 +113,57 @@
     }
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .card-content {
+
+    .card-content-container {
+      padding: 200px 0 0 75px;
+
+      .mb-70 {
+        margin-bottom: 0;
+      }
+
+      .text-gray, .text-black {
+        font-size: 17px;
+        line-height: 22px;
+      }
+
+      .gap-10 {
+        gap: 5px;
+      }
+
+      .mb-50 {
+        margin-bottom: 10px;
+      }
+
+      .mb-80 {
+        margin-bottom: 20px;
+      }
+
+      .ml5 {
+        margin-left: -5%;
+      }
+
+      .ml7 {
+        margin-bottom: 0 !important;
+        margin-left: -7%;
+      }
+
+      .service {
+        font-size: 22px;
+        line-height: 27px;
+        padding: 20px 40px;
+        border-radius: 80px;
+      }
+
+      .mb-400 {
+        margin-bottom: 200px;
+      }
+
+      .mb-300 {
+        margin-bottom: 150px;
+      }
+    }
+  }
+}

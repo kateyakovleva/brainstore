@@ -72,3 +72,27 @@
     margin-bottom: 40px;
   }
 }
+
+@media (min-width: 1251px) and (max-width: 1450px) {
+  .h2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .item {
+    height: 195px;
+    border-left: 1px solid black;
+    padding: 20px;
+  }
+
+  .mb-60 {
+    margin-bottom: 30px;
+  }
+
+  .text-black {
+    width: 60%;
+  }
+
+}
+
+

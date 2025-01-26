@@ -134,3 +134,57 @@ textarea {
 
 }
 
+@media (min-width: 1301px) and (max-width: 1450px) {
+  .padding {
+    padding-top: 285px;
+    padding-bottom: 20px;
+  }
+
+  .text-black, .text-gray {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  textarea {
+    height: 130px;
+  }
+
+  .min-text {
+    font-size: 12px;
+    width: 80%;
+  }
+
+  .logo {
+    width: 210px;
+  }
+
+  .dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mt-40 {
+    margin-top: 0;
+  }
+
+  .h-936 {
+    height: 500px;
+  }
+
+  .w-80 {
+    width: 70%;
+  }
+
+  .gap-30, .gap-50 {
+    gap: 20px;
+  }
+
+  .btn {
+    margin-top: 0;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 25px;
+  }
+}
+

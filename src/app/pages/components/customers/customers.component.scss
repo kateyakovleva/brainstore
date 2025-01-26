@@ -102,3 +102,51 @@ img {
     line-height: 20px;
   }
 }
+
+@media (min-width: 1000px) and (max-width: 1450px) {
+
+  .padding {
+    padding: 270px 0 275px;
+  }
+
+  .company {
+    font-size: 22px;
+    line-height: 27px;
+    padding: 20px 40px;
+    border-radius: 80px;
+  }
+
+  .mb-60 {
+    margin-bottom: 30px;
+  }
+
+  .gap-10 {
+    gap: 5px;
+  }
+
+  .ml-40 {
+    margin-left: 20px;
+  }
+
+  .h-760 {
+    height: 380px;
+  }
+
+  .description {
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  .gap-60 {
+    gap: 35px;
+  }
+
+  .text-gray, .text-black {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}

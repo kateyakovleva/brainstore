@@ -44,3 +44,38 @@
 
 
 }
+
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .background-white {
+
+    .w-80 {
+      width: 60%;
+    }
+
+    .container {
+      .mb-60 {
+        margin-bottom: 30px;
+      }
+
+      .direction-row {
+        gap: 20px;
+
+        .section {
+          padding: 50px 0 15px 20px;
+
+          .mb-50 {
+            margin-bottom: 25px;
+          }
+
+          .count {
+            font-size: 85px;
+            line-height: 42px;
+            letter-spacing: -2px;
+          }
+        }
+      }
+    }
+  }
+
+
+}
