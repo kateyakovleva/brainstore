@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {RouterLink} from '@angular/router';
 
 @Component({
@@ -11,11 +11,15 @@ import {RouterLink} from '@angular/router';
   styleUrl: './mobile-header.component.scss'
 })
 export class MobileHeaderComponent {
-
-
   toSection(name: string) {
-    let top = (document.querySelector('app-' + name) as HTMLElement)?.offsetTop - 95;
-    window.scrollTo({top: top, behavior: 'smooth'});
+    setTimeout(() => {
+      let top = (document.querySelector('app-' + name) as HTMLElement)?.offsetTop - 95;
+      window.scrollTo({top: top, behavior: 'smooth'});
+
+      this.close.emit();
+    }, 100)
   }
 
+  @Output()
+  close = new EventEmitter;
 }

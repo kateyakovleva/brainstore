@@ -4,13 +4,16 @@
      (mouseup)="onMouseUp()"
      (mouseleave)="onMouseLeave()"
      (mousemove)="onMouseMove($event)"
+     [style.width]="width"
 >
   <div *ngFor="let slide of slider" class="d-flex direction-column slide">
-    <img [src]="slide.banner" class="banner" alt="banner"/>
+    <div class="banner d-flex a-i-center j-c-center w-100" [style.background]="slide.background">
+      <img [src]="slide.banner" alt="banner"/>
+    </div>
     <div class="d-flex direction-row gap-10 services">
       <div class="service" *ngFor="let service of slide.services">{{service.service}}</div>
     </div>
-    <div class="text-gray">
+    <div class="text-gray w-70">
       <a routerLink="/projects" class="text-black">{{slide.company}}</a>
       {{slide.description}}
     </div>

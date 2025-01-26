@@ -5,8 +5,8 @@
       <div class="sub-logo">ТМ</div>
     </a>
     <div class="d-flex a-i-center gap-15 menu-item" *ngIf="!isMobile">
-      <div (click)="toSection('services')">Услуги</div>
-      <div (click)="toSection('works')">Работы</div>
+      <a href="#" (click)="$event.preventDefault();toSection('services')">Услуги</a>
+      <a href="#" (click)="$event.preventDefault();toSection('works')">Работы</a>
       <a routerLink="/contacts">Контакты</a>
       <a routerLink="/team">Команда</a>
       <a routerLink="/merch">Стор</a>
@@ -15,4 +15,4 @@
          (click)="openMobileHeader()"/>
   </div>
 </div>
-<app-mobile-header *ngIf="mobile_header"></app-mobile-header>
+<app-mobile-header *ngIf="mobile_header" (close)="mobile_header = false"></app-mobile-header>

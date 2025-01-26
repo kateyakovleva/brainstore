@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {ISlide} from '../../types/types';
 import {RouterLink} from '@angular/router';
 import {NgClass, NgForOf} from '@angular/common';
@@ -10,11 +10,18 @@ import {NgClass, NgForOf} from '@angular/common';
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
 })
-export class SliderComponent {
+export class SliderComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    const width = typeof window !== "undefined" ? window.innerWidth : 1300;
+    const contWidth = (typeof document !== "undefined" ? document.querySelector('.container')?.clientWidth : 1300) || 1300;
+    this.width = `${(width - contWidth) / 2 + contWidth}px`;
+  }
+
+  width = '1300px';
 
   slider: ISlide[] = [
     {
-      banner: '/images/slider/2.png',
+      banner: '/images/slider/1.png',
       services: [
         {
           id: 1,
@@ -26,10 +33,12 @@ export class SliderComponent {
         }
       ],
       company: 'Инбриг',
-      description: 'Строительная компания, которая возводит частные дома из камня по всему Татарстану'
+      description: 'Строительная компания, которая возводит частные дома из камня по всему Татарстану',
+      background: '#0827FE'
+
     },
     {
-      banner: '/images/slider/1.png',
+      banner: '/images/slider/2.png',
       services: [
         {
           id: 3,
@@ -41,7 +50,8 @@ export class SliderComponent {
         }
       ],
       company: 'Danaflex',
-      description: 'Один из крупнейших производителей гибкой упаковки в мире'
+      description: 'Один из крупнейших производителей гибкой упаковки в мире',
+      background: '#090909'
     },
     {
       banner: '/images/slider/3.png',
@@ -56,7 +66,8 @@ export class SliderComponent {
         }
       ],
       company: 'ВкусВилл',
-      description: 'Российский бренд продуктов для здорового питания'
+      description: 'Российский бренд продуктов для здорового питания',
+      background: '#F1F1F1'
     },
   ]
 

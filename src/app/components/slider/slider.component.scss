@@ -9,16 +9,25 @@
     cursor: grabbing;
   }
 
+  .w-70 {
+    width: 70%;
+  }
+
   .slide {
     position: relative;
-    width: 900px;
-    min-width: 900px;
+    width: 1073px;
+    min-width: 1073px;
     margin-right: 40px;
 
     .banner {
       position: relative;
+      height: 600px;
       border-radius: 60px;
       margin-bottom: 36px;
+
+      img {
+        max-width: 70%;
+      }
     }
 
     .services {
@@ -43,9 +52,12 @@
 @media (max-width: 999px) {
   .projects-slider {
 
+    .w-70 {
+      width: 100%;
+    }
+
     .slide {
       width: 300px;
-      height: 320px;
       min-width: 300px;
       margin-right: 10px;
 
@@ -75,7 +87,6 @@
 
     .slide {
       width: 537px;
-      height: 380px;
       min-width: 537px;
       margin-right: 20px;
 
@@ -99,7 +110,6 @@
       .text-gray {
         font-size: 17px;
         line-height: 22px;
-        width: 70%;
       }
     }
   }

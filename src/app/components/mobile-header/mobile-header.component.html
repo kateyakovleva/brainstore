@@ -1,11 +1,11 @@
 <div class="popup">
   <div class="container d-flex direction-column j-c-space-between a-i-start h-100">
     <div class="d-flex direction-column gap-10" style="margin-top: 150px">
-      <a (click)="toSection('services')" class="text-black">Услуги</a>
-      <a (click)="toSection('works')" class="text-black">Работы</a>
-      <a routerLink="/contacts" class="text-black">Контакты</a>
-      <a routerLink="/team" class="text-black">Команда</a>
-      <a routerLink="/merch" class="text-black">Стор</a>
+      <a routerLink="/" (click)="toSection('services')" class="text-black">Услуги</a>
+      <a routerLink="/" (click)="toSection('works')" class="text-black">Работы</a>
+      <a (click)="close.emit()" routerLink="/contacts" class="text-black">Контакты</a>
+      <a (click)="close.emit()" routerLink="/team" class="text-black">Команда</a>
+      <a (click)="close.emit()" routerLink="/merch" class="text-black">Стор</a>
     </div>
     <div class="d-flex direction-column gap-30">
       <div class="d-flex direction-column gap-5">

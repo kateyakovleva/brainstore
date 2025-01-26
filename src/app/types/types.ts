@@ -3,6 +3,7 @@ export interface ISlide {
   services: IService[];
   company: string;
   description: string;
+  background: string;
 }
 
 export interface ICustomer {

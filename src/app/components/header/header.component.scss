@@ -1,5 +1,6 @@
 .header {
-  color: #090909;
+  mix-blend-mode: difference;
+  color: #ffffff;
   z-index: 99999;
   position: fixed;
 
@@ -8,6 +9,7 @@
     width: auto;
 
     .logo {
+      font-family: 'ABCFavoritCYRItalic';
       position: relative;
       margin-top: -20px;
       margin-left: 36px;
@@ -16,6 +18,7 @@
       font-style: italic;
 
       .sub-logo {
+        font-family: 'ABCFavoritCYRItalic';
         position: absolute;
         top: 20px;
         right: -40px;

@@ -27,7 +27,7 @@ export class HeaderComponent {
 
   toSection(name: string) {
     let top = (document.querySelector('app-' + name) as HTMLElement)?.offsetTop - 95;
-    window.scrollTo({top: top, behavior: 'smooth'});
+    document.scrollingElement?.scrollTo({top: top, behavior: 'smooth'});
   }
 
 }
