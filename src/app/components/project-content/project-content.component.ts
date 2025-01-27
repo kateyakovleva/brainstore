@@ -16,7 +16,6 @@ import {isMobile} from '../../utils/utils';
     StatisticsComponent,
     WorksComponent,
     FormComponent,
-    NgIf
   ],
   templateUrl: './project-content.component.html',
   styleUrl: './project-content.component.scss'

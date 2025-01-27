@@ -6,9 +6,6 @@ import {NgIf} from '@angular/common';
   selector: 'app-main-screen',
   standalone: true,
   templateUrl: './main-screen.component.html',
-  imports: [
-    NgIf
-  ],
   styleUrl: './main-screen.component.scss'
 })
 export class MainScreenComponent {
