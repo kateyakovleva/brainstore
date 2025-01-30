@@ -2,6 +2,15 @@
   width: 0;
 }
 
+:root {
+  --bg-color: #FFF;
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+}
+
+
 body, html, .video-background {
   border-radius: 50px;
   overflow: auto;
@@ -258,7 +267,7 @@ img {
   //overflow: auto;
 
   .border {
-    mix-blend-mode: difference;
+    //mix-blend-mode: difference;
     width: 1%;
     border-left: 1px solid black;
     height: calc(100% - 84px);
