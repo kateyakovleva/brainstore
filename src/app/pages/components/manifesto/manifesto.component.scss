@@ -28,3 +28,18 @@
     width: 70%;
   }
 }
+
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .padding {
+    padding-top: 350px;
+    padding-bottom: 130px;
+  }
+
+  .gap-10 {
+    gap: 20px;
+  }
+
+  .w-95 {
+    width: 76%;
+  }
+}

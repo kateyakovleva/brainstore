@@ -115,3 +115,40 @@
   }
 }
 
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .projects-slider {
+
+    .slide {
+      width: 730px;
+      min-width: 730px;
+      margin-right: 20px;
+
+      .banner {
+        height: 425px;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+
+      .w-70 {
+        width: 100%;
+      }
+
+      .services {
+        top: 20px;
+        left: 20px;
+
+        .service {
+          padding: 5px 22px;
+          border-radius: 14px;
+          font-size: 15px;
+        }
+      }
+
+      .text-gray {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+

@@ -5,6 +5,10 @@
   .card-content-container {
     padding: 250px 0 0 75px;
 
+    .container-slider {
+      padding-right: 30px;
+    }
+
     .mb-70 {
       margin-bottom: 70px;
     }
@@ -155,6 +159,58 @@
         line-height: 27px;
         padding: 20px 40px;
         border-radius: 80px;
+      }
+
+      .mb-400 {
+        margin-bottom: 200px;
+      }
+
+      .mb-300 {
+        margin-bottom: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .card-content {
+
+    .card-content-container {
+      padding: 380px 0 0 75px;
+
+      .mb-70 {
+        margin-bottom: 0;
+      }
+
+      .text-gray, .text-black {
+        font-size: 34px;
+        line-height: 45px;
+      }
+
+      .w-95 {
+        width: 95%;
+      }
+
+      .w-80 {
+        width: 85%;
+      }
+
+      .ml5 {
+        width: 105%;
+        margin-left: -5%;
+      }
+
+      .ml7 {
+        margin-bottom: 0 !important;
+        margin-left: -5%;
+      }
+
+      .w-50 {
+        width: 60%;
+      }
+
+      .w-70 {
+        width: 75%;
       }
 
       .mb-400 {

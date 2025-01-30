@@ -53,6 +53,14 @@ video {
   }
 }
 
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .content {
+    .logo {
+      width: 41%;
+    }
+  }
+}
+
 @media (min-width: 768px) and (max-width: 999px) {
 
   .content {

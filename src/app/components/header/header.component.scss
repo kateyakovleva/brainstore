@@ -7,13 +7,11 @@
   .header-container {
     height: 0;
     margin-top: 42px;
-    //width: auto;
 
     .logo {
       font-family: 'ABCFavoritCYRItalic';
       position: relative;
       margin-top: -20px;
-      //margin-left: 36px;
       font-weight: 900;
       font-size: 90px;
       font-style: italic;
@@ -64,8 +62,6 @@
   .header {
 
     .header-container {
-      //margin: 30px 40px 0 75px;
-      //width: auto;
 
       .menu-item {
         font-size: 17px;
@@ -77,6 +73,32 @@
         margin-left: 0;
         position: relative;
         font-size: 45px;
+
+        .sub-logo {
+          top: 10px;
+          right: -20px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .header {
+
+    .header-container {
+
+      .menu-item {
+        font-size: 23px;
+        letter-spacing: 0.13px;
+        line-height: 25px;
+      }
+
+      .logo {
+        margin-left: -25px;
+        position: relative;
+        font-size: 60px;
 
         .sub-logo {
           top: 10px;

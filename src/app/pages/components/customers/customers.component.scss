@@ -150,3 +150,51 @@ img {
     line-height: 22px;
   }
 }
+
+@media (min-width: 1451px) and (max-width: 2000px) {
+
+  .padding {
+    padding: 360px 0 370px;
+  }
+
+  .company {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 30px 70px;
+    border-radius: 110px;
+  }
+
+  .mb-60 {
+    margin-bottom: 30px;
+  }
+
+  .gap-10 {
+    gap: 10px;
+  }
+
+  .ml-40 {
+    margin-left: 20px;
+  }
+
+  .h-760 {
+    height: 380px;
+  }
+
+  .description {
+    width: 50%;
+    margin-left: 20px;
+  }
+
+  img {
+    max-width: 270px;
+  }
+
+  .gap-60 {
+    gap: 47px;
+  }
+
+  .text-gray, .text-black {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}

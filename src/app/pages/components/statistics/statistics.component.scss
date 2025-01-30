@@ -81,3 +81,38 @@
 
 
 }
+
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .background-white {
+
+    .w-80 {
+      width: 70%;
+    }
+
+    .container {
+      .mb-60 {
+        margin-bottom: 24px;
+      }
+
+      .direction-row {
+        gap: 20px;
+
+        .section {
+          padding: 45px 0 15px 40px;
+
+          .mb-50 {
+            margin-bottom: 20px;
+          }
+
+          .count {
+            font-size: 115px;
+            line-height: 120px;
+            letter-spacing: -2.7px;
+          }
+        }
+      }
+    }
+  }
+
+
+}

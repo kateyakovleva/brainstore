@@ -95,4 +95,26 @@
 
 }
 
+@media (min-width: 1451px) and (max-width: 2000px) {
+  .h2 {
+    margin-top: 36px;
+    margin-bottom: 50px;
+  }
+
+  .item {
+    height: 285px;
+    border-left: 1px solid black;
+    padding: 24px 41px;
+  }
+
+  .mb-60 {
+    margin-bottom: 40px;
+  }
+
+  .text-black {
+    width: 85%;
+  }
+
+}
+
 
