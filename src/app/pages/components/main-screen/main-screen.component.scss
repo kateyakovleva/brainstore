@@ -17,13 +17,13 @@ video {
 }
 
 .content {
-  color: white;
+  color: var(--white);
   backdrop-filter: blur(40px);
   position: relative;
   height: 100vh;
 
   .border {
-    border-left: 1px solid white;
+    border-left: 1px solid var(--white);
     margin-left: 42px;
     height: calc(100% - 84px);
   }

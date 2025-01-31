@@ -3,7 +3,7 @@
 }
 
 .border {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--black);
 }
 
 .h-760 {
@@ -19,14 +19,14 @@ img {
   font-weight: 400;
   line-height: 54px;
   letter-spacing: 0.5px;
-  color: black;
+  color: var(--black);
   padding: 25px 80px;
   border-radius: 160px;
-  background-color: #E9E9E9B2;
+  background-color: var(--gray);
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 
     .description {
       display: flex;

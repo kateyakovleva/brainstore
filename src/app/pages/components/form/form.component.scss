@@ -20,7 +20,7 @@
 }
 
 .form-item {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--black);
 
   input {
     width: 80%;
@@ -42,9 +42,9 @@
 
 .btn {
   margin-top: 100px;
-  background-color: black;
+  background-color: var(--black);
   border-radius: 40px;
-  color: white;
+  color: var(--white);
   font-size: 34px;
   font-weight: 400;
   line-height: 40px;
@@ -57,7 +57,7 @@ textarea {
   &::placeholder {
     font-size: 24px;
     font-weight: 400;
-    color: black;
+    color: var(--black);
   }
 }
 

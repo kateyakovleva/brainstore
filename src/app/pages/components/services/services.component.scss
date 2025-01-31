@@ -1,6 +1,6 @@
 .item {
   height: 415px;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--black);
   padding: 40px;
 }
 
@@ -34,7 +34,7 @@
   .item {
     height: 90px;
     border-left: none;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--black);
     padding: 0;
   }
 
@@ -81,7 +81,7 @@
 
   .item {
     height: 195px;
-    border-left: 1px solid black;
+    border-left: 1px solid var(--black);
     padding: 20px;
   }
 
@@ -103,7 +103,7 @@
 
   .item {
     height: 285px;
-    border-left: 1px solid black;
+    border-left: 1px solid var(--black);
     padding: 24px 41px;
   }
 

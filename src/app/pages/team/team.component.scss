@@ -1,6 +1,6 @@
 .team-content {
-  color: black;
-  background-color: white;
+  color: var(--black);
+  background-color: var(--bg-color);
 
   .team-content-container {
     padding: 250px 0 0 75px;
@@ -30,7 +30,7 @@
     }
 
     .ml7 {
-      margin-left: -7%;
+      margin-left: -5%;
     }
   }
 }
