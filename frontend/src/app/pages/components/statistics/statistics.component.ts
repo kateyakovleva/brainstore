@@ -1,15 +1,15 @@
-import {Component} from '@angular/core';
-import {NgForOf} from '@angular/common';
+import { Component } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
-@Component({
+@Component( {
   selector: 'app-statistics',
   imports: [
     NgForOf
   ],
   standalone: true,
   templateUrl: './statistics.component.html',
-  styleUrl: './statistics.component.scss'
-})
+  styleUrl: './statistics.component.scss',
+} )
 export class StatisticsComponent {
 
   stat = [

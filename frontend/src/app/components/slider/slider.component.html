@@ -6,16 +6,16 @@
      (mousemove)="onMouseMove($event)"
      [style.width]="width"
 >
-  <div *ngFor="let slide of slider" class="d-flex direction-column slide">
-    <div class="banner d-flex a-i-center j-c-center w-100" [style.background]="slide.background">
-      <img [src]="slide.banner" alt="banner"/>
+  <div *ngFor="let project of slides" class="d-flex direction-column slide">
+    <div class="banner d-flex a-i-center j-c-center w-100" [style.background]="project.background">
+      <img [src]="project.image" alt="banner"/>
     </div>
     <div class="d-flex direction-row gap-10 services">
-      <div class="service" *ngFor="let service of slide.services">{{service.service}}</div>
+      <div class="service" *ngFor="let tag of project.tags">{{tag}}</div>
     </div>
     <div class="text-gray w-70">
-      <a routerLink="/projects" class="text-black">{{slide.company}}</a>
-      {{slide.description}}
+      <a [routerLink]="'/projects/'+project.id" class="text-black">{{project.name}}</a>
+      {{project.short_description}}
     </div>
   </div>
 </div>

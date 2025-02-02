@@ -1,8 +1,12 @@
 .header {
   mix-blend-mode: difference;
-  color: var(--white);
+  //color: var(--white);
   z-index: 99999;
   position: fixed;
+
+  a {
+    color: var(--header-link);
+  }
 
   .header-container {
     height: 0;

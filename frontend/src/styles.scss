@@ -7,6 +7,7 @@
   --black: #000000;
   --gray: #E9E9E9B2;
   --text-gray: rgba(0, 0, 0, 0.25);
+  --header-link: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -14,6 +15,7 @@
   --black: #ffffff;
   --gray: #E9E9E926;
   --text-gray: #FFFFFF40;
+  --header-link: #ffffff;
 }
 
 
@@ -60,9 +62,10 @@ body, html, .video-background {
 
 body {
   font-family: 'WilliamTextLC';
-  background-color: var(--);
+  background-color: var(--white);
   overflow-x: hidden;
   margin: 0;
+  color: var(--black);
 }
 
 h2 {
@@ -120,8 +123,17 @@ ul {
   margin-block-end: 0;
 }
 
+ul li::before {
+  content: "—";
+  padding-right: 10px;
+}
+
 img {
   max-width: 100%;
+}
+
+markdown, .d-block {
+  display: block;
 }
 
 .d-flex {
