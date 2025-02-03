@@ -7,41 +7,46 @@
       <div class="d-flex direction-column gap-30" *ngIf="!isMobile">
         <img src="images/logo-black.svg" alt="logo" class="logo"/>
         <div class="text-black d-flex direction-column">
-          <span>+7 (843) 251-99-99</span>
+          <span>{{settings.settings?.phone}}</span>
           <span>brainstore.com</span>
         </div>
         <div class="text-black d-flex direction-column">
-          <span>Telegram</span>
-          <span>VK</span>
+          <a *ngIf="settings.settings?.tg" [href]="settings.settings?.tg">Telegram</a>
+          <a *ngIf="settings.settings?.vk" [href]="settings.settings?.vk">VK</a>
         </div>
         <div class="d-flex direction-column">
           <span class="text-black">© 2024 Brainstore</span>
-          <span class="text-gray">Казань, Университетская, 20 / Москва, Лубянский проезд 19с1</span>
+          <span class="text-gray">{{settings.settings?.address}}</span>
         </div>
       </div>
     </div>
-    <form class="d-flex direction-column gap-50 w-50 mt-40">
-      <div class="form-item d-flex direction-row a-i-center gap-15">
+    <form (submit)="send($event)" class="d-flex direction-column gap-50 w-50 mt-40">
+      <div *ngIf="success">
+        <label class="text-black">Ваше сообщениe отправлено!</label>
+      </div>
+
+      <div *ngIf="!success" class="form-item d-flex direction-row a-i-center gap-15">
         <label class="text-black">Имя</label>
-        <input/>
+        <input name="name" required/>
       </div>
-      <div class="form-item d-flex direction-row a-i-center gap-15">
+      <div *ngIf="!success" class="form-item d-flex direction-row a-i-center gap-15">
         <label class="text-black">Телефон</label>
-        <input/>
+        <input name="phone" required/>
       </div>
-      <div class="form-item d-flex direction-row a-i-center gap-15">
+      <div *ngIf="!success" class="form-item d-flex direction-row a-i-center gap-15">
         <label class="text-black">E-mail</label>
-        <input/>
+        <input name="email" required/>
       </div>
-      <div class="form-textarea d-flex direction-column gap-15">
+      <div *ngIf="!success" class="form-textarea d-flex direction-column gap-15">
         <label class="text-black">Сообщение</label>
-        <textarea placeholder="Здравствуйте, я только спросить..."></textarea>
+        <textarea name="message" required placeholder="Здравствуйте, я только спросить..."></textarea>
       </div>
-      <div class="d-flex direction-row gap-15 a-i-center">
+      <div *ngIf="!success" class="d-flex direction-row gap-15 a-i-center">
         <img src="images/dot.svg" alt="icon" class="dot"/>
         <div class="min-text">Я соглашаюсь с условиями обработки персональных данных</div>
       </div>
-      <button class="btn w-100">Отправить</button>
+      <button *ngIf="!success" [disabled]="loading"
+              class="btn w-100">{{loading ? 'Отправляется..' : 'Отправить'}}</button>
     </form>
     <div class="d-flex direction-column gap-30" *ngIf="isMobile">
       <img src="images/logo-black.svg" alt="logo" class="logo"/>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $key
@@ -25,4 +25,11 @@ class Setting extends Model
     protected $casts = [
         'value' => 'json'
     ];
+
+    protected $guarded = [];
+
+    public static function findByCode(string $code)
+    {
+        return static::where('key', $code)->first();
+    }
 }

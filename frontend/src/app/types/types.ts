@@ -79,3 +79,9 @@ export interface ILink {
   active: boolean;
 }
 
+export interface ISettings {
+  phone: string;
+  address: string;
+  tg: string;
+  vk: string;
+}

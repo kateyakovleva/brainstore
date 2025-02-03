@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/projects', [\App\Http\Controllers\Api\ProjectsController::class, 'list']);
 Route::get('/projects/{id}', [\App\Http\Controllers\Api\ProjectsController::class, 'get']);
+
+Route::get('/settings', [\App\Http\Controllers\Api\SettingsController::class, 'get']);
+
+Route::post('/form-request', [\App\Http\Controllers\Api\FormController::class, 'form']);
