@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Traits\HasFile;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,12 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Project extends Model
 {
-    use HasFactory, HasFile;
-
-    protected $_files = [
-        'image' => 'projects',
-        'description.image' => 'projects'
-    ];
+    use HasFactory;
 
     protected $guarded = [];
 
