@@ -3,7 +3,7 @@
   background-color: var(--white);
 
   .card-content-container {
-    padding: 250px 0 0 75px;
+    padding: 250px 40px 0 75px;
 
     .container-slider {
       padding-right: 30px;
@@ -71,11 +71,7 @@
       .w-50 {
         width: 90%;
       }
-
-      .flex-wrap {
-        flex-wrap: nowrap;
-      }
-
+      
       .mb-50 {
         margin-bottom: 10px;
       }
@@ -84,7 +80,11 @@
         margin-bottom: 20px;
       }
 
-      .w-94, .w-70 {
+      .w-70 {
+        width: 90%;
+      }
+
+      .w-94 {
         width: 100%;
         margin-left: -20px;
       }
