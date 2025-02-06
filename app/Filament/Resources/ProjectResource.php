@@ -30,7 +30,7 @@ class ProjectResource extends Resource
                     ->label('Название')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('short_description')
+                Forms\Components\MarkdownEditor::make('short_description')
                     ->label('Краткое описание')
                     ->maxLength(65535)
                     ->columnSpanFull(),
@@ -54,9 +54,10 @@ class ProjectResource extends Resource
                                     ->label('Заголовок')
                                     ->required(),
                                 Forms\Components\FileUpload::make('image')
-                                    ->required()
                                     ->label('Изображение')
                                     ->image(),
+                                Forms\Components\TextInput::make('link')
+                                    ->label('Ссылка на видео'),
                                 Forms\Components\MarkdownEditor::make('description')
                                     ->required()
                                     ->columnSpanFull(),

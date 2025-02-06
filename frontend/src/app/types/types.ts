@@ -66,7 +66,7 @@ export interface IProject {
   id: number;
   name: string;
   short_description?: any;
-  image: string;
+  image_url: string;
   tags: string[];
   blocks: IProjectDescription[];
   created_at: string;

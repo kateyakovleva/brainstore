@@ -39,7 +39,8 @@ class Project extends Model
     ];
 
     protected $appends = [
-        'blocks'
+        'blocks',
+        'image_url'
     ];
 
     public function getBlocksAttribute()
@@ -51,5 +52,10 @@ class Project extends Model
             }
             return $d;
         });
+    }
+
+    public function getImageUrlAttribute()
+    {
+        return config('app.url') . '/storage/' . $this->image;
     }
 }
