@@ -288,6 +288,14 @@ markdown, .d-block {
   }
 }
 
+markdown.text-title {
+  display: inline !important;
+
+  > * {
+    display: inline;
+  }
+}
+
 .bottom-container {
   position: absolute;
   bottom: 42px;
@@ -433,6 +441,14 @@ markdown, .d-block {
     font-size: 55px;
     line-height: 60px;
     letter-spacing: -1px;
+
+    &markdown {
+      display: inline !important;
+
+      > * {
+        display: inline;
+      }
+    }
   }
 
   h2 {

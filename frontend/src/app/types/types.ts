@@ -57,9 +57,10 @@ export interface IProjects {
 }
 
 export interface IProjectDescription {
-  image: string;
+  image?: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 export interface IProject {

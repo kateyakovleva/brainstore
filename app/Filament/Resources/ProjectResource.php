@@ -56,7 +56,7 @@ class ProjectResource extends Resource
                                 Forms\Components\FileUpload::make('image')
                                     ->label('Изображение')
                                     ->image(),
-                                Forms\Components\TextInput::make('link')
+                                Forms\Components\Textarea::make('link')
                                     ->label('Ссылка на видео'),
                                 Forms\Components\MarkdownEditor::make('description')
                                     ->required()

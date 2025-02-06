@@ -17,10 +17,18 @@
       <div class="text-gray mb-50">{{description.title}}</div>
       <markdown [class]="'text-black mb-80 w-70 ' + (i === length - 1 ? 'w-50':'')"
                 [data]="description.description"></markdown>
-      <img *ngIf="i !== length - 1" [src]="description.image" alt="picture"
+      <img *ngIf="description.image && i !== length - 1" [src]="description.image" alt="picture"
            [class]="i === 0 ? 'mb-400 w-94' : 'mb-300 w-70'"/>
-      <img *ngIf="i === length - 1" [src]="description.image" alt="picture"
+      <img *ngIf="description.image && i === length - 1" [src]="description.image" alt="picture"
            class="mb-60 w-94"/>
+
+      <div class="mb-60 w-94" *ngIf="description.link && !description.link.startsWith('http')"
+           [innerHTML]="description.link"></div>
+
+      <iframe *ngIf="description.link && !description.link.startsWith('http')" [src]="description.link" frameborder="0"
+              allow="autoplay; fullscreen" allowfullscreen
+              class="mb-60 w-94"></iframe>
+
     </div>
 
 
