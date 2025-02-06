@@ -7,6 +7,7 @@ use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Components\Builder;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -50,14 +51,17 @@ class ProjectResource extends Resource
                         Builder\Block::make('block')
                             ->label('Блок')
                             ->schema([
-                                TextInput::make('title')
-                                    ->label('Заголовок')
-                                    ->required(),
+                                Section::make()
+                                    ->schema([
+                                        TextInput::make('title')
+                                            ->label('Заголовок')
+                                            ->required(),
+                                        Forms\Components\Textarea::make('link')
+                                            ->label('Ссылка на видео'),
+                                    ])->columnSpan(1),
                                 Forms\Components\FileUpload::make('image')
                                     ->label('Изображение')
                                     ->image(),
-                                Forms\Components\Textarea::make('link')
-                                    ->label('Ссылка на видео'),
                                 Forms\Components\MarkdownEditor::make('description')
                                     ->required()
                                     ->columnSpanFull(),
