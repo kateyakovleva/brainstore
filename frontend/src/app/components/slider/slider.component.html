@@ -7,8 +7,8 @@
      [style.width]="width"
 >
   <div *ngFor="let project of slides" class="d-flex direction-column slide">
-    <div class="banner d-flex a-i-center j-c-center w-100" [style.background]="project.background">
-      <img [src]="project.image_url" alt="banner"/>
+    <div class="banner d-flex a-i-center j-c-center w-100"
+         [style]="{'background-image': 'url(' + project.image_url + ')'}">
     </div>
     <div class="d-flex direction-row gap-10 services">
       <div class="service" *ngFor="let tag of project.tags">{{tag}}</div>

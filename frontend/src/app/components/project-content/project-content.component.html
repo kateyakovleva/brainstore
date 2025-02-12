@@ -28,37 +28,8 @@
       <iframe *ngIf="description.link && !description.link.startsWith('http')" [src]="description.link" frameborder="0"
               allow="autoplay; fullscreen" allowfullscreen
               class="mb-60 w-94"></iframe>
-
     </div>
 
-
-    <!--    <div *ngFor="let description of project?.blocks; let i = index">-->
-    <!--      <app-statistics *ngIf="i === length - 1" class="mb-300 ml5 d-block"></app-statistics>-->
-
-    <!--      <div class="text-gray mb-50">{{description.title}}</div>-->
-    <!--      <markdown [class]="'text-black mb-80 w-70 ' + (i === length - 1 ? 'w-50':'')"-->
-    <!--                [data]="description.description"></markdown>-->
-
-    <!--      &lt;!&ndash; Проверка на тип контента &ndash;&gt;-->
-    <!--      <ng-container *ngIf="description.type === 'image'; else videoBlock">-->
-    <!--        <img *ngIf="i !== length - 1" [src]="description.image" alt="picture"-->
-    <!--             [class]="i === 0 ? 'mb-400 w-94' : 'mb-300 w-70'"/>-->
-    <!--        <img *ngIf="i === length - 1" [src]="description.image" alt="picture"-->
-    <!--             class="mb-60 w-94"/>-->
-    <!--      </ng-container>-->
-
-    <!--      &lt;!&ndash; Блок для видео &ndash;&gt;-->
-    <!--      <ng-template #videoBlock>-->
-    <!--        <div *ngIf="description.type === 'video'" class="video-container">-->
-    <!--          <iframe *ngIf="i !== length - 1" [src]="getSafeUrl(description.videoUrl)" frameborder="0"-->
-    <!--                  allow="autoplay; fullscreen" allowfullscreen-->
-    <!--                  [class]="i === 0 ? 'mb-400 w-94' : 'mb-300 w-70'"></iframe>-->
-    <!--          <iframe *ngIf="i === length - 1" [src]="getSafeUrl(description.videoUrl)" frameborder="0"-->
-    <!--                  allow="autoplay; fullscreen" allowfullscreen-->
-    <!--                  class="mb-60 w-94"></iframe>-->
-    <!--        </div>-->
-    <!--      </ng-template>-->
-    <!--    </div>-->
 
     <div class="d-flex direction-row flex-wrap w-95 gap-10 mb-400">
       <div class="service" *ngFor="let tag of project?.tags">{{tag}}</div>
