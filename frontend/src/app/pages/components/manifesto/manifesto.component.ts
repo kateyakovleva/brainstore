@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { MarkdownComponent } from 'ngx-markdown';
 
-@Component({
+@Component( {
   selector: 'app-manifesto',
   standalone: true,
-  imports: [],
+  imports: [
+    MarkdownComponent
+  ],
   templateUrl: './manifesto.component.html',
   styleUrl: './manifesto.component.scss'
-})
+} )
 export class ManifestoComponent {
 
 }

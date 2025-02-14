@@ -1,17 +1,17 @@
 <div class="d-flex w-100 card-content" *ngIf="project|async; let project">
   <div *ngIf="(project?.blocks?.length||0); let length"
        class="card-content-container d-flex direction-column a-i-start w-100">
-    <markdown class="text-title w-80" [data]="project?.name"></markdown>
-    <markdown class="text-title w-70" style="margin-bottom: 70px; color: var(--text-gray);">
-      {{project.short_description}}
-    </markdown>
+    <div style="margin-bottom: 70px">
+      <markdown class="text-title d-inline">*{{project?.name}}*</markdown>
+      <markdown class="text-title d-inline"> — {{project.short_description}}</markdown>
+    </div>
 
     <div class="d-flex direction-row flex-wrap w-95 gap-10 mb-400">
       <div class="service" *ngFor="let tag of project?.tags">{{tag}}</div>
     </div>
 
 
-    <div *ngFor="let description of project?.blocks; let i = index">
+    <div *ngFor="let description of project?.blocks; let i = index" style="width: 100%">
       <app-statistics *ngIf="i === length - 1" class="mb-300 ml5 d-block"></app-statistics>
 
       <div class="text-gray mb-50">{{description.title}}</div>
@@ -22,12 +22,19 @@
       <img *ngIf="description.image && i === length - 1" [src]="description.image" alt="picture"
            class="mb-60 w-94"/>
 
-      <div class="mb-60 w-94" *ngIf="description.link && !description.link.startsWith('http')"
-           [innerHTML]="description.link"></div>
+      <iframe
+        *ngIf="description.link"
+        class="mb-60 w-94"
+        [width]="size.width"
+        [height]="size.height"
+        [src]="url(description.link) | safe"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
 
-      <iframe *ngIf="description.link && !description.link.startsWith('http')" [src]="description.link" frameborder="0"
-              allow="autoplay; fullscreen" allowfullscreen
-              class="mb-60 w-94"></iframe>
     </div>
 
 
