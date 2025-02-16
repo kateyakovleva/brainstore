@@ -85,9 +85,9 @@ export class AppClient {
 export const apiUrl = ( url: string ) => {
   if ( !url.startsWith( 'http' ) ) {
     if ( !url.startsWith( '/' ) ) url = '/' + url;
-    url = `//brainstore.ru/api${ url }`;
+    // url = `//brainstore.ru/api${ url }`;
     // url = `//hh.wi-studio.ru/api${ url }`;
-    // url = `//grtgegdf.ru/api${ url }`;
+    url = `//grtgegdf.ru/api${ url }`;
   }
 
   return url;
