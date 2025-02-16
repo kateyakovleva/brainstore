@@ -25,6 +25,10 @@
   .hover {
     opacity: 1.00;
   }
+
+  .text-gray em {
+    color: var(--black);
+  }
 }
 
 @media (max-width: 1250px) {

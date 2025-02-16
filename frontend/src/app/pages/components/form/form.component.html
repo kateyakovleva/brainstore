@@ -1,9 +1,7 @@
 <div class="w-100 background-white">
   <div class="container d-flex padding j-c-space-between">
     <div class="d-flex direction-column j-c-space-between h-936">
-      <div class="text-title w-80">Напишите нам сообщение —
-        <span>это будет круто!</span>
-      </div>
+      <markdown class="text-title w-80" [data]="settings.settings?.formMessage"></markdown>
       <div class="d-flex direction-column gap-30" *ngIf="!isMobile">
         <img src="images/logo-black.svg" alt="logo" class="logo"/>
         <div class="text-black d-flex direction-column">

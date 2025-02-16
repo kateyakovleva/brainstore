@@ -3,12 +3,14 @@ import { NgIf } from '@angular/common';
 import { isMobile } from '../../../utils/utils';
 import { SettingsStore } from '../../../services/SettingsStore';
 import { AppClient } from '../../../services/AppClient';
+import { MarkdownComponent } from 'ngx-markdown';
 
 @Component( {
   selector: 'app-form',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    MarkdownComponent
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'

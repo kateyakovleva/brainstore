@@ -6,12 +6,15 @@ use App\Filament\Resources\SettingResource\Pages;
 use App\Filament\Resources\SettingResource\RelationManagers;
 use App\Models\Setting;
 use Filament\Forms;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class SettingResource extends Resource
 {
@@ -25,16 +28,59 @@ class SettingResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Select::make('type')
+                    ->disabledOn('edit')
+                    ->options([
+                        'bool' => 'Переключатель',
+                        'string' => 'Строка',
+                        'markdown' => 'Текст с форматированием',
+                        'tags' => 'Список',
+                        'text' => 'Многострочный текст',
+                    ])
+                    ->default('markdown')
+                    ->live()
+                    ->afterStateUpdated(fn(Select $component) => $component
+                        ->getContainer()
+                        ->getComponent('dynamicTypeFields')
+                        ->getChildComponentContainer()
+                        ->fill()),
                 Forms\Components\TextInput::make('key')
                     ->disabledOn('edit')
                     ->label('Код')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('value')
-                    ->label('Значение')
-                    ->required()
-                    ->maxLength(65535)
-                    ->columnSpanFull(),
+                Grid::make(2)
+                    ->schema(fn(Get $get): array => match ($get('type')) {
+                        'bool' => [
+                            Forms\Components\Toggle::make('value')
+                                ->label('Значение'),
+                        ],
+                        'markdown' => [
+                            Forms\Components\MarkdownEditor::make('value')
+                                ->label('Значение')
+                                ->required()
+                                ->columnSpanFull(),
+                        ],
+                        'tags' => [
+                            TagsInput::make('value')
+                                ->label('Значение')
+                                ->required()
+                                ->columnSpanFull(),
+                        ],
+                        'text' => [
+                            Forms\Components\Textarea::make('value')
+                                ->label('Значение')
+                                ->required()
+                                ->columnSpanFull(),
+                        ],
+                        default => [
+                            TextInput::make('value')
+                                ->label('Значение')
+                                ->required()
+                                ->columnSpanFull(),
+                        ],
+                    })
+                    ->key('dynamicTypeFields'),
             ]);
     }
 

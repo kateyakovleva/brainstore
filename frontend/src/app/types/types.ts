@@ -85,4 +85,26 @@ export interface ISettings {
   address: string;
   tg: string;
   vk: string;
+  manifest: string;
+  formMessage: string;
+  clients: IClient[];
+  services: IServiceType[];
+  state_1: string;
+  state_2: string;
+  state_3: string;
+  state_title: string;
+}
+
+export interface IClient {
+  id: number;
+  name: string;
+  image_url: string;
+  description?: string;
+  tags: string[];
+}
+
+export interface IServiceType {
+  id: number;
+  name: string;
+  description?: string;
 }

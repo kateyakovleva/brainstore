@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Client;
+use App\Models\Service;
 use App\Models\Setting;
 
 class SettingsController extends Controller
@@ -13,6 +15,9 @@ class SettingsController extends Controller
             /** @var Setting $setting */
             $settings[$setting->key] = $setting->value;
         }
+
+        $settings['clients'] = Client::all()->toArray();
+        $settings['services'] = Service::all()->toArray();
 
         return response()->json($settings);
     }

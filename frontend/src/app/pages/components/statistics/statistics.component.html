@@ -1,9 +1,8 @@
 <div class="w-100 background-white">
   <div class="container d-flex direction-column">
-    <div class="text-title mb-60 w-80">Брэйнстор состоит в медиагруппе РИМ — <span>это крупный рекламный холдинг</span>
-    </div>
+    <markdown class="text-title mb-60 w-80" [data]="settings.settings?.state_title"></markdown>
     <div class="d-flex direction-row">
-      <div class="section d-flex direction-column" *ngFor="let item of stat">
+      <div class="section d-flex direction-column" *ngFor="let item of getStat()">
         <div class="count mb-50">{{item.count}}</div>
         <div class="text-black w-70">{{item.text}}</div>
       </div>
