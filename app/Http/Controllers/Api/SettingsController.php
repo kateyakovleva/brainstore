@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Client;
+use App\Models\HomeSlide;
 use App\Models\Service;
 use App\Models\Setting;
 
@@ -18,6 +19,7 @@ class SettingsController extends Controller
 
         $settings['clients'] = Client::all()->toArray();
         $settings['services'] = Service::all()->toArray();
+        $settings['home_slides'] = HomeSlide::all()->toArray();
 
         return response()->json($settings);
     }

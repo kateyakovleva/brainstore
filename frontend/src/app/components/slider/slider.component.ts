@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewChecked, Component } from '@angular/core';
 import { IProject } from '../../types/types';
 import { RouterLink } from '@angular/router';
 import { NgClass, NgForOf } from '@angular/common';
@@ -11,7 +11,7 @@ import { ProjectsStore } from '../../services/ProjectsStore';
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
 } )
-export class SliderComponent implements AfterViewInit {
+export class SliderComponent implements AfterViewChecked {
   constructor(
     public projectsStore: ProjectsStore
   ) {
@@ -20,10 +20,12 @@ export class SliderComponent implements AfterViewInit {
     } )
   }
 
-  ngAfterViewInit() {
-    const width = typeof window !== "undefined" ? window.innerWidth : 1300;
-    const contWidth = ( typeof document !== "undefined" ? document.querySelector( '.container' )?.clientWidth : 1300 ) || 1300;
-    this.width = `${ ( width - contWidth ) / 2 + contWidth }px`;
+  ngAfterViewChecked() {
+    setTimeout( () => {
+      const width = typeof window !== "undefined" ? window.innerWidth : 1300;
+      const contWidth = ( typeof document !== "undefined" ? document.querySelector( '.container' )?.clientWidth : 1300 ) || 1300;
+      this.width = `${ ( width - contWidth ) / 2 + contWidth }px`;
+    }, 100 )
   }
 
   width = '1300px';

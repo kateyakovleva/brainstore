@@ -15,7 +15,9 @@
     </div>
     <div class="text-gray w-70">
       <a [routerLink]="'/projects/'+project.id" class="text-black">{{project.name}}</a>
-      <span> {{project.short_description}}</span>
+      <a [routerLink]="'/projects/'+project.id" class="text-gray">
+        <span> {{project.short_description}}</span>
+      </a>
     </div>
   </div>
 </div>

@@ -1,17 +1,52 @@
-<div class="video-background w-100 h-100">
-  <video autoplay muted loop>
-    <source src="/video/123.mov" type="video/mp4">
-  </video>
-</div>
-<div class="content w-100 d-flex a-i-center j-c-center">
-  <div class="w-100 h-100 d-flex a-i-center j-c-center border">
-    <img src="images/biglogo.svg" alt="logo" class="mb-50 logo"/>
-    <div class="bottom-container d-flex direction-column j-c-start gap-10">
-      <img src="images/circles.svg" class="circles" alt="icon"/>
-      <div class="text-title">Brainstore — креативное агенство
-        <span>созидателей, художников, дизайнеров и стратегов</span>
+<!--<div class="video-background w-100 h-100">-->
+<!--  <video autoplay muted loop>-->
+<!--    <source src="/video/123.mov" type="video/mp4">-->
+<!--  </video>-->
+<!--</div>-->
+<!--<div class="content w-100 d-flex a-i-center j-c-center">-->
+<!--  <div class="w-100 h-100 d-flex a-i-center j-c-center border">-->
+<!--    <img src="images/biglogo.svg" alt="logo" class="mb-50 logo"/>-->
+<!--    <div class="bottom-container d-flex direction-column j-c-start gap-10">-->
+<!--      <img src="images/circles.svg" class="circles" alt="icon"/>-->
+<!--      <div class="text-title">Brainstore — креативное агенство-->
+<!--        <span>созидателей, художников, дизайнеров и стратегов</span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<p-carousel
+  [value]="settings.settings?.home_slides || []"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [showIndicators]="true"
+  [showNavigators]="false"
+  (onPage)="change($event)"
+>
+  <ng-template let-item pTemplate="item">
+    <div [class]="'home-slide '">
+      <div class="video-background w-100 h-100">
+        <img *ngIf="item.image_url" [src]="item.image_url"/>
+        <iframe
+          *ngIf="item.video"
+          class="mb-60 w-94"
+          width="100%"
+          height="100%"
+          [src]="url(item.video, item.index == page) | safe"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media;"
+        ></iframe>
+      </div>
+      <div [class]="'content w-100 d-flex a-i-center j-c-center ' + (item.show_logo ? 'blur' : '')">
+        <div class="w-100 h-100 d-flex a-i-center j-c-center border">
+          <img *ngIf="item.show_logo" src="images/biglogo.svg" alt="logo" class="mb-50 logo"/>
+          <div class="bottom-container d-flex direction-column j-c-start gap-10">
+            <!--            <img src="images/circles.svg" class="circles" alt="icon"/>-->
+            <markdown class="text-title" [data]="item.description"></markdown>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
+  </ng-template>
+</p-carousel>

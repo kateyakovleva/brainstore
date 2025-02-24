@@ -89,6 +89,7 @@ export interface ISettings {
   formMessage: string;
   clients: IClient[];
   services: IServiceType[];
+  home_slides: IHomeSlide[];
   state_1: string;
   state_2: string;
   state_3: string;
@@ -107,4 +108,13 @@ export interface IServiceType {
   id: number;
   name: string;
   description?: string;
+}
+
+export interface IHomeSlide {
+  id: number;
+  image?: string;
+  video?: string;
+  description?: string;
+  show_logo: boolean;
+  image_url?: string;
 }

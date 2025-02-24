@@ -19,16 +19,16 @@
 }
 
 
-body, html, .video-background {
-  border-radius: 50px;
-  overflow: auto;
-}
-
-@media (max-width: 999px) {
-  body, html, .video-background {
-    border-radius: 0;
-  }
-}
+//body, html, .video-background {
+//  border-radius: 50px;
+//  overflow: auto;
+//}
+//
+//@media (max-width: 999px) {
+//  body, html, .video-background {
+//    border-radius: 0;
+//  }
+//}
 
 
 @font-face {
@@ -61,7 +61,7 @@ body, html, .video-background {
 }
 
 body {
-  font-family: 'WilliamTextLC';
+  font-family: 'WilliamTextLC', serif;
   background-color: var(--white);
   overflow-x: hidden;
   margin: 0;
@@ -74,9 +74,23 @@ markdown {
   }
 
   em {
-    font-family: 'WilliamTextLCItalic';
+    font-family: 'WilliamTextLCItalic', serif;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.1em;
+
+    strong {
+      font-family: 'ABCFavoritCYRItalic', serif;
+      font-size: 0.9em;
+    }
+  }
+
+  strong {
+    font-family: 'ABCFavoritCYR', serif;
+
+    em {
+      font-family: 'ABCFavoritCYRItalic', serif;
+      font-size: 1em;
+    }
   }
 }
 
@@ -197,7 +211,7 @@ markdown, .d-block {
 }
 
 .container {
-  width: 90%;
+  width: 94%;
   margin: 0 auto 0;
 }
 
@@ -251,6 +265,10 @@ markdown, .d-block {
 
 .gap-15 {
   gap: 15px;
+}
+
+.gap-20 {
+  gap: 20px;
 }
 
 .background-white {
@@ -462,4 +480,8 @@ markdown.text-title {
     font-size: 25px;
     line-height: 30px;
   }
+}
+
+.w-auto {
+  width: auto !important;
 }

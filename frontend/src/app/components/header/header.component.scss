@@ -10,13 +10,24 @@
 
   .header-container {
     height: 0;
-    margin-top: 42px;
+    margin-top: 52px;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 96vh;
+      position: absolute;
+      border-left: 1px solid var(--white);
+      top: 30px;
+      left: 30px;
+    }
 
     .logo {
       max-width: 556px;
     }
 
     .menu-item {
+      gap: 28px;
       font-weight: 400;
       font-size: 34px;
       letter-spacing: 0.25px;

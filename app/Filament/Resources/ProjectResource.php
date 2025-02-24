@@ -63,7 +63,6 @@ class ProjectResource extends Resource
                                     ->label('Изображение')
                                     ->image(),
                                 Forms\Components\MarkdownEditor::make('description')
-                                    ->required()
                                     ->columnSpanFull(),
                             ])->columns(2)
                     ])->columns(2)

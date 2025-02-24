@@ -1,9 +1,9 @@
 <div class="header w-100">
-  <div class="header-container container d-flex a-i-start j-c-space-between">
+  <div class="header-container container d-flex a-i-center j-c-space-between">
     <a routerLink="/" class="logo">
       <img src="images/logo.svg" alt="logo"/>
     </a>
-    <div class="d-flex a-i-center gap-15 menu-item" *ngIf="!isMobile">
+    <div class="d-flex a-i-center menu-item" *ngIf="!isMobile">
       <a href="#" (click)="$event.preventDefault();toSection('services')">Услуги</a>
       <a href="#" (click)="$event.preventDefault();toSection('works')">Работы</a>
       <a routerLink="/contacts">Контакты</a>

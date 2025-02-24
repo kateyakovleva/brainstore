@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -58,6 +58,7 @@ class Project extends Model
 
     public function getImageUrlAttribute()
     {
+        if (!$this->image) return '';
         return config('app.url') . '/storage/' . $this->image;
     }
 }

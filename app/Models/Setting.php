@@ -33,4 +33,15 @@ class Setting extends Model
     {
         return static::where('key', $code)->first();
     }
+
+    public static function getByCode(string $code)
+    {
+        return static::where('key', $code)->first()?->value;
+    }
+
+    public static function set(string $code, mixed $value)
+    {
+        $item = static::findByCode($code);
+        $item->update(['value' => $value]);
+    }
 }

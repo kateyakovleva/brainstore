@@ -21,13 +21,45 @@
 
 }
 
-.service-item:hover {
-  .hover {
-    opacity: 1.00;
+.service-item {
+  .text-black {
+    font-size: 20px;
+    line-height: 25px;
+
+    & + .text-gray {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 25px;
+      line-height: 30px;
+
+      & + .text-gray {
+        font-size: 17px;
+        line-height: 20px;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      font-size: 34px;
+      line-height: 45px;
+
+      & + .text-gray {
+        font-size: 23px;
+        line-height: 30px;
+      }
+    }
   }
 
-  .text-gray em {
-    color: var(--black);
+  &:hover {
+    .hover {
+      opacity: 1.00;
+    }
+
+    .text-gray em {
+      color: var(--black);
+    }
   }
 }
 

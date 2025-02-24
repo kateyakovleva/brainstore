@@ -6,41 +6,41 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
- * @property string $name
- * @property string $image
+ * @property string|null $image
+ * @property string|null $video
  * @property string|null $description
- * @property array $tags
+ * @property int $show_logo
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read mixed $image_url
- * @method static \Illuminate\Database\Eloquent\Builder|Client newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Client newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Client query()
+ * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide query()
  * @mixin \Eloquent
  */
-class Client extends Model
+class HomeSlide extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
-
     protected $attributes = [
-        'tags' => '[]'
-    ];
-
-    protected $casts = [
-        'tags' => 'array'
+        'show_logo' => false,
     ];
 
     protected $appends = [
         'image_url'
     ];
 
+    protected $casts = [
+        'show_logo' => 'boolean'
+    ];
+
     public function getImageUrlAttribute()
     {
+        if (!$this->image) return '';
         return config('app.url') . '/storage/' . $this->image;
     }
 }

@@ -4,7 +4,7 @@ import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { StatisticsComponent } from '../../pages/components/statistics/statistics.component';
 import { WorksComponent } from '../../pages/components/works/works.component';
 import { FormComponent } from '../../pages/components/form/form.component';
-import { isMobile } from '../../utils/utils';
+import { isMobile, videoUrl } from '../../utils/utils';
 import { IProject } from '../../types/types';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectsStore } from '../../services/ProjectsStore';
@@ -57,18 +57,7 @@ export class ProjectContentComponent implements AfterViewInit {
   }
 
   url( url: string ) {
-    if ( url.indexOf( 'rutube.ru' ) !== -1 ) {
-      return url.replace( 'https://rutube.ru/video/', 'https://rutube.ru/play/embed/' )
-    }
-
-    if ( url.indexOf( 'vimeo.com' ) ) {
-      return url.replace( /https:\/\/vimeo.com\/([^\/]+)\/([^\/]+)/, 'https://player.vimeo.com/video/$1?h=$2' )
-    }
-    //https://vimeo.com/1053368072/7b446baf6d
-
-    //https://player.vimeo.com/video/1053368072?h=7b446baf6d
-
-    return url;
+    return videoUrl( url );
   }
 }
 
