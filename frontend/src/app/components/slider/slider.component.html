@@ -14,9 +14,9 @@
       <div class="service" *ngFor="let tag of project.tags">{{tag}}</div>
     </div>
     <div class="text-gray w-70">
-      <a [routerLink]="'/projects/'+project.id" class="text-black">{{project.name}}</a>
-      <a [routerLink]="'/projects/'+project.id" class="text-gray">
-        <span> {{project.short_description}}</span>
+      <a [routerLink]="'/projects/'+(project.seo_alias || project.id)" class="text-black">{{project.name}}&nbsp;</a>
+      <a [routerLink]="'/projects/'+(project.seo_alias || project.id)" class="text-gray">
+        <markdown class="d-inline" [data]="project.short_description"></markdown>
       </a>
     </div>
   </div>

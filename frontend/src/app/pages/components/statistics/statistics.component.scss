@@ -1,6 +1,9 @@
 .section {
   border-left: 1px solid var(--black);
-  padding: 96px 0 0 26px;
+  padding: 96px 0 0 20px;
+  width: 25%;
+  min-width: 25%;
+  max-width: 25%;
 
   .count {
     font-family: 'ABCFavoritCYR';

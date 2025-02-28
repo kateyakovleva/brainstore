@@ -31,6 +31,15 @@ class ProjectResource extends Resource
                     ->label('Название')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('seo_alias')
+                    ->label('url проекта')
+                    ->placeholder('project-inbrig')
+                    ->hint('Можно вводить только лат. символы, цифры, тире и подчеркивание')
+                    ->regex('/[a-zA-Z0-9-_]+/')
+                    ->unique()
+                    ->required()
+                    ->validationMessages(['unique' => 'Проект с таким url уже существует'])
+                    ->maxLength(255),
                 Forms\Components\MarkdownEditor::make('short_description')
                     ->label('Краткое описание')
                     ->maxLength(65535)
@@ -38,9 +47,6 @@ class ProjectResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Изображение(превью)')
                     ->image(),
-                Forms\Components\ColorPicker::make('background')
-                    ->label('Цвет фона')
-                    ->required(),
                 TagsInput::make('tags')
                     ->label('Теги')
                     ->required()
@@ -58,10 +64,12 @@ class ProjectResource extends Resource
                                             ->required(),
                                         Forms\Components\Textarea::make('link')
                                             ->label('Ссылка на видео'),
-                                    ])->columnSpan(1),
+                                    ])->columnSpan(2),
                                 Forms\Components\FileUpload::make('image')
                                     ->label('Изображение')
                                     ->image(),
+                                Forms\Components\MarkdownEditor::make('image_description')
+                                    ->label('Подпись к изображению'),
                                 Forms\Components\MarkdownEditor::make('description')
                                     ->columnSpanFull(),
                             ])->columns(2)

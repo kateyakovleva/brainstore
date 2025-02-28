@@ -58,6 +58,7 @@ export interface IProjects {
 
 export interface IProjectDescription {
   image?: string;
+  image_description?: string;
   title: string;
   description: string;
   link?: string;
@@ -70,6 +71,7 @@ export interface IProject {
   image_url: string;
   tags: string[];
   blocks: IProjectDescription[];
+  seo_alias?: string;
   created_at: string;
   updated_at: string;
 }
@@ -114,7 +116,9 @@ export interface IHomeSlide {
   id: number;
   image?: string;
   video?: string;
+  link?: string;
   description?: string;
   show_logo: boolean;
+  apply_blur: boolean;
   image_url?: string;
 }

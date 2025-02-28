@@ -34,18 +34,14 @@
 @font-face {
   font-family: 'ABCFavoritCYR';
   src: url('/fonts/ABCFavoritCYR-Ultra.otf') format('opentype'),
-  url('/fonts/ABCFavoritCYR-Ultra.otf') format('opentype'),
-    //src: url('/fonts/suisseintl.eot'); /* IE 9 Compatibility Mode */
-    //src: url('/fonts/suisseintl.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
   url('/fonts/ABCFavoritCYR-Ultra.woff2') format('woff2'), /* Super Modern Browsers */
   url('/fonts/ABCFavoritCYR-Ultra.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
-  //url('/fonts/suisseintl.ttf') format('truetype'), /* Safari, Android, iOS */
-  //url('/fonts/suisseintl.svg#suisseintl') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
 @font-face {
   font-family: 'ABCFavoritCYRItalic';
-  src: url('/fonts/ABCFavoritCYR-UltraItalic.woff2') format('woff2'), /* Super Modern Browsers */
+  src: url('/fonts/ABCFavoritCYR-UltraItalic.otf') format('opentype'),
+  url('/fonts/ABCFavoritCYR-UltraItalic.woff2') format('woff2'), /* Super Modern Browsers */
   url('/fonts/ABCFavoritCYR-UltraItalic.woff') format('woff'); /* Firefox >= 3.6, any other modern browser */
 
 }
@@ -57,7 +53,7 @@
 
 @font-face {
   font-family: 'WilliamTextLCItalic';
-  src: url('/fonts/WilliamTextLC-RegularItalic') format('opentype');
+  src: url('/fonts/WilliamTextLC-RegularItalic.otf') format('opentype');
 }
 
 body {
@@ -76,11 +72,9 @@ markdown {
   em {
     font-family: 'WilliamTextLCItalic', serif;
     font-style: italic;
-    font-size: 1.1em;
 
     strong {
       font-family: 'ABCFavoritCYRItalic', serif;
-      font-size: 0.9em;
     }
   }
 
@@ -89,7 +83,6 @@ markdown {
 
     em {
       font-family: 'ABCFavoritCYRItalic', serif;
-      font-size: 1em;
     }
   }
 }
@@ -160,6 +153,10 @@ img {
 
 markdown, .d-block {
   display: block;
+}
+
+.d-inline, markdown .d-inline {
+  display: inline;
 }
 
 .d-flex {
@@ -306,7 +303,7 @@ markdown, .d-block {
   }
 }
 
-markdown.text-title {
+markdown.text-title, markdown.d-inline {
   display: inline !important;
 
   > * {

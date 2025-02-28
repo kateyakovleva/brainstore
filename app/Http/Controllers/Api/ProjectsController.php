@@ -13,6 +13,8 @@ class ProjectsController extends Controller
 
     public function get($id)
     {
-        return Project::findOrFail($id);
+        return Project::where('id', $id)
+            ->orWhere('seo_alias', $id)
+            ->firstOrFail();
     }
 }

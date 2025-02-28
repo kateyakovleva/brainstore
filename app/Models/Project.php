@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property string $name
@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property array|null $description
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $seo_alias
  * @property-read mixed $blocks
  * @property-read mixed $image_url
  * @method static \Illuminate\Database\Eloquent\Builder|Project newModelQuery()

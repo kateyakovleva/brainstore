@@ -1,17 +1,18 @@
-import { AfterViewChecked, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IProject } from '../../types/types';
 import { RouterLink } from '@angular/router';
 import { NgClass, NgForOf } from '@angular/common';
 import { ProjectsStore } from '../../services/ProjectsStore';
+import { MarkdownComponent } from 'ngx-markdown';
 
 @Component( {
   selector: 'app-slider',
   standalone: true,
-  imports: [ RouterLink, NgForOf, NgClass ],
+  imports: [ RouterLink, NgForOf, NgClass, MarkdownComponent ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
 } )
-export class SliderComponent implements AfterViewChecked {
+export class SliderComponent implements OnInit {
   constructor(
     public projectsStore: ProjectsStore
   ) {
@@ -20,13 +21,18 @@ export class SliderComponent implements AfterViewChecked {
     } )
   }
 
-  ngAfterViewChecked() {
-    setTimeout( () => {
-      const width = typeof window !== "undefined" ? window.innerWidth : 1300;
-      const contWidth = ( typeof document !== "undefined" ? document.querySelector( '.container' )?.clientWidth : 1300 ) || 1300;
-      this.width = `${ ( width - contWidth ) / 2 + contWidth }px`;
-    }, 100 )
+  ngOnInit() {
+    // if ( !this.inited ) {
+    //   setTimeout( () => {
+    //     const width = typeof window !== "undefined" ? window.innerWidth : 1300;
+    //     const contWidth = ( typeof document !== "undefined" ? document.querySelector( '.container' )?.clientWidth : 1300 ) || 1300;
+    //     this.width = `${ ( width - contWidth ) / 2 + contWidth }px`;
+    //   }, 100 );
+    //   this.inited = true;
+    // }
   }
+
+  inited: boolean = false;
 
   width = '1300px';
 

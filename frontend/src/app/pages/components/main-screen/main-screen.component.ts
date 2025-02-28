@@ -25,7 +25,16 @@ export class MainScreenComponent {
   constructor(
     public settings: SettingsStore
   ) {
+    if ( this.timer ) clearInterval( this.timer );
+    // this.timer = setInterval( () => {
+    //   if ( this.hovered ) return;
+    //   this.page = this.getNextPage()
+    // }, 2000 )
   }
+
+  timer: any = null;
+
+  hovered: boolean = false;
 
   isMobile = isMobile;
 
@@ -33,9 +42,19 @@ export class MainScreenComponent {
     return videoUrl( url, false, play );
   }
 
-  page: number | undefined = 0;
+  page: number = 0;
+
+  getNextPage() {
+    let page = this.page + 1;
+    let lastPage = this.settings.settings?.home_slides?.length || 0;
+    if ( page > lastPage ) {
+      page = 0;
+    }
+
+    return page;
+  }
 
   change( event: CarouselPageEvent ) {
-    this.page = event.page;
+    this.page = event.page || 0;
   }
 }

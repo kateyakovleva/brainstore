@@ -2,7 +2,7 @@
   <div class="container d-flex j-c-start direction-column">
     <h2 class="h2">Услуги</h2>
     <div class="d-flex w-80 direction-row flex-wrap">
-      <div class="service-item d-flex j-c-space-between direction-column item w-25 mb-60"
+      <div class="service-item d-flex j-c-space-between direction-column item w-30 mb-60"
            *ngFor="let item of settings.settings?.services">
         <div class="text-black">{{item.name}}</div>
         <markdown class="text-gray hover" [data]="item.description"></markdown>
