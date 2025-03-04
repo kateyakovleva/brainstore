@@ -1,9 +1,19 @@
 .section {
   border-left: 1px solid var(--black);
   padding: 96px 0 0 20px;
-  width: 25%;
-  min-width: 25%;
-  max-width: 25%;
+  //width: 25%;
+  min-width: 22%;
+  //max-width: 25%;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -21px;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid var(--black);
+  }
 
   .count {
     font-family: 'ABCFavoritCYR';

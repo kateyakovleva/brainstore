@@ -39,10 +39,8 @@ export class FormComponent {
         next: ( r ) => {
           this.loading = false;
           this.success = true;
-          // form.reset();
         },
         error: ( e ) => {
-          // this.errors = e?.error?.errors || {};
           this.loading = false;
           this.success = true;
         },

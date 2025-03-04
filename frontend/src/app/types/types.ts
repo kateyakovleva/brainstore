@@ -71,6 +71,8 @@ export interface IProject {
   image_url: string;
   tags: string[];
   blocks: IProjectDescription[];
+  advantage_title?: string;
+  advs?: { text: string, count: string }[];
   seo_alias?: string;
   created_at: string;
   updated_at: string;
@@ -92,10 +94,23 @@ export interface ISettings {
   clients: IClient[];
   services: IServiceType[];
   home_slides: IHomeSlide[];
+  header_menu: ISettingItem[];
+  menu: IMenuItem[];
   state_1: string;
   state_2: string;
   state_3: string;
   state_title: string;
+}
+
+export interface ISettingItem {
+  type: string;
+  data: IMenuItem;
+}
+
+export interface IMenuItem {
+  name: string;
+  link: string;
+  status: boolean;
 }
 
 export interface IClient {

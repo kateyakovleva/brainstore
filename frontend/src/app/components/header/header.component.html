@@ -4,11 +4,11 @@
       <img src="images/logo.svg" alt="logo"/>
     </a>
     <div class="d-flex a-i-center menu-item" *ngIf="!isMobile">
-      <a href="#" (click)="$event.preventDefault();toSection('services')">Услуги</a>
-      <a href="#" (click)="$event.preventDefault();toSection('works')">Работы</a>
-      <a routerLink="/contacts">Контакты</a>
-      <a routerLink="/team">Команда</a>
-      <a routerLink="/merch">Стор</a>
+      <a
+        *ngFor="let item of settings.settings?.menu"
+        [routerLink]="getLink(item)"
+        (click)="toSection(item, $event)"
+      >{{item.name}}</a>
     </div>
     <img src="images/menu.png" alt="menu" *ngIf="isMobile" style="width: 40px; height: 17px"
          (click)="openMobileHeader()"/>

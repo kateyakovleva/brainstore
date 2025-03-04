@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $key
@@ -42,6 +42,10 @@ class Setting extends Model
     public static function set(string $code, mixed $value)
     {
         $item = static::findByCode($code);
-        $item->update(['value' => $value]);
+        if (!$item) {
+            $item = static::create(['key' => $code, 'value' => $value]);
+        } else {
+            $item->update(['value' => $value]);
+        }
     }
 }

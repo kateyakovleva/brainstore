@@ -9,6 +9,7 @@ use Filament\Forms;
 use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TagsInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -36,7 +37,7 @@ class ProjectResource extends Resource
                     ->placeholder('project-inbrig')
                     ->hint('Можно вводить только лат. символы, цифры, тире и подчеркивание')
                     ->regex('/[a-zA-Z0-9-_]+/')
-                    ->unique()
+                    ->unique(ignoreRecord: true)
                     ->required()
                     ->validationMessages(['unique' => 'Проект с таким url уже существует'])
                     ->maxLength(255),
@@ -92,6 +93,23 @@ class ProjectResource extends Resource
                             'type' => 'block'
                         ],
                     ])
+                    ->columnSpanFull(),
+                Forms\Components\MarkdownEditor::make('advantage_title')
+                    ->label('Заголовок преимуществ')
+                    ->maxLength(65535)
+                    ->columnSpanFull(),
+                Builder::make('advantages')
+                    ->label('Преимущества')
+                    ->blocks([
+                        Builder\Block::make('advantage')
+                            ->label('Преимущество')
+                            ->schema([
+                                Textarea::make('text')
+                                    ->hiddenLabel()
+                                    ->columnSpan(1),
+                            ])->columnSpan(1)
+                    ])->columns(3)
+                    ->addActionLabel('Добавить преимущество')
                     ->columnSpanFull(),
             ]);
     }

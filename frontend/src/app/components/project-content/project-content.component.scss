@@ -71,7 +71,7 @@
       .w-50 {
         width: 90%;
       }
-      
+
       .mb-50 {
         margin-bottom: 10px;
       }
@@ -175,6 +175,7 @@
 
     .card-content-container {
       padding: 380px 0 0 75px;
+      width: calc(100% - 75px);
 
       .mb-70 {
         margin-bottom: 0;

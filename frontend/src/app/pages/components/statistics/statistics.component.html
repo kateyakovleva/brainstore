@@ -1,13 +1,13 @@
 <div class="w-100 background-white">
   <div class="container d-flex direction-column">
-    <markdown class="text-title mb-60 w-80" [data]="settings.settings?.state_title"></markdown>
-    <div class="d-flex direction-row">
-      <div class="section d-flex direction-column" *ngFor="let item of getStat()">
+    <markdown *ngIf="title" class="text-title mb-60 w-80" [data]="title"></markdown>
+    <div class="d-flex direction-row flex-wrap">
+      <div class="section d-flex direction-column" *ngFor="let item of items">
         <div class="count mb-50">{{item.count}}</div>
         <div class="text-black w-70">{{item.text}}</div>
       </div>
 
-      <div class="section d-flex direction-column"></div>
+      <!--      <div class="section d-flex direction-column"></div>-->
     </div>
   </div>
 </div>

@@ -1,21 +1,17 @@
-import {AfterViewInit, Component} from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-root',
   standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-})
+} )
 export class AppComponent implements AfterViewInit {
-  // ngAfterViewInit(): void {
-  //   document.documentElement.setAttribute('data-theme', 'dark');
-  // }
-
   ngAfterViewInit(): void {
     const currentHour = new Date().getHours();
 
-    if (currentHour <= 6 && currentHour > 18) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+    if ( currentHour <= 6 && currentHour > 18 ) {
+      document.documentElement.setAttribute( 'data-theme', 'dark' );
     }
   }
 

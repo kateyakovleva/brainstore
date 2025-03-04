@@ -12,7 +12,12 @@
 
 
     <div *ngFor="let description of project?.blocks; let i = index" style="width: 100%">
-      <app-statistics *ngIf="i === length - 1" class="mb-300 ml5 d-block"></app-statistics>
+      <app-statistics
+        *ngIf="i === length - 1 && project.advs && project.advs.length"
+        [items]="project.advs"
+        [title]="project.advantage_title"
+        class="mb-300 ml5 d-block"
+      ></app-statistics>
 
       <div class="text-gray mb-50">{{description.title}}</div>
       <markdown [class]="'text-black mb-80 w-70 ' + (i === length - 1 ? 'w-50':'')"

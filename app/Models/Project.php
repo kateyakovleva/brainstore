@@ -18,6 +18,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $seo_alias
+ * @property array $advantages
+ * @property string|null $advantage_title
+ * @property-read mixed $advs
  * @property-read mixed $blocks
  * @property-read mixed $image_url
  * @method static \Illuminate\Database\Eloquent\Builder|Project newModelQuery()
@@ -33,16 +36,19 @@ class Project extends Model
 
     protected $attributes = [
         'tags' => '[]',
-        'description' => '[]'
+        'description' => '[]',
+        'advantages' => '[]',
     ];
 
     protected $casts = [
         'tags' => 'array',
-        'description' => 'array'
+        'description' => 'array',
+        'advantages' => 'array',
     ];
 
     protected $appends = [
         'blocks',
+        'advs',
         'image_url'
     ];
 
@@ -54,6 +60,17 @@ class Project extends Model
                 $d['image'] = config('app.url') . '/storage/' . $d['image'];
             }
             return $d;
+        });
+    }
+
+    public function getAdvsAttribute()
+    {
+        return \Arr::map($this->advantages, function ($el) {
+            $t = explode("\n", $el['data']['text'] ?? '');
+            return [
+                'count' => $t[0],
+                'text' => $t[1] ?? '',
+            ];
         });
     }
 

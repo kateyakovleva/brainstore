@@ -3,7 +3,9 @@
 namespace App\Filament\Pages;
 
 use App\Models\Setting;
+use Filament\Forms\Components\Builder;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Forms\Form;
@@ -24,6 +26,7 @@ class GeneralSettings extends Page implements HasForms
     public function mount(): void
     {
         $this->form->fill([
+            'header_menu' => Setting::getByCode('header_menu'),
             'phone' => Setting::getByCode('phone'),
             'address' => Setting::getByCode('address'),
             'tg' => Setting::getByCode('tg'),
@@ -42,6 +45,26 @@ class GeneralSettings extends Page implements HasForms
     protected function getFormSchema(): array
     {
         return [
+            Builder::make('header_menu')
+                ->label('Меню')
+                ->blocks([
+                    Builder\Block::make('link')
+                        ->label('Ссылка')
+                        ->schema([
+                            TextInput::make('name')
+                                ->placeholder('Название')
+                                ->hiddenLabel()
+                                ->columnSpan(1),
+                            TextInput::make('link')
+                                ->hiddenLabel()
+                                ->placeholder('Ссылка')
+                                ->columnSpan(1),
+                            Toggle::make('status')
+                                ->label('Включено'),
+                        ])->columns(3)
+                ])->columns(3)
+                ->addActionLabel('Добавить ссылку')
+                ->columnSpanFull(),
             TextInput::make('phone')
                 ->label('Телефон')
                 ->required()

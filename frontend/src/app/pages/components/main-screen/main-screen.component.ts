@@ -26,10 +26,10 @@ export class MainScreenComponent {
     public settings: SettingsStore
   ) {
     if ( this.timer ) clearInterval( this.timer );
-    // this.timer = setInterval( () => {
-    //   if ( this.hovered ) return;
-    //   this.page = this.getNextPage()
-    // }, 2000 )
+    this.timer = setInterval( () => {
+      if ( this.hovered ) return;
+      this.page = this.getNextPage()
+    }, 2000 )
   }
 
   timer: any = null;

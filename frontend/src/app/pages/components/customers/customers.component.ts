@@ -23,8 +23,4 @@ export class CustomersComponent {
   showDescription( index: number ) {
     this.currentIndex = index;
   }
-
-  // hideDescription( customer: any ) {
-  //   customer.showDescription = false;
-  // }
 }
