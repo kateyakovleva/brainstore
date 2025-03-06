@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -65,7 +65,7 @@ class Project extends Model
 
     public function getAdvsAttribute()
     {
-        return \Arr::map($this->advantages, function ($el) {
+        return \Arr::map($this->advantages ?? [], function ($el) {
             $t = explode("\n", $el['data']['text'] ?? '');
             return [
                 'count' => $t[0],
