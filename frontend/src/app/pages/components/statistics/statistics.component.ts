@@ -15,8 +15,13 @@ import { MarkdownComponent } from 'ngx-markdown';
 } )
 export class StatisticsComponent {
   @Input()
-  items: { count: string, text: string }[] = [];
+  items: IStatItem[] = [];
 
   @Input()
   title?: string = '';
+}
+
+export interface IStatItem {
+  count: string;
+  text: string;
 }
