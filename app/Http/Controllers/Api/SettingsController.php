@@ -6,6 +6,7 @@ use App\Models\Client;
 use App\Models\HomeSlide;
 use App\Models\Service;
 use App\Models\Setting;
+use App\Utils\Utils;
 
 class SettingsController extends Controller
 {
@@ -20,6 +21,8 @@ class SettingsController extends Controller
         $settings['clients'] = Client::all()->toArray();
         $settings['services'] = Service::all()->toArray();
         $settings['home_slides'] = HomeSlide::all()->toArray();
+        $setting['contacts_image_url'] = Utils::imageUrl(Setting::getByCode('contacts_image'));
+        $setting['team_image_url'] = Utils::imageUrl(Setting::getByCode('team_image'));
 
         return response()->json($settings);
     }

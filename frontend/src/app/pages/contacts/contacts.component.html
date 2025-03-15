@@ -1,18 +1,13 @@
 <div class="merch">
   <div class="team-content w-100 d-flex">
     <div class="d-flex direction-column a-i-start w-100 team-content-container">
-      <div class="text-title w-80 mb-400">Если ты талантливый, идейный и, главное, хочешь к нам в команду, пиши на почту
-        hello{{'@'}}brainstore.agency с пометкой желаемой должности в теме письма<span> и не забывай
-прикрепить портфолио!</span>
-      </div>
-      <div class="w-50 text-black mb-80">Если ты талантливый, идейный и, главное, хочешь к нам в команду, пиши на почту
-        hello{{'@'}}brainstore.agency
-      </div>
-      <img src="images/contacts.png" alt="picture" class="mb-60 w-94"/>
-      <div class="text-gray w-50 mb-400 mobile-margin">Ксения Хозяева, Серега Федотов, Александ Калугин, Валиахмед
-        Попов, Серега
-        Федотов, Ксения Хозяева, Александ Калугин, Валиахмед Попов, Ксения Хозяева
-      </div>
+      <markdown class="text-title w-80 mb-400" [data]="settings.settings?.contacts_description">
+      </markdown>
+      <markdown class="w-50 text-black mb-80" [data]="settings.settings?.contacts_sub_description">
+      </markdown>
+      <img [src]="settings.settings?.contacts_image_url" alt="picture" class="mb-60 w-94"/>
+      <markdown class="text-gray w-50 mb-400 mobile-margin"
+                [data]="settings.settings?.contacts_image_description"></markdown>
       <app-manifesto class="mb-200 ml5"></app-manifesto>
       <app-works class="mb-400 ml7 mobile-margin"></app-works>
       <app-form class="ml5"></app-form>

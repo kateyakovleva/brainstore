@@ -8,4 +8,10 @@ class Utils
     {
         return get_object_vars($class);
     }
+
+    public static function imageUrl($link)
+    {
+        if (!$link) return '';
+        return config('app.url') . '/storage/' . $link;
+    }
 }
