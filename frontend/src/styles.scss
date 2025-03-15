@@ -208,7 +208,7 @@ markdown, .d-block {
 }
 
 .container {
-  width: 94%;
+  width: 94.2%;
   margin: 0 auto 0;
 }
 
@@ -300,6 +300,7 @@ markdown, .d-block {
   span {
     font-family: 'WilliamTextLCItalic';
     font-style: italic;
+    font-weight: 400;
   }
 }
 
@@ -316,22 +317,18 @@ markdown.text-title, markdown.d-inline {
   position: absolute;
   bottom: 42px;
   left: 75px;
-
-  .circles {
-    width: 80px;
-    height: 20px;
-  }
 }
 
 .merch {
 
   .border {
-    width: 1%;
+    width: 1px;
     border-left: 1px solid var(--black);
-    height: calc(100% - 84px);
     position: fixed;
-    left: 42px;
-    top: 42px
+    margin-left: 21px;
+    height: calc(100% - 50px);
+    top: 20px;
+    bottom: 30px;
   }
 
   .fixed {
@@ -432,7 +429,7 @@ markdown.text-title, markdown.d-inline {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1450px) {
+@media (min-width: 1000px) and (max-width: 1350px) {
   .merch {
     .fixed {
       width: 50%;
@@ -440,23 +437,25 @@ markdown.text-title, markdown.d-inline {
   }
 }
 
-@media (min-width: 1451px) and (max-width: 2000px) {
-  .bottom-container {
-    width: 70%;
-    position: absolute;
-    bottom: 42px;
-    left: 75px;
+@media (min-width: 1351px) and (max-width: 1900px) {
 
-    .circles {
-      width: 60px;
-      height: 15px;
-    }
+  .container {
+    width: 94.2%;
+    margin: 0 auto 0;
+  }
+
+  .bottom-container {
+    width: 900px;
+    bottom: 30px;
+    left: 39.5px;
   }
 
   .text-title {
-    font-size: 55px;
-    line-height: 60px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 42.5px;
     letter-spacing: -1px;
+
 
     &markdown {
       display: inline !important;
@@ -468,14 +467,104 @@ markdown.text-title, markdown.d-inline {
   }
 
   h2 {
-    font-size: 60px;
-    line-height: 55px;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 40px;
     letter-spacing: -1px;
+    margin-top: 31px;
+    margin-bottom: 38px;
   }
 
   .text-black, .text-gray {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.5px;
+    letter-spacing: 0;
+
+  }
+}
+
+@media (min-width: 1901px) and (max-width: 2700px) {
+
+  .container {
+    width: 93.5%;
+    margin: 0 auto 0;
+  }
+
+  .bottom-container {
+    width: 1270px;
+    left: 60px;
+    bottom: 30px;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 55px;
+    letter-spacing: -1px;
+    margin-top: 35.57px;
+    margin-bottom: 60px;
+  }
+
+  .text-title {
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 60px;
+    letter-spacing: -1px;
+
+    span {
+      font-family: 'WilliamTextLCItalic';
+      font-style: italic;
+    }
+  }
+
+  .text-black, .text-gray {
+    font-weight: 400;
     font-size: 25px;
     line-height: 30px;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 2701px) and (max-width: 3000px) {
+  .container {
+    width: 94.2%;
+    margin: 0 auto 0;
+  }
+
+  .bottom-container {
+    width: 1850px;
+    left: 79px;
+    bottom: 60px;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: 90px;
+    line-height: 80px;
+    letter-spacing: -2px;
+    margin-top: 62px;
+    margin-bottom: 75px;
+  }
+
+  .text-title {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 85px;
+    letter-spacing: -2px;
+
+    span {
+      font-family: 'WilliamTextLCItalic';
+      font-style: italic;
+    }
+  }
+
+  .text-black, .text-gray {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 45px;
+    letter-spacing: 0;
+
   }
 }
 

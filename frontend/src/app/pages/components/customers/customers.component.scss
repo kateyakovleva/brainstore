@@ -103,7 +103,7 @@ img {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1450px) {
+@media (min-width: 1000px) and (max-width: 1350px) {
 
   .padding {
     padding: 270px 0 275px;
@@ -151,17 +151,27 @@ img {
   }
 }
 
-@media (min-width: 1451px) and (max-width: 2000px) {
+@media (min-width: 1351px) and (max-width: 1900px) {
 
   .padding {
-    padding: 360px 0 370px;
+    padding: 241.5px 0 274.5px;
+  }
+
+  .border {
+    border-left: 1px solid var(--black);
+    height: 380px;
   }
 
   .company {
-    font-size: 30px;
-    line-height: 40px;
-    padding: 30px 70px;
-    border-radius: 110px;
+    text-align: center;
+    width: 216px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+
+    padding: 19px 40px;
+    border-radius: 80px;
   }
 
   .mb-60 {
@@ -169,15 +179,11 @@ img {
   }
 
   .gap-10 {
-    gap: 10px;
+    gap: 5px;
   }
 
   .ml-40 {
     margin-left: 20px;
-  }
-
-  .h-760 {
-    height: 380px;
   }
 
   .description {
@@ -186,7 +192,59 @@ img {
   }
 
   img {
-    max-width: 270px;
+    max-width: 188.77px;
+    width: 188.77px;
+  }
+
+  .gap-60 {
+    gap: 34px;
+  }
+
+  .text-gray, .text-black {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22.5px;
+
+  }
+}
+
+@media (min-width: 1901px) and (max-width: 2700px) {
+
+  .padding {
+    padding: 330px 0 371px;
+  }
+
+  .border {
+    border-left: 1px solid var(--black);
+    height: 525px;
+  }
+
+  .company {
+    width: 297px;
+    padding: 25px 55px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    text-align: center;;
+  }
+
+  .mb-60 {
+    margin-bottom: 34px;
+  }
+
+  .gap-10 {
+    gap: 10px;
+  }
+
+  .description {
+    width: 50%;
+    margin-left: 40px;
+  }
+
+  img {
+    max-width: 260px;
+    width: 260px;
   }
 
   .gap-60 {
@@ -194,7 +252,57 @@ img {
   }
 
   .text-gray, .text-black {
+    font-weight: 400;
     font-size: 25px;
     line-height: 30px;
+
+  }
+}
+
+@media (min-width: 2701px) and (max-width: 3000px) {
+
+  .padding {
+    padding: 480px 0 549px;
+  }
+
+  .border {
+    border-left: 1px solid var(--black);
+    height: 760px;
+  }
+
+
+  .company {
+    width: 462px;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 54px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 38px 80px;
+    border-radius: 160px;
+  }
+
+  .gap-10 {
+    gap: 10px;
+  }
+
+  .description {
+    width: 50%;
+    margin-left: 40px;
+  }
+
+  img {
+    max-width: 377.54px;
+    width: 377.54px;
+  }
+
+  .gap-60 {
+    gap: 66px;
+  }
+
+  .text-gray, .text-black {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 45px;
   }
 }

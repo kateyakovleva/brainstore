@@ -1,6 +1,5 @@
 .padding {
-  padding-top: 544px;
-  padding-bottom: 80px;
+  padding-top: 570px;
 }
 
 .h-936 {
@@ -9,6 +8,10 @@
 
 .gap-50 {
   gap: 50px;
+}
+
+.gap-40 {
+  gap: 40px;
 }
 
 .gap-30 {
@@ -26,7 +29,7 @@
   font-family: 'WilliamTextLC', serif;
 
   input {
-    width: 80%;
+    width: 70%;
     height: 40px;
     font-size: 24px;
     font-weight: 400;
@@ -46,7 +49,6 @@
 
 .btn {
   font-family: 'WilliamTextLC', serif;
-  margin-top: 100px;
   background-color: var(--black);
   border-radius: 40px;
   color: var(--white);
@@ -134,7 +136,7 @@ textarea {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1300px) {
+@media (min-width: 768px) and (max-width: 1350px) {
 
   .container {
     width: 65%;
@@ -142,29 +144,42 @@ textarea {
 
 }
 
-@media (min-width: 1301px) and (max-width: 1450px) {
+@media (min-width: 1351px) and (max-width: 1900px) {
   .padding {
     padding-top: 285px;
     padding-bottom: 20px;
   }
 
+  .w-50 {
+    width: 425px;
+  }
+
   .text-black, .text-gray {
+    font-weight: 400;
     font-size: 17px;
-    line-height: 22px;
+    line-height: 20px;
     white-space: nowrap;
   }
 
   textarea {
-    height: 130px;
+    height: 100px;
+
+    &::placeholder {
+      padding: 10px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17.5px;
+    }
   }
 
   .min-text {
+    font-weight: 400;
     font-size: 12px;
-    width: 80%;
+    line-height: 17.5px;
   }
 
   .logo {
-    width: 210px;
+    width: 202px;
   }
 
   .dot {
@@ -177,7 +192,7 @@ textarea {
   }
 
   .h-936 {
-    height: 500px;
+    height: 468px;
   }
 
   .w-80 {
@@ -189,25 +204,28 @@ textarea {
   }
 
   .btn {
-    margin-top: 0;
-    border-radius: 15px;
-    font-size: 15px;
+    margin-top: 25px;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 17px;
     line-height: 20px;
+    text-align: center;
     padding: 25px;
   }
 }
 
-@media (min-width: 1451px) and (max-width: 2000px) {
+@media (min-width: 1901px) and (max-width: 2700px) {
   .padding {
     padding-top: 370px;
     padding-bottom: 40px;
   }
 
   .w-50 {
-    width: 35%;
+    width: 580px;
   }
 
   .text-black, .text-gray {
+    font-weight: 400;
     font-size: 25px;
     line-height: 30px;
     white-space: nowrap;
@@ -216,20 +234,29 @@ textarea {
   textarea {
     margin-top: 10px;
     height: 140px;
+
+    &::placeholder {
+      padding: 14px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
 
   .min-text {
+    font-weight: 400;
     font-size: 15px;
+    line-height: 20px;
     width: 50%;
   }
 
   .logo {
-    width: 210px;
+    width: 278px;
   }
 
   .dot {
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
   }
 
   .mt-40 {
@@ -244,16 +271,96 @@ textarea {
     width: 70%;
   }
 
-  .gap-30, .gap-50, .gap-15 {
+  .gap-30, .gap-50 {
     gap: 30px;
   }
 
   .btn {
-    margin-top: 30px;
-    border-radius: 28px;
+    font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    padding: 40px;
+    text-align: center;
+    border-radius: 28px;
+    padding: 35px;
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 2701px) and (max-width: 3000px) {
+  .padding {
+    padding-top: 592px;
+  }
+
+  .w-50 {
+    width: 850px;
+  }
+
+
+  .text-black, .text-gray {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    white-space: nowrap;
+  }
+
+  .form-item {
+    padding-bottom: 10px;
+  }
+
+  textarea {
+    height: 200px;
+
+    &::placeholder {
+      padding: 20px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+
+  .min-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
+    width: 50%;
+  }
+
+  .logo {
+    width: 404px;
+  }
+
+  .dot {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mt-40 {
+    margin-top: 0;
+  }
+
+  .h-936 {
+    height: 936px;
+  }
+
+  .w-80 {
+    width: 70%;
+  }
+
+  .gap-50 {
+    gap: 64px;
+  }
+
+  .gap-15 {
+    gap: 30px;
+  }
+
+  .btn {
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    padding: 50px;
   }
 }
 

@@ -1,8 +1,8 @@
-<div class="w-100 background-white">
+<div class="d-flex w-100 background-white">
   <div class="container d-flex padding j-c-space-between">
     <div class="d-flex direction-column j-c-space-between h-936">
       <markdown class="text-title w-80" [data]="settings.settings?.formMessage"></markdown>
-      <div class="d-flex direction-column gap-30" *ngIf="!isMobile">
+      <div class="d-flex direction-column gap-40" *ngIf="!isMobile">
         <img src="images/logo-black.svg" alt="logo" class="logo"/>
         <div class="text-black d-flex direction-column">
           <span>{{settings.settings?.phone}}</span>
@@ -18,11 +18,10 @@
         </div>
       </div>
     </div>
-    <form (submit)="send($event)" class="d-flex direction-column gap-50 w-50 mt-40">
+    <form (submit)="send($event)" class="d-flex direction-column gap-50 w-50">
       <div *ngIf="success">
         <label class="text-black">Ваше сообщениe отправлено!</label>
       </div>
-
       <div *ngIf="!success" class="form-item direction-row a-i-center">
         <label class="text-black">Имя&nbsp;&nbsp;</label>
         <input name="name" required/>
@@ -35,13 +34,15 @@
         <label class="text-black">E-mail&nbsp;&nbsp;</label>
         <input name="email" required/>
       </div>
-      <div *ngIf="!success" class="form-textarea d-flex direction-column gap-15">
-        <label class="text-black">Сообщение</label>
-        <textarea name="message" required placeholder="Здравствуйте, я только спросить..."></textarea>
-      </div>
-      <div *ngIf="!success" class="d-flex direction-row gap-15 a-i-center">
-        <img src="images/dot.svg" alt="icon" class="dot"/>
-        <div class="min-text">Я соглашаюсь с условиями обработки персональных данных</div>
+      <div class="d-flex direction-column gap-15">
+        <div *ngIf="!success" class="form-textarea d-flex direction-column gap-15">
+          <label class="text-black">Сообщение</label>
+          <textarea name="message" required placeholder="Здравствуйте, я только спросить..."></textarea>
+        </div>
+        <div *ngIf="!success" class="d-flex direction-row gap-15 a-i-start">
+          <img src="images/dot.svg" alt="icon" class="dot"/>
+          <div class="min-text">Я соглашаюсь с условиями обработки персональных данных</div>
+        </div>
       </div>
       <button *ngIf="!success" [disabled]="loading"
               class="btn w-100">{{loading ? 'Отправляется..' : 'Отправить'}}</button>

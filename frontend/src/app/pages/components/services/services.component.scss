@@ -4,15 +4,6 @@
   padding: 40px;
 }
 
-.h2 {
-  margin-top: 62px;
-  margin-bottom: 75px;
-}
-
-.w-25 {
-  width: 25%;
-}
-
 .hover {
   opacity: 0.00;
   transition: 1s all ease-in-out;
@@ -23,29 +14,26 @@
 
 .service-item {
   .text-black {
-    font-size: 20px;
-    line-height: 25px;
 
     & + .text-gray {
+      width: 229px;
       font-size: 14px;
       line-height: 17px;
     }
 
     @media (min-width: 1400px) {
-      font-size: 25px;
-      line-height: 30px;
 
       & + .text-gray {
+        width: 315.2px;
         font-size: 17px;
         line-height: 20px;
       }
     }
 
     @media (min-width: 1921px) {
-      font-size: 34px;
-      line-height: 45px;
 
       & + .text-gray {
+        width: 520px;
         font-size: 23px;
         line-height: 30px;
       }
@@ -99,24 +87,13 @@
 }
 
 @media (min-width: 370px) and (max-width: 999px) {
-  .h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+
 }
 
 @media (min-width: 1000px) and (max-width: 1250px) {
-  .h2 {
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
 }
 
-@media (min-width: 1251px) and (max-width: 1450px) {
-  .h2 {
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
+@media (min-width: 1251px) and (max-width: 1350px) {
 
   .item {
     height: 195px;
@@ -134,26 +111,35 @@
 
 }
 
-@media (min-width: 1451px) and (max-width: 2000px) {
-  .h2 {
-    margin-top: 36px;
-    margin-bottom: 50px;
-  }
+
+@media (min-width: 1351px) and (max-width: 1900px) {
 
   .item {
-    height: 285px;
+    margin-bottom: 30px;
+    height: 207.5px;
+    width: 333px;
     border-left: 1px solid var(--black);
-    padding: 24px 41px;
-  }
-
-  .mb-60 {
-    margin-bottom: 40px;
-  }
-
-  .text-black {
-    width: 85%;
+    padding: 20.5px 91.5px 5px 13.5px;
   }
 
 }
 
+@media (min-width: 1901px) and (max-width: 2700px) {
+  .item {
+    margin-bottom: 40px;
+    height: 285px;
+    width: 456.85px;
+    border-left: 1px solid var(--black);
+    padding: 24px 91.5px 30px 41px;
+  }
+}
 
+@media (min-width: 2701px) and (max-width: 3000px) {
+  .item {
+    margin-bottom: 60px;
+    height: 415px;
+    width: 666px;
+    border-left: 1px solid var(--black);
+    padding: 41px 91.5px 39px 38px;
+  }
+}

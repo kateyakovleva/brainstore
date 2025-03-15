@@ -4,9 +4,42 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1450px) {
+@media (min-width: 1000px) and (max-width: 1350px) {
   .mb-60 {
     margin-bottom: 30px;
   }
+
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
+@media (min-width: 1351px) and (max-width: 1900px) {
+  .mb-60 {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1901px) and (max-width: 2700px) {
+  .mb-60 {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 2701px) and (max-width: 3000px) {
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}

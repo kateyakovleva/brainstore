@@ -2,18 +2,10 @@
   border-left: 1px solid var(--black);
   padding: 96px 0 0 20px;
   //width: 25%;
-  min-width: 22%;
+  min-width: 333px;
   //max-width: 25%;
   position: relative;
 
-  &:after {
-    content: "";
-    position: absolute;
-    right: -21px;
-    top: 0;
-    height: 100%;
-    border-left: 1px solid var(--black);
-  }
 
   .count {
     font-family: 'ABCFavoritCYR';
@@ -60,7 +52,7 @@
 
 }
 
-@media (min-width: 1000px) and (max-width: 1450px) {
+@media (min-width: 1000px) and (max-width: 1350px) {
   .background-white {
 
     .w-80 {
@@ -95,11 +87,16 @@
 
 }
 
-@media (min-width: 1451px) and (max-width: 2000px) {
+@media (min-width: 1351px) and (max-width: 1900px) {
+
   .background-white {
 
     .w-80 {
-      width: 70%;
+      width: 65%;
+    }
+
+    .w-70 {
+      width: 50%;
     }
 
     .container {
@@ -107,15 +104,88 @@
         margin-bottom: 24px;
       }
 
+
       .direction-row {
-        gap: 20px;
 
         .section {
-          padding: 45px 0 15px 40px;
+          height: 190px;
+          width: 400px;
+          padding: 48px 0 12.5px 19px;
 
           .mb-50 {
-            margin-bottom: 20px;
+            margin-bottom: 24.5px;
           }
+
+          .count {
+            font-weight: 900;
+            font-size: 85px;
+            line-height: 42.5px;
+            letter-spacing: -2px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 1901px) and (max-width: 2700px) {
+
+  .background-white {
+
+    .w-80 {
+      width: 65%;
+    }
+
+    .w-70 {
+      width: 50%;
+    }
+
+    .container {
+      .mb-60 {
+        margin-bottom: 30px;
+      }
+
+      .direction-row {
+
+        .section {
+          height: 260px;
+          width: 557px;
+          padding: 45px 0 16px 39px;
+
+          .mb-50 {
+            margin-bottom: 24.5px;
+          }
+
+          .count {
+            font-weight: 900;
+            font-size: 115px;
+            line-height: 120px;
+            letter-spacing: -2.75px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 2701px) and (max-width: 3000px) {
+  .background-white {
+
+    .w-80 {
+      width: 65%;
+    }
+
+    .container {
+
+      .direction-row {
+
+        .section {
+          width: 666px;
+          height: 380px;
+          padding: 96px 0 26px 38px;
+
 
           .count {
             font-size: 115px;
