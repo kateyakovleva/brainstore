@@ -1,7 +1,7 @@
-<div class="d-flex w-100 card-content" *ngIf="project|async; let project">
+<div class="d-flex w-100 card-content direction-column" *ngIf="project|async; let project">
   <div *ngIf="(project?.blocks?.length||0); let length"
-       class="card-content-container d-flex direction-column a-i-start w-100">
-    <div style="margin-bottom: 70px">
+       class="container d-flex direction-column a-i-start w-100">
+    <div class="title-comp">
       <markdown class="text-title d-inline">*{{project?.name}}*</markdown>
       <markdown class="text-title d-inline"> — {{project.short_description}}</markdown>
     </div>
@@ -20,15 +20,15 @@
       ></app-statistics>
 
       <div class="text-gray mb-50">{{description.title}}</div>
-      <markdown [class]="'text-black mb-80 w-70 ' + (i === length - 1 ? 'w-50':'')"
+      <markdown [class]="'text-black mb-80 w-45 ' + (i === length - 1 ? 'w-50':'')"
                 [data]="description.description"></markdown>
 
-      <img *ngIf="description.image" [src]="description.image" alt="picture"
-           [class]="i === 0 ? 'w-94' : 'w-70'"/>
+      <img *ngIf="description.image" [src]="description.image" alt="picture" [class]="i === 0 ? 'w-100' : 'w-70'"/>
 
       <iframe
         *ngIf="description.link"
-        class="mb-60 w-94"
+        class="mb-60"
+        class="mb-60 w-100"
         [width]="size.width"
         [height]="size.height"
         [src]="url(description.link) | safe"
@@ -43,7 +43,7 @@
         <markdown>{{description.image_description}}</markdown>
       </div>
 
-      <div *ngIf="i !== length - 1" [class]="i === 0 ? 'mb-400' : 'mb-300'"></div>
+      <div *ngIf="i !== length - 1" [class]="i === 0 ? 'mb-401' : 'mb-300'"></div>
       <div *ngIf="i === length - 1" class="mb-60"></div>
 
     </div>
@@ -52,7 +52,7 @@
     <div class="d-flex direction-row flex-wrap w-95 gap-10 mb-400">
       <div class="service" *ngFor="let tag of project?.tags">{{tag}}</div>
     </div>
-    <app-works class="mb-400 ml7"></app-works>
-    <app-form class="ml5"></app-form>
   </div>
+  <app-works></app-works>
+  <app-form></app-form>
 </div>
