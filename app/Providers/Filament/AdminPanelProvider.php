@@ -2,8 +2,10 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\ContactsSettings;
 use App\Filament\Pages\GeneralSettings;
 use App\Filament\Pages\HomeSettings;
+use App\Filament\Pages\TeamSettings;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -38,6 +40,8 @@ class AdminPanelProvider extends PanelProvider
                 Pages\Dashboard::class,
                 GeneralSettings::class,
                 HomeSettings::class,
+                ContactsSettings::class,
+                TeamSettings::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([

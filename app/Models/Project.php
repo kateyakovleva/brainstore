@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Utils\Utils;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -76,7 +77,6 @@ class Project extends Model
 
     public function getImageUrlAttribute()
     {
-        if (!$this->image) return '';
-        return config('app.url') . '/storage/' . $this->image;
+        return Utils::imageUrl($this->image);
     }
 }

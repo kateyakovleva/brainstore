@@ -100,6 +100,15 @@ export interface ISettings {
   state_2: string;
   state_3: string;
   state_title: string;
+  contacts_description: string;
+  contacts_sub_description: string;
+  contacts_image_url: string;
+  contacts_image_description: string;
+
+  team_description: string;
+  team_sub_description: string;
+  team_image_url: string;
+  team_image_description: string;
 }
 
 export interface ISettingItem {
