@@ -21,8 +21,8 @@ class SettingsController extends Controller
         $settings['clients'] = Client::all()->toArray();
         $settings['services'] = Service::all()->toArray();
         $settings['home_slides'] = HomeSlide::all()->toArray();
-        $setting['contacts_image_url'] = Utils::imageUrl(Setting::getByCode('contacts_image'));
-        $setting['team_image_url'] = Utils::imageUrl(Setting::getByCode('team_image'));
+        $settings['contacts_image_url'] = Utils::imageUrl(Setting::getByCode('contacts_image'));
+        $settings['team_image_url'] = Utils::imageUrl(Setting::getByCode('team_image'));
 
         return response()->json($settings);
     }
