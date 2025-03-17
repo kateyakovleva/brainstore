@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Utils\Utils;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,7 +18,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $link
  * @property int|null $apply_blur
+ * @property int|null $time
  * @property-read mixed $image_url
+ * @property-read mixed $video_url
  * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide query()
@@ -33,7 +36,8 @@ class HomeSlide extends Model
     ];
 
     protected $appends = [
-        'image_url'
+        'image_url',
+        'video_url',
     ];
 
     protected $casts = [
@@ -42,7 +46,11 @@ class HomeSlide extends Model
 
     public function getImageUrlAttribute()
     {
-        if (!$this->image) return '';
-        return config('app.url') . '/storage/' . $this->image;
+        return Utils::resourceUrl($this->image);
+    }
+
+    public function getVideoUrlAttribute()
+    {
+        return Utils::resourceUrl($this->video);
     }
 }

@@ -1,13 +1,15 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { isMobile, videoUrl } from '../../../utils/utils';
-import { SettingsStore } from '../../../services/SettingsStore';
-import { Carousel, CarouselPageEvent } from 'primeng/carousel';
-import { PrimeTemplate } from 'primeng/api';
-import { NgIf } from '@angular/common';
-import { MarkdownComponent } from 'ngx-markdown';
-import { SafePipe } from '../../../pipes/SafePipe';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {isMobile, videoUrl} from '../../../utils/utils';
+import {SettingsStore} from '../../../services/SettingsStore';
+import {Carousel, CarouselPageEvent} from 'primeng/carousel';
+import {PrimeTemplate} from 'primeng/api';
+import {AsyncPipe, NgIf} from '@angular/common';
+import {MarkdownComponent} from 'ngx-markdown';
+import {SafePipe} from '../../../pipes/SafePipe';
+import {BehaviorSubject} from 'rxjs';
+import {IHomeSlide} from '../../../types/types';
 
-@Component( {
+@Component({
   selector: 'app-main-screen',
   standalone: true,
   templateUrl: './main-screen.component.html',
@@ -16,21 +18,30 @@ import { SafePipe } from '../../../pipes/SafePipe';
     PrimeTemplate,
     NgIf,
     MarkdownComponent,
-    SafePipe
+    SafePipe,
+    AsyncPipe
   ],
   styleUrl: './main-screen.component.scss',
   encapsulation: ViewEncapsulation.None,
-} )
+})
 export class MainScreenComponent {
   constructor(
     public settings: SettingsStore
   ) {
-    if ( this.timer ) clearInterval( this.timer );
-    this.timer = setInterval( () => {
-      if ( this.hovered ) return;
-      this.page = this.getNextPage()
-    }, 2000 )
+    this.settings.$settings.subscribe(s => {
+      this.items = s?.home_slides || [];
+      this.page.subscribe(p => {
+        if (this.timer) clearTimeout(this.timer);
+        this.timer = setTimeout(() => {
+          if (!this.hovered) {
+            this.page.next(this.getNextPage());
+          }
+        }, (this.items[p]?.time || 2) * 1000);
+      });
+    })
   }
+
+  items: IHomeSlide[] = [];
 
   timer: any = null;
 
@@ -38,23 +49,29 @@ export class MainScreenComponent {
 
   isMobile = isMobile;
 
-  url( url: string, play = false ) {
-    return videoUrl( url, false, play );
+  url(url: string, play = false) {
+    return videoUrl(url, false, play);
   }
 
-  page: number = 0;
+  page = new BehaviorSubject<number>(0);
 
   getNextPage() {
-    let page = this.page + 1;
+    let page = this.page.value + 1;
     let lastPage = this.settings.settings?.home_slides?.length || 0;
-    if ( page > lastPage ) {
+    if (page > lastPage) {
       page = 0;
     }
 
     return page;
   }
 
-  change( event: CarouselPageEvent ) {
-    this.page = event.page || 0;
+  change(event: CarouselPageEvent) {
+    this.page.next(event.page || 0);
+  }
+
+  type(video: string) {
+    let file = video.split('.');
+
+    return 'video/' + file[file.length - 1];
   }
 }

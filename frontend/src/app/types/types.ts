@@ -138,11 +138,11 @@ export interface IServiceType {
 
 export interface IHomeSlide {
   id: number;
-  image?: string;
-  video?: string;
   link?: string;
+  time: number;
   description?: string;
   show_logo: boolean;
   apply_blur: boolean;
   image_url?: string;
+  video_url?: string;
 }

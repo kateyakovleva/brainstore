@@ -27,15 +27,21 @@ class HomeSlideResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Изображение')
                     ->image(),
-                Forms\Components\TextInput::make('video')
-                    ->label('vimeo или rutube')
-                    ->maxLength(255),
+                Forms\Components\FileUpload::make('video')
+                    ->acceptedFileTypes(['video/*'])
+                    ->label('Видео'),
                 Forms\Components\MarkdownEditor::make('description')
                     ->label('Описание')
                     ->maxLength(65535)
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('link')
                     ->label('Ссылка на описании')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('time')
+                    ->numeric()
+                    ->label('Время')
+                    ->hint('Время до след. слайда в секундах')
+                    ->required()
                     ->maxLength(255),
                 Forms\Components\Toggle::make('apply_blur')
                     ->label('Применять блюр'),

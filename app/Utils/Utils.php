@@ -9,7 +9,7 @@ class Utils
         return get_object_vars($class);
     }
 
-    public static function imageUrl($link)
+    public static function resourceUrl($link)
     {
         if (!$link) return '';
         return config('app.url') . '/storage/' . $link;
