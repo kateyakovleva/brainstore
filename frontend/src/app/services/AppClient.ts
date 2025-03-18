@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient as AngularHttpClient} from "@angular/common/http";
 import {BehaviorSubject, map, Observable} from "rxjs";
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -85,8 +86,7 @@ export class AppClient {
 export const apiUrl = (url: string) => {
   if (!url.startsWith('http')) {
     if (!url.startsWith('/')) url = '/' + url;
-    url = `//brainstore.ru/api${url}`;
-    // url = `https://grtgegdf.ru/api${ url }`;
+    url = `${environment.apiUrl}${url}`;
   }
 
   return url;

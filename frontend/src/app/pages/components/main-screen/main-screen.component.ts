@@ -31,11 +31,17 @@ export class MainScreenComponent {
     this.settings.$settings.subscribe(s => {
       this.items = s?.home_slides || [];
       this.page.subscribe(p => {
+        const el = document.getElementById('home_slide_' + p) as HTMLVideoElement;
+        if (el) {
+          console.log('eeeee', el)
+          el.currentTime = 0;
+          el.play().then();
+        }
         if (this.timer) clearTimeout(this.timer);
         this.timer = setTimeout(() => {
-          if (!this.hovered) {
-            this.page.next(this.getNextPage());
-          }
+          // if (!this.hovered) {
+          this.page.next(this.getNextPage());
+          // }
         }, (this.items[p]?.time || 2) * 1000);
       });
     })
@@ -69,9 +75,8 @@ export class MainScreenComponent {
     this.page.next(event.page || 0);
   }
 
-  type(video: string) {
-    let file = video.split('.');
-
-    return 'video/' + file[file.length - 1];
+  type(val: any) {
+    console.log('=====', val);
+    return '';
   }
 }

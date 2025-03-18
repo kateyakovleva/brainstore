@@ -8,7 +8,7 @@
   (onPage)="change($event)"
   [page]="(page|async) || 0"
 >
-  <ng-template let-item let-index pTemplate="item">
+  <ng-template let-item pTemplate="item">
     <div
       [class]="'home-slide '"
       (mouseover)="hovered = true"
@@ -18,8 +18,9 @@
         class="video-background w-100 h-100"
         [style.background-image]="'url('+item.image_url+')'"
       >
-        <video *ngIf="item.video_url" [autoplay]="(page|async) === index ? 'true' : 'false'" muted loop
-               oncanplay="this.play()" onloadedmetadata="this.muted = true">
+        <video
+          [id]="'home_slide_'+item.index"
+          *ngIf="item.video_url" muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true">
           <source [src]="item.video_url" type="video/mp4">
         </video>
         <!--        <iframe-->
