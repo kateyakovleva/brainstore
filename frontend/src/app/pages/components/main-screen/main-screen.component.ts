@@ -28,23 +28,29 @@ export class MainScreenComponent {
   constructor(
     public settings: SettingsStore
   ) {
-    this.settings.$settings.subscribe(s => {
-      this.items = s?.home_slides || [];
-      this.page.subscribe(p => {
-        const el = document.getElementById('home_slide_' + p) as HTMLVideoElement;
-        if (el) {
-          console.log('eeeee', el)
-          el.currentTime = 0;
-          el.play().then();
-        }
-        if (this.timer) clearTimeout(this.timer);
-        this.timer = setTimeout(() => {
-          // if (!this.hovered) {
-          this.page.next(this.getNextPage());
-          // }
-        }, (this.items[p]?.time || 2) * 1000);
+    if (!this.settings.settings?.home_slides.length) {
+      this.settings.$settings.subscribe(s => {
+        this.items = s?.home_slides || [];
+        this.page.subscribe(p => this.init(p));
       });
-    })
+    } else {
+      this.items = this.settings.settings?.home_slides;
+      this.page.subscribe(p => this.init(p));
+    }
+  }
+
+  init(p: number) {
+    const el = document.getElementById('home_slide_' + p) as HTMLVideoElement;
+    if (el) {
+      el.currentTime = 0;
+      el.play().then();
+    }
+    if (this.timer) clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      // if (!this.hovered) {
+      this.page.next(this.getNextPage());
+      // }
+    }, (this.items[p]?.time || 2) * 1000);
   }
 
   items: IHomeSlide[] = [];
