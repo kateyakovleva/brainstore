@@ -95,10 +95,6 @@
       width: 65%;
     }
 
-    .w-70 {
-      width: 50%;
-    }
-
     .container {
       .mb-60 {
         margin-bottom: 24px;
@@ -109,8 +105,8 @@
 
         .section {
           height: 190px;
-          width: 400px;
-          padding: 48px 0 12.5px 19px;
+          min-width: 400px;
+          padding: 48px 62px 12.5px 19px;
 
           .mb-50 {
             margin-bottom: 24.5px;
@@ -137,9 +133,6 @@
       width: 65%;
     }
 
-    .w-70 {
-      width: 50%;
-    }
 
     .container {
       .mb-60 {
@@ -150,8 +143,8 @@
 
         .section {
           height: 260px;
-          width: 557px;
-          padding: 45px 0 16px 39px;
+          min-width: 500px;
+          padding: 45px 50px 16px 39px;
 
           .mb-50 {
             margin-bottom: 24.5px;
@@ -182,9 +175,9 @@
       .direction-row {
 
         .section {
-          width: 666px;
+          min-width: 666px;
           height: 380px;
-          padding: 96px 0 26px 38px;
+          padding: 96px 124px 26px 38px;
 
 
           .count {
