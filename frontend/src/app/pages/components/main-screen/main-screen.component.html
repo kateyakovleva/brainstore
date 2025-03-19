@@ -15,8 +15,8 @@
       (mouseout)="hovered = false"
     >
       <div
-        class="video-background w-100 h-100"
-        [style.background-image]="'url('+item.image_url+')'"
+        [class]="'video-background w-100 h-100 ' + (item.apply_blur ? 'blur' : '')"
+        [style.background-image]="item.image_url ? 'url('+item.image_url+')' : ''"
       >
         <video
           [id]="'home_slide_'+item.index"
@@ -33,7 +33,10 @@
         <!--          allow="autoplay; clipboard-write; encrypted-media;"-->
         <!--        ></iframe>-->
       </div>
-      <div [class]="'content w-100 d-flex a-i-center j-c-center ' + (item.apply_blur ? 'blur' : '')">
+      <div [class]="'content w-100 d-flex a-i-center j-c-center '">
+
+        <!-- <div *ngIf="item.apply_blur" class="blur"></div> -->
+
         <div class="w-100 h-100 d-flex a-i-center j-c-center">
           <!--          <img *ngIf="item.show_logo" src="images/biglogo.svg" alt="logo" class="logo"/>-->
           <img src="images/biglogo.svg" alt="logo" class="logo"/>
