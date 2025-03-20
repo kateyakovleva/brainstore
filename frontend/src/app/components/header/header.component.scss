@@ -41,10 +41,25 @@
 
 @media (max-width: 999px) {
   .header {
+    padding: 29px 20px 0 18px;
 
     .header-container {
-      //margin: 30px 20px;
-      //width: auto;
+      justify-content: space-between;
+      align-items: start;
+      margin-top: 0;
+      margin-right: 0;
+      margin-left: 0;
+
+      &:before {
+        content: "";
+        display: none;
+        height: 0;
+        position: fixed;
+        border-left: 0;
+        top: 0;
+        left: 0;
+      }
+
 
       .logo {
         max-width: 228px;

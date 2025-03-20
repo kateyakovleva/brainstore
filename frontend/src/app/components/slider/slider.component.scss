@@ -48,7 +48,13 @@
 }
 
 @media (max-width: 999px) {
+  .mobik {
+    margin-left: 8px;
+  }
+  
   .projects-slider {
+    width: 102% !important;
+    margin-left: -8px;
 
     .w-70 {
       width: 100%;

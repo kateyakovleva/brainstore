@@ -66,6 +66,7 @@ body {
 
 markdown {
   p {
+    color: var(--text-gray);
     margin-block-end: 0 !important;
   }
 
@@ -340,37 +341,44 @@ markdown.text-title, markdown.d-inline {
 }
 
 @media (max-width: 999px) {
+
+  .container {
+    width: 89.4%;
+    margin: 0 18px 0 20px;
+  }
+
   .bottom-container {
     position: absolute;
     bottom: 42px;
     left: 20px;
-
-    .circles {
-      width: 40px;
-      height: 10px;
-    }
   }
 
   .text-title {
+    font-weight: 400;
     font-size: 25px;
     line-height: 30px;
     letter-spacing: 0;
   }
 
   h2 {
+    font-weight: 900;
     font-size: 40px;
-    line-height: 20px;
+    line-height: 20.15px;
     letter-spacing: -0.5px;
   }
 
   .text-black, .text-black * {
-    font-size: 20px;
-    line-height: 25px;
+    font-weight: 400;
+    font-size: 19.5px;
+    line-height: 23px;
+    letter-spacing: 0;
   }
 
   .text-gray, .text-gray * {
+    font-weight: 400;
     font-size: 12px;
     line-height: 15px;
+    letter-spacing: 0;
   }
 
   .merch {
@@ -382,7 +390,7 @@ markdown.text-title, markdown.d-inline {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1450px) {
+@media (min-width: 1000px) and (max-width: 1350px) {
   .bottom-container {
     width: 70%;
     position: absolute;
@@ -428,13 +436,6 @@ markdown.text-title, markdown.d-inline {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1350px) {
-  .merch {
-    .fixed {
-      width: 50%;
-    }
-  }
-}
 
 @media (min-width: 1351px) and (max-width: 1900px) {
 

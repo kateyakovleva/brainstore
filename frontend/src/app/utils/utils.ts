@@ -1,6 +1,6 @@
 import {IMenuItem} from '../types/types';
 
-export const isMobile = window.innerWidth < 1300;
+export const isMobile = window.innerWidth < 1000;
 
 export const videoUrl = (url: string, controls = true, play = false) => {
   if (url.indexOf('rutube.ru') !== -1) {

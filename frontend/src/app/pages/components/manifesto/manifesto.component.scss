@@ -8,9 +8,13 @@
 }
 
 @media (max-width: 999px) {
+  .black {
+    color: var(--black);
+  }
+
   .padding {
-    padding-top: 160px;
-    padding-bottom: 80px;
+    padding-top: 166px;
+    padding-bottom: 82px;
   }
 
   .w-95 {

@@ -71,7 +71,7 @@ textarea {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 999px) {
   .padding {
     flex-direction: column;
     padding-top: 170px;
@@ -83,25 +83,35 @@ textarea {
   }
 
   .h-936 {
-    height: 0;
+    height: 136px;
   }
 
   .w-50 {
     width: 100%;
-
   }
 
-  .text-black, .text-gray {
+  .text-black {
+    font-size: 15px;
+    line-height: 45px;
+  }
+
+  .text-gray, .m-b {
     font-size: 15px;
     line-height: 25px;
   }
 
   textarea {
     height: 100px;
+    padding: 12px 14px;
+    margin-bottom: 15px;
 
     &::placeholder {
       font-size: 12px;
     }
+  }
+
+  .gap-15 {
+    gap: 0;
   }
 
   .min-text {
@@ -114,6 +124,7 @@ textarea {
   }
 
   .dot {
+    margin-right: 15px;
     width: 15px;
     height: 15px;
   }
@@ -133,16 +144,10 @@ textarea {
     font-size: 15px;
     line-height: 20px;
     padding: 25px;
+    margin-bottom: 160px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1350px) {
-
-  .container {
-    width: 65%;
-  }
-
-}
 
 @media (min-width: 1351px) and (max-width: 1900px) {
   .padding {
