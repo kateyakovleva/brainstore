@@ -7,6 +7,10 @@
     padding-right: 30px;
   }
 
+  .textttt {
+    color: var(--text-gray);
+  }
+
   .mb-70 {
     margin-bottom: 70px;
   }
@@ -47,61 +51,62 @@
 @media (max-width: 999px) {
   .card-content {
 
-    .card-content-container {
-      padding: 200px 0 0 20px;
+    .pic {
+      width: 100vw;
+    }
 
-      .mb-70 {
-        margin-bottom: 20px;
-      }
+    .height-200 {
+      height: 200px;
+    }
 
-      .gap-10 {
-        gap: 5px;
-      }
+    .title-comp {
+      padding: 212px 0 25px 0;
+    }
 
-      .w-50 {
-        width: 90%;
-      }
+    .mb-70 {
+      margin-bottom: 20px;
+    }
 
-      .mb-50 {
-        margin-bottom: 10px;
-      }
+    .gap-10 {
+      gap: 5px;
+    }
 
-      .mb-80 {
-        margin-bottom: 20px;
-      }
+    .w-50 {
+      width: 90%;
+    }
 
-      .w-70 {
-        width: 90%;
-      }
+    .mb-50 {
+      margin-bottom: 10px;
+    }
 
-      .w-94 {
-        width: 100%;
-        margin-left: -20px;
-      }
+    .mb-80 {
+      margin-bottom: 20px;
+    }
 
-      .ml5 {
-        margin-left: -5%;
-      }
+    .w-94, .w-45, .w-70 {
+      width: 100%;
+    }
 
-      .ml7 {
-        margin-bottom: 0 !important;
-        margin-left: -7%;
-      }
+    .service {
+      font-size: 19px;
+      line-height: 23px;
+      padding: 15px 30px;
+      border-radius: 68px;
+    }
 
-      .service {
-        font-size: 19px;
-        line-height: 23px;
-        padding: 15px 30px;
-        border-radius: 68px;
-      }
+    .text-black {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0;
+    }
 
-      .mb-400 {
-        margin-bottom: 150px;
-      }
+    .mb-400 {
+      margin-bottom: 150px;
+    }
 
-      .mb-300 {
-        margin-bottom: 100px;
-      }
+    .mb-300 {
+      margin-bottom: 100px;
     }
   }
 }

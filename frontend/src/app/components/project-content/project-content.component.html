@@ -11,7 +11,8 @@
     </div>
 
 
-    <div *ngFor="let description of project?.blocks; let i = index" style="width: 100%">
+    <div *ngFor="let description of project?.blocks; let i = index"
+         style="width: 100%">
       <app-statistics
         *ngIf="i === length - 1 && project.advs && project.advs.length"
         [items]="project.advs"
@@ -23,12 +24,14 @@
       <markdown [class]="'text-black mb-80 w-45 ' + (i === length - 1 ? 'w-50':'')"
                 [data]="description.description"></markdown>
 
-      <img *ngIf="description.image" [src]="description.image" alt="picture" [class]="i === 0 ? 'w-100' : 'w-70'"/>
+      <img *ngIf="description.image" [src]="description.image" alt="picture"
+           [class]="'mob-full ' +(i === 0 ? 'w-100' : 'w-70')"/>
 
       <iframe
         *ngIf="description.link"
         class="mb-60"
         class="mb-60 w-100"
+        class="height-200"
         [width]="size.width"
         [height]="size.height"
         [src]="url(description.link) | safe"
@@ -40,7 +43,7 @@
       ></iframe>
 
       <div *ngIf="description.image_description">
-        <markdown>{{description.image_description}}</markdown>
+        <markdown class="textttt">{{description.image_description}}</markdown>
       </div>
 
       <div *ngIf="i !== length - 1" [class]="i === 0 ? 'mb-401' : 'mb-300'"></div>
