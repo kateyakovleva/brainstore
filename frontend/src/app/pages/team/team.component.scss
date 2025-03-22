@@ -18,45 +18,46 @@
 @media (max-width: 999px) {
   .team-content {
 
-    .team-content-container {
-      padding: 150px 0 0 20px;
+    .padd {
+      width: 90%;
+      padding: 152px 0 217px;
+    }
 
-      .mb-60 {
-        margin-bottom: 30px;
-      }
+    .mb-60 {
+      margin-bottom: 30px;
+    }
 
-      .mb-80 {
-        margin-bottom: 20px;
-      }
+    .texx {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0;
+    }
 
-      .mb-400 {
-        margin-bottom: 200px;
-      }
+    .mob-full {
+      width: 100vw !important;
+      max-width: 100vw;
+      margin-left: calc(50% - 50vw);
+    }
 
-      .w-50 {
-        width: 80%;
-      }
+    .mb-80 {
+      margin-bottom: 20px;
+    }
 
-      .mobile-margin {
-        margin-bottom: 0;
-      }
+    .mb-400 {
+      margin-bottom: 0;
+    }
 
-      .mb-200 {
-        margin-bottom: 0;
-      }
+    .w-50 {
+      width: 80%;
+    }
 
-      .w-94 {
-        width: 100%;
-        margin-left: -20px;
-      }
+    .mobile-margin {
+      margin-bottom: 0;
+    }
 
-      .ml5 {
-        margin-left: -5%;
-      }
-
-      .ml7 {
-        margin-left: -7%;
-      }
+    .mb-200 {
+      margin-bottom: 0;
     }
   }
 }

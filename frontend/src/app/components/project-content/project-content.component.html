@@ -6,7 +6,7 @@
       <markdown class="text-title d-inline"> — {{project.short_description}}</markdown>
     </div>
 
-    <div class="d-flex direction-row flex-wrap w-95 gap-10 mb-400">
+    <div class="d-flex direction-row w-95 gap-10 mb-400 swipe-horizontal">
       <div class="service" *ngFor="let tag of project?.tags">{{tag}}</div>
     </div>
 
@@ -29,9 +29,7 @@
 
       <iframe
         *ngIf="description.link"
-        class="mb-60"
-        class="mb-60 w-100"
-        class="height-200"
+        class="mob-full w-100"
         [width]="size.width"
         [height]="size.height"
         [src]="url(description.link) | safe"
@@ -47,12 +45,12 @@
       </div>
 
       <div *ngIf="i !== length - 1" [class]="i === 0 ? 'mb-401' : 'mb-300'"></div>
-      <div *ngIf="i === length - 1" class="mb-60"></div>
+      <div *ngIf="i === length - 1" style="margin-bottom: 20px"></div>
 
     </div>
 
 
-    <div class="d-flex direction-row flex-wrap w-95 gap-10 mb-400">
+    <div class="d-flex direction-row w-95 gap-10 mb-400 swipe-horizontal">
       <div class="service" *ngFor="let tag of project?.tags">{{tag}}</div>
     </div>
   </div>
