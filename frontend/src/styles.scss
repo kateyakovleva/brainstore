@@ -19,18 +19,6 @@
 }
 
 
-//body, html, .video-background {
-//  border-radius: 50px;
-//  overflow: auto;
-//}
-//
-//@media (max-width: 999px) {
-//  body, html, .video-background {
-//    border-radius: 0;
-//  }
-//}
-
-
 @font-face {
   font-family: 'ABCFavoritCYR';
   src: url('/fonts/ABCFavoritCYR-Ultra.otf') format('opentype'),
@@ -98,9 +86,10 @@ h2 {
   margin-block-end: 0;
 }
 
-a {
-  text-decoration: transparent;
+
+a, a:hover, a:active, a:visited {
   color: var(--black);
+  text-decoration: none !important;
 }
 
 button {
@@ -133,6 +122,10 @@ input {
 
 textarea {
   background-color: transparent;
+
+  &::placeholder {
+    font-family: 'WilliamTextLC', serif;
+  }
 }
 
 ul {
@@ -153,6 +146,11 @@ img {
 
 markdown, .d-block {
   display: block;
+}
+
+
+.p-carousel .p-carousel-content {
+  touch-action: none !important;
 }
 
 .d-inline, markdown .d-inline {

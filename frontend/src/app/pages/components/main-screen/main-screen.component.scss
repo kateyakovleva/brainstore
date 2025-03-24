@@ -87,7 +87,12 @@
 
   .home-slide {
 
+    .video-background {
+      height: 86vh;
+    }
+
     .content {
+      height: 86vh;
 
       .logo {
         width: 285px;
@@ -99,14 +104,16 @@
 }
 
 @media (max-width: 999px) {
+
   .p-carousel-content-container {
     position: relative;
+    touch-action: none;
 
     .p-carousel-indicator-list {
       position: absolute;
       gap: 7px;
-      bottom: 145px;
-      left: 21px;
+      bottom: 175px;
+      left: 20px;
 
       li {
         &:before {
