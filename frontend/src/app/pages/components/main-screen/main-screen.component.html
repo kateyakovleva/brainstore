@@ -7,6 +7,7 @@
   [showNavigators]="false"
   (onPage)="change($event)"
   [page]="(page|async) || 0"
+  orientation="horizontal"
 >
   <ng-template let-item pTemplate="item">
     <div

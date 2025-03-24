@@ -28,6 +28,23 @@ export class MainScreenComponent {
   constructor(
     public settings: SettingsStore
   ) {
+    Carousel.prototype.onTouchMove = (e) => {
+      e = e as TouchEvent;
+      if (this.y) {
+        const y = this.y - e.changedTouches[0].clientY;
+        if (document.scrollingElement)
+          document.scrollingElement.scrollTop = document.scrollingElement.scrollTop + y;
+        this.y = e.changedTouches[0].clientY;
+      }
+    };
+    Carousel.prototype.onTouchStart = (e) => {
+      this.y = e.changedTouches[0].clientY;
+      // console.log('====', e)
+    };
+    Carousel.prototype.onTouchEnd = (e) => {
+      this.y = 0;
+      // console.log('====', e)
+    };
     if (!this.settings.settings?.home_slides.length) {
       this.settings.$settings.subscribe(s => {
         this.items = s?.home_slides || [];
@@ -38,6 +55,8 @@ export class MainScreenComponent {
       this.page.subscribe(p => this.init(p));
     }
   }
+
+  y = 0;
 
   init(p: number) {
     const el = document.getElementById('home_slide_' + p) as HTMLVideoElement;
@@ -76,7 +95,7 @@ export class MainScreenComponent {
 
     return page;
   }
-
+  
   change(event: CarouselPageEvent) {
     this.page.next(event.page || 0);
   }
