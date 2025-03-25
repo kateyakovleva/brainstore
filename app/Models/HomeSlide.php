@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string|null $image
@@ -19,6 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $link
  * @property int|null $apply_blur
  * @property int|null $time
+ * @property string|null $image_mob
+ * @property string|null $video_mob
  * @property-read mixed $image_url
  * @property-read mixed $video_url
  * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newModelQuery()
@@ -38,6 +40,8 @@ class HomeSlide extends Model
     protected $appends = [
         'image_url',
         'video_url',
+        'image_mob_url',
+        'video_mob_url',
     ];
 
     protected $casts = [
@@ -52,5 +56,15 @@ class HomeSlide extends Model
     public function getVideoUrlAttribute()
     {
         return Utils::resourceUrl($this->video);
+    }
+
+    public function getImageMobUrlAttribute()
+    {
+        return Utils::resourceUrl($this->image_mob);
+    }
+
+    public function getVideoMobUrlAttribute()
+    {
+        return Utils::resourceUrl($this->video_mob);
     }
 }

@@ -6,6 +6,7 @@ use App\Filament\Resources\HomeSlideResource\Pages;
 use App\Filament\Resources\HomeSlideResource\RelationManagers;
 use App\Models\HomeSlide;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -24,12 +25,30 @@ class HomeSlideResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('image')
-                    ->label('Изображение')
-                    ->image(),
-                Forms\Components\FileUpload::make('video')
-                    ->acceptedFileTypes(['video/*'])
-                    ->label('Видео'),
+                Section::make()
+                    ->schema([
+                        Forms\Components\FileUpload::make('image')
+                            ->label('Изображение')
+                            ->image()
+                            ->columnSpan(1),
+                        Forms\Components\FileUpload::make('video')
+                            ->acceptedFileTypes(['video/*'])
+                            ->label('Видео')
+                            ->columnSpan(1),
+                    ])->columns(2),
+
+                Section::make()
+                    ->schema([
+                        Forms\Components\FileUpload::make('image_mob')
+                            ->label('Изображение для моб.')
+                            ->image()
+                            ->columnSpan(1),
+                        Forms\Components\FileUpload::make('video_mob')
+                            ->acceptedFileTypes(['video/*'])
+                            ->label('Видео для моб.')
+                            ->columnSpan(1),
+                    ])->columns(2),
+
                 Forms\Components\MarkdownEditor::make('description')
                     ->label('Описание')
                     ->maxLength(65535)
