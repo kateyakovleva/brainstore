@@ -145,4 +145,6 @@ export interface IHomeSlide {
   apply_blur: boolean;
   image_url?: string;
   video_url?: string;
+  image_mob_url?: string;
+  video_mob_url?: string;
 }
