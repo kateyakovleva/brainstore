@@ -24,10 +24,11 @@ export class SliderComponent implements OnInit {
   ngOnInit() {
     if (!this.inited) {
       setTimeout(() => {
-        const width = typeof window !== "undefined" ? window.innerWidth : 1300;
+        const width = typeof window !== "undefined" ? window.outerWidth : 1300;
         const contWidth = (typeof document !== "undefined" ? document.querySelector('.container')?.clientWidth : 1300) || 1300;
         this.width = `${(width - contWidth) / 2 + contWidth}px`;
       }, 100);
+
       this.inited = true;
     }
   }

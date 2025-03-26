@@ -17,6 +17,7 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    touch-action: pan-y;
 
     &.blur {
       filter: blur(20px);
@@ -85,6 +86,7 @@
 @media (max-width: 999px) {
 
   .home-slide {
+    height: 86vh;
 
     .video-background {
       height: 86vh;
@@ -107,6 +109,7 @@
   .p-carousel-content-container {
     position: relative;
     touch-action: none;
+    height: 86vh;
 
     .p-carousel-indicator-list {
       position: absolute;

@@ -31,6 +31,7 @@ export class MobileHeaderComponent {
 
   toSection(item: IMenuItem, event?: any) {
     toSection(item, event);
+    this.close.emit();
   }
 
   getLink(item: IMenuItem) {

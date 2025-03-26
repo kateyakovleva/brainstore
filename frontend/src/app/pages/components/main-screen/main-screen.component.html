@@ -21,7 +21,15 @@
       >
         <video
           [id]="'home_slide_'+item.index"
-          *ngIf="item.video_url" muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true">
+          *ngIf="item.video_url"
+          muted
+          loop
+          oncanplay="this.play()"
+          onloadedmetadata="this.muted = true"
+          playsinline
+          webkit-playsinline="true"
+          [attr.playsinline]="true"
+        >
           <source [src]="item.video_url" type="video/mp4">
         </video>
       </div>
