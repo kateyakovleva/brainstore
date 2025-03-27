@@ -1,9 +1,47 @@
+.slider-containerr {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapperr {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slidee {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+
+    &.active {
+      background-color: white;
+    }
+  }
+}
+
 .home-slide {
 
   video {
-    //position: absolute;
-    //top: 0;
-    //left: 0;
     width: 100%;
   }
 
@@ -51,37 +89,6 @@
   }
 }
 
-.p-carousel-content-container {
-  position: relative;
-
-  .p-carousel-indicator-list {
-    position: absolute;
-    gap: 7px;
-    bottom: 174px;
-    left: 75px;
-
-    li {
-      &:before {
-        display: none;
-      }
-
-      .p-carousel-indicator-button {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        border: 2px solid #FFF;
-        background: #FFF;
-      }
-
-      &.p-carousel-indicator-active {
-        .p-carousel-indicator-button {
-          background: transparent;
-        }
-      }
-    }
-  }
-
-}
 
 @media (max-width: 999px) {
 
@@ -104,43 +111,6 @@
 
 }
 
-@media (max-width: 999px) {
-
-  .p-carousel-content-container {
-    position: relative;
-    touch-action: none;
-    height: 86vh;
-
-    .p-carousel-indicator-list {
-      position: absolute;
-      gap: 7px;
-      bottom: 175px;
-      left: 20px;
-
-      li {
-        &:before {
-          display: none;
-        }
-
-        .p-carousel-indicator-button {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          border: 2px solid #FFF;
-          background: #FFF;
-        }
-
-        &.p-carousel-indicator-active {
-          .p-carousel-indicator-button {
-            background: transparent;
-          }
-        }
-      }
-    }
-
-  }
-
-}
 
 //PC
 
@@ -182,105 +152,4 @@
   }
 }
 
-@media (min-width: 1351px) and (max-width: 1900px) {
-  .p-carousel-content-container {
-    position: relative;
 
-    .p-carousel-indicator-list {
-      position: absolute;
-      gap: 7px;
-      bottom: 130px;
-      left: 41px;
-
-      li {
-        &:before {
-          display: none;
-        }
-
-        .p-carousel-indicator-button {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          border: 2px solid #FFF;
-          background: #FFF;
-        }
-
-        &.p-carousel-indicator-active {
-          .p-carousel-indicator-button {
-            background: transparent;
-          }
-        }
-      }
-    }
-
-  }
-
-}
-
-@media (min-width: 1901px) and (max-width: 2700px) {
-  .p-carousel-content-container {
-    position: relative;
-
-    .p-carousel-indicator-list {
-      position: absolute;
-      gap: 7px;
-      bottom: 170px;
-      left: 62px;
-
-      li {
-        &:before {
-          display: none;
-        }
-
-        .p-carousel-indicator-button {
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          border: 2px solid #FFF;
-          background: #FFF;
-        }
-
-        &.p-carousel-indicator-active {
-          .p-carousel-indicator-button {
-            background: transparent;
-          }
-        }
-      }
-    }
-
-  }
-}
-
-@media (min-width: 2701px) and (max-width: 3000px) {
-  .p-carousel-content-container {
-    position: relative;
-
-    .p-carousel-indicator-list {
-      position: absolute;
-      gap: 10px;
-      bottom: 264px;
-      left: 82px;
-
-      li {
-        &:before {
-          display: none;
-        }
-
-        .p-carousel-indicator-button {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          border: 2px solid #FFF;
-          background: #FFF;
-        }
-
-        &.p-carousel-indicator-active {
-          .p-carousel-indicator-button {
-            background: transparent;
-          }
-        }
-      }
-    }
-
-  }
-}

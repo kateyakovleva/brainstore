@@ -1,51 +1,48 @@
-<p-carousel
-  [value]="items"
-  [numVisible]="1"
-  [numScroll]="1"
-  [circular]="false"
-  [showIndicators]="true"
-  [showNavigators]="false"
-  (onPage)="change($event)"
-  [page]="(page|async) || 0"
-  orientation="horizontal"
->
-  <ng-template let-item pTemplate="item">
-    <div
-      [class]="'home-slide '"
-      (mouseover)="hovered = true"
-      (mouseout)="hovered = false"
-    >
+<div class="slider-containerr">
+  <div class="slider-wrapperr" [style.transform]="'translateX(' + (-page.value * 100) + '%)'">
+    <div *ngFor="let item of items; let i = index" class="slidee">
       <div
-        [class]="'video-background w-100 h-100 ' + (item.apply_blur ? 'blur' : '')"
-        [style.background-image]="item.image_url ? 'url('+item.image_url+')' : ''"
+        [class]="'home-slide '"
+        (mouseover)="hovered = true"
+        (mouseout)="hovered = false"
       >
-        <video
-          [id]="'home_slide_'+item.index"
-          *ngIf="item.video_url"
-          muted
-          loop
-          oncanplay="this.play()"
-          onloadedmetadata="this.muted = true"
-          playsinline
-          webkit-playsinline="true"
-          [attr.playsinline]="true"
+        <div
+          [class]="'video-background w-100 h-100 ' + (item.apply_blur ? 'blur' : '')"
+          [style.background-image]="item.image_url ? 'url('+item.image_url+')' : ''"
         >
-          <source [src]="item.video_url" type="video/mp4">
-        </video>
-      </div>
-      <div [class]="'content w-100 d-flex a-i-center j-c-center '">
-        <div class="w-100 h-100 d-flex a-i-center j-c-center">
-          <img *ngIf="item.show_logo" src="images/biglogo.svg" alt="logo" class="logo"/>
-          <div class="bottom-container d-flex direction-column j-c-start gap-10">
-            <!--            <img src="images/circles.svg" class="circles" alt="icon"/>-->
-            <a *ngIf="!item.link" [href]="item.link">
-              <markdown class="text-title" [data]="item.description"></markdown>
-            </a>
-            <markdown *ngIf="item.link" class="text-title" [data]="item.description"></markdown>
+          <video
+            [id]="'home_slide_' + i"
+            *ngIf="item.video_url"
+            muted
+            loop
+            oncanplay="this.play()"
+            onloadedmetadata="this.muted = true"
+            playsinline
+            webkit-playsinline="true"
+            [attr.playsinline]="true"
+          >
+            <source [src]="item.video_url" type="video/mp4">
+          </video>
+        </div>
+        <div [class]="'content w-100 d-flex a-i-center j-c-center '">
+          <div class="w-100 h-100 d-flex a-i-center j-c-center">
+            <img *ngIf="item.show_logo" src="images/biglogo.svg" alt="logo" class="logo"/>
+            <div class="bottom-container d-flex direction-column j-c-start gap-10">
+              <a *ngIf="!item.link" [href]="item.link">
+                <markdown class="text-title" [data]="item.description"></markdown>
+              </a>
+              <markdown *ngIf="item.link" class="text-title" [data]="item.description"></markdown>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </ng-template>
-</p-carousel>
+  </div>
 
+  <!-- Индикаторы для ПК версии -->
+  <div *ngIf="!isMobile" class="indicators">
+    <div *ngFor="let item of items; let i = index"
+         [class.active]="i === page.value"
+         (click)="page.next(i)"></div>
+  </div>
+</div>
