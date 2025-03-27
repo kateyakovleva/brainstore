@@ -20,23 +20,23 @@
 
 .indicators {
   position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  gap: 7px;
+  bottom: 194px;
+  left: 75px;
 
   div {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #FFF;
+    background: #FFF;
     cursor: pointer;
+    transition: background 0.3s ease;
 
     &.active {
-      background-color: white;
+      background: transparent;
     }
+
   }
 }
 
@@ -73,17 +73,6 @@
       color: var(--white);
     }
 
-    // .blur {
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   // background: #000;
-    //   // opacity: 0.5;
-    //   background-image: url('/images/blur.png');
-    // }
-
     .logo {
       width: 50%;
     }
@@ -92,6 +81,18 @@
 
 
 @media (max-width: 999px) {
+
+  .indicators {
+    bottom: 175px;
+    left: 20px;
+    gap: 5px;
+
+    div {
+      width: 10px;
+      height: 10px;
+    }
+
+  }
 
   .slider-wrapperr {
     height: 86vh;
@@ -116,6 +117,19 @@
 //PC
 
 @media (min-width: 1351px) and (max-width: 1900px) {
+
+  .indicators {
+    position: absolute;
+    bottom: 175px;
+    left: 41px;
+    gap: 7px;
+
+    div {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
   .home-slide {
 
     .content {
@@ -129,6 +143,18 @@
 }
 
 @media (min-width: 1901px) and (max-width: 2700px) {
+
+  .indicators {
+    gap: 7px;
+    bottom: 225px;
+    left: 62px;
+
+    div {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
   .home-slide {
 
     .content {
@@ -141,6 +167,17 @@
 }
 
 @media (min-width: 2701px) and (max-width: 3000px) {
+  .indicators {
+    gap: 10px;
+    bottom: 335px;
+    left: 82px;
+
+    div {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .home-slide {
 
     .content {

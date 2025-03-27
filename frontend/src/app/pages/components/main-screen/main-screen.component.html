@@ -38,9 +38,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Индикаторы для ПК версии -->
-  <div *ngIf="!isMobile" class="indicators">
+  <div class="indicators d-flex direction-row">
     <div *ngFor="let item of items; let i = index"
          [class.active]="i === page.value"
          (click)="page.next(i)"></div>
