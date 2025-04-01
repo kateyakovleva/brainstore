@@ -10,6 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 import {ProjectsStore} from '../../services/ProjectsStore';
 import {Observable} from 'rxjs';
 import {SafePipe} from '../../pipes/SafePipe';
+import {WrapShortWordsPipe} from '../../pipes/wrapShortWords';
 
 @Component({
   selector: 'app-project-content',
@@ -23,6 +24,7 @@ import {SafePipe} from '../../pipes/SafePipe';
     NgIf,
     AsyncPipe,
     SafePipe,
+    WrapShortWordsPipe,
   ],
   templateUrl: './project-content.component.html',
   styleUrl: './project-content.component.scss'

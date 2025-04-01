@@ -16,7 +16,7 @@
     <div class="text-gray w-70 mobik">
       <a [routerLink]="'/projects/'+(project.seo_alias || project.id)" class="text-black">{{project.name}}&nbsp;</a>
       <a [routerLink]="'/projects/'+(project.seo_alias || project.id)" class="text-gray">
-        <markdown class="d-inline" [data]="project.short_description"></markdown>
+        <markdown class="d-inline text-block" [data]="(project.short_description | wrapShortWords)"></markdown>
       </a>
     </div>
   </div>

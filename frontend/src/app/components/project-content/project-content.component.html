@@ -3,7 +3,8 @@
        class="container d-flex direction-column a-i-start w-100">
     <div class="title-comp">
       <markdown class="text-title d-inline">*{{project?.name}}*</markdown>
-      <markdown class="text-title d-inline"> — {{project.short_description}}</markdown>
+      <markdown class="text-title d-inline text-block" [data]="(project.short_description | wrapShortWords)"></markdown>
+
     </div>
 
     <div class="d-flex direction-row w-95 gap-10 mb-400 swipe-horizontal">
@@ -21,8 +22,8 @@
       ></app-statistics>
 
       <div class="text-gray mb-50">{{description.title}}</div>
-      <markdown [class]="'text-black mb-80 w-45 ' + (i === length - 1 ? 'w-50':'')"
-                [data]="description.description"></markdown>
+      <markdown [class]="'text-black text-block mb-80 w-45 ' + (i === length - 1 ? 'w-50':'')"
+                [data]="(description.description | wrapShortWords)"></markdown>
 
       <img *ngIf="description.image" [src]="description.image" alt="picture"
            [class]="'mob-full ' +(i === 0 ? 'w-100' : 'w-70')"/>
@@ -41,7 +42,7 @@
       ></iframe>
 
       <div *ngIf="description.image_description">
-        <markdown class="textttt">{{description.image_description}}</markdown>
+        <markdown class="textttt text-block" [data]="(description.image_description | wrapShortWords)"></markdown>
       </div>
 
       <div *ngIf="i !== length - 1" [class]="i === 0 ? 'mb-401' : 'mb-300'"></div>

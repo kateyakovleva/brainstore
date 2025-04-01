@@ -6,6 +6,7 @@ import {isMobile} from '../../utils/utils';
 import {NgIf} from '@angular/common';
 import {SettingsStore} from '../../services/SettingsStore';
 import {MarkdownComponent} from 'ngx-markdown';
+import {WrapShortWordsPipe} from "../../pipes/wrapShortWords";
 
 @Component({
   selector: 'app-contacts',
@@ -14,7 +15,8 @@ import {MarkdownComponent} from 'ngx-markdown';
     ManifestoComponent,
     WorksComponent,
     NgIf,
-    MarkdownComponent
+    MarkdownComponent,
+    WrapShortWordsPipe
   ],
   standalone: true,
   templateUrl: './contacts.component.html',

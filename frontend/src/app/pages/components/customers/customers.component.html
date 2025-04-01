@@ -14,7 +14,7 @@
            *ngFor="let client of settings.settings?.clients; index as i"
            [ngClass]="{'visible': currentIndex ===i, 'hidden': currentIndex !==i}">
         <img [src]="client.image_url" alt="logo"/>
-        <div class="text-gray">{{client.description}}</div>
+        <div class="text-gray text-block">{{client.description | wrapShortWords}}</div>
         <div class="d-flex direction-row flex-wrap gap-10">
           <div class="text-black" style="width: auto"
                *ngFor="let tag of client.tags;let i = index">{{tag}}{{i + 1 !== client.tags.length ? ' /' : ''}}</div>

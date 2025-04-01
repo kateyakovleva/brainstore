@@ -1,18 +1,18 @@
 <div class="team-content w-100">
   <div class="d-flex direction-column a-i-start w-100 container">
-    <div class="text-title mb-400 padd">Если ты талантливый, идейный и, главное, хочешь к нам в команду, пиши на
-      почту
-      <span style="color: var(--text-gray);">hello{{'@'}}brainstore.agency</span> с пометкой желаемой должности в теме
-      письма<span> и не забывай
-прикрепить портфолио!</span>
+    <div class="text-title mb-400 padd text-block">{{'Если ты талантливый, идейный и, главное, хочешь к нам в\n' +
+    '      команду, пиши на почту' | wrapShortWords}}
+      <span style="color: var(--text-gray);">hello{{'@'}}
+        brainstore.agency</span>{{ 'с пометкой желаемой должности в теме письма' | wrapShortWords }}
+      <span>{{' и не забывай прикрепить портфолио!' | wrapShortWords}} </span>
     </div>
-    <div class="w-50 texx mb-80">Если ты талантливый, идейный и, главное, хочешь к нам в команду, пиши на почту
-      hello{{'@'}}brainstore.agency
+    <div
+      class="w-50 texx mb-80 text-block">{{ 'Если ты талантливый, идейный и, главное, хочешь к нам в команду, пиши на почту hello' | wrapShortWords }}{{'@'}}
+      brainstore.agency
     </div>
     <img src="images/contacts.png" alt="picture" class="mb-60 mob-full"/>
-    <div class="text-gray mb-401 mobile-margin">Ксения Хозяева, Серега Федотов, Александ Калугин, Валиахмед
-      Попов, Серега Федотов, Ксения Хозяева, Александ Калугин, Валиахмед Попов, Ксения Хозяева
-    </div>
+    <div
+      class="text-gray mb-401 mobile-margin text-block">{{ 'Ксения Хозяева, Серега Федотов, Александ Калугин, Валиахмед Попов, Серега Федотов, Ксения Хозяева, Александ Калугин, Валиахмед Попов, Ксения Хозяева' | wrapShortWords }}</div>
   </div>
   <app-manifesto class=""></app-manifesto>
   <app-works class=""></app-works>

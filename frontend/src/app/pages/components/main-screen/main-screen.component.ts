@@ -8,6 +8,7 @@ import {MarkdownComponent} from 'ngx-markdown';
 import {SafePipe} from '../../../pipes/SafePipe';
 import {BehaviorSubject} from 'rxjs';
 import {IHomeSlide} from '../../../types/types';
+import {WrapShortWordsPipe} from "../../../pipes/wrapShortWords";
 
 @Component({
   selector: 'app-main-screen',
@@ -20,7 +21,8 @@ import {IHomeSlide} from '../../../types/types';
     MarkdownComponent,
     SafePipe,
     AsyncPipe,
-    NgForOf
+    NgForOf,
+    WrapShortWordsPipe
   ],
   styleUrl: './main-screen.component.scss',
   encapsulation: ViewEncapsulation.None,
