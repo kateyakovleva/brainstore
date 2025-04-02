@@ -1,19 +1,17 @@
-import {Component} from '@angular/core';
-import {NgClass, NgForOf} from '@angular/common';
-import {SettingsStore} from '../../../services/SettingsStore';
-import {WrapShortWordsPipe} from "../../../pipes/wrapShortWords";
+import { Component } from '@angular/core';
+import { NgClass, NgForOf } from '@angular/common';
+import { SettingsStore } from '../../../services/SettingsStore';
 
-@Component({
+@Component( {
   selector: 'app-customers',
   standalone: true,
   imports: [
     NgForOf,
-    NgClass,
-    WrapShortWordsPipe
+    NgClass
   ],
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.scss'
-})
+} )
 export class CustomersComponent {
   constructor(
     public settings: SettingsStore
@@ -22,7 +20,7 @@ export class CustomersComponent {
 
   currentIndex = 0;
 
-  showDescription(index: number) {
+  showDescription( index: number ) {
     this.currentIndex = index;
   }
 }

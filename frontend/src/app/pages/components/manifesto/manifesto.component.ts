@@ -1,18 +1,16 @@
-import {Component} from '@angular/core';
-import {MarkdownComponent} from 'ngx-markdown';
-import {SettingsStore} from '../../../services/SettingsStore';
-import {WrapShortWordsPipe} from "../../../pipes/wrapShortWords";
+import { Component } from '@angular/core';
+import { MarkdownComponent } from 'ngx-markdown';
+import { SettingsStore } from '../../../services/SettingsStore';
 
-@Component({
+@Component( {
   selector: 'app-manifesto',
   standalone: true,
   imports: [
-    MarkdownComponent,
-    WrapShortWordsPipe
+    MarkdownComponent
   ],
   templateUrl: './manifesto.component.html',
   styleUrl: './manifesto.component.scss'
-})
+} )
 export class ManifestoComponent {
   constructor(
     public settings: SettingsStore

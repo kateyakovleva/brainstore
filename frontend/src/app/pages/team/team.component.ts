@@ -4,7 +4,6 @@ import {FormComponent} from '../components/form/form.component';
 import {WorksComponent} from '../components/works/works.component';
 import {SettingsStore} from '../../services/SettingsStore';
 import {MarkdownComponent} from 'ngx-markdown';
-import {WrapShortWordsPipe} from "../../pipes/wrapShortWords";
 
 @Component({
   selector: 'app-team',
@@ -14,8 +13,7 @@ import {WrapShortWordsPipe} from "../../pipes/wrapShortWords";
     ManifestoComponent,
     FormComponent,
     WorksComponent,
-    MarkdownComponent,
-    WrapShortWordsPipe
+    MarkdownComponent
   ],
   styleUrl: './team.component.scss'
 })

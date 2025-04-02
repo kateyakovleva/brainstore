@@ -5,7 +5,7 @@
       <div class="service-item d-flex j-c-space-between direction-column item"
            *ngFor="let item of settings.settings?.services">
         <div class="text-black">{{item.name}}</div>
-        <markdown class="text-gray hover text-block" [data]="(item.description | wrapShortWords)"></markdown>
+        <markdown class="text-gray hover" [data]="item.description"></markdown>
       </div>
     </div>
   </div>
