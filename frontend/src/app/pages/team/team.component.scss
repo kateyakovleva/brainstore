@@ -69,6 +69,7 @@
       width: 60%;
     }
 
+
     .team-content-container {
       padding: 250px 0 0 75px;
 
@@ -118,6 +119,14 @@
 @media (min-width: 1351px) and (max-width: 1900px) {
   .team-content {
 
+    .texx {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22.5px;
+      letter-spacing: 0;
+      margin-bottom: 40px;
+    }
+
     .w-80 {
       width: 70%;
     }
@@ -157,6 +166,14 @@
 @media (min-width: 1901px) and (max-width: 2700px) {
   .team-content {
 
+    .texx {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: 0;
+      margin-bottom: 47px;
+    }
+
     .w-80 {
       width: 70%;
     }
@@ -195,6 +212,14 @@
 
 @media (min-width: 2701px) and (max-width: 3000px) {
   .team-content {
+
+    .texx {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 45px;
+      letter-spacing: 0;
+      margin-bottom: 80px;
+    }
 
     .mb-400 {
       margin-top: 559px;
