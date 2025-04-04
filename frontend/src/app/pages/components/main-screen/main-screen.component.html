@@ -29,9 +29,10 @@
             <img *ngIf="item.show_logo" src="images/biglogo.svg" alt="logo" class="logo"/>
             <div class="bottom-container d-flex direction-column j-c-start gap-10">
               <a *ngIf="!item.link" [href]="item.link">
-                <markdown class="text-title" [data]="item.description"></markdown>
+                <markdown class="text-title text-block" [data]="item.description"></markdown>
               </a>
-              <markdown *ngIf="item.link" class="text-title" [data]="item.description"></markdown>
+              <markdown *ngIf="item.link" class="text-title text-block" [data]="item.description"
+                        appSmartThreeLetterWrap></markdown>
             </div>
           </div>
         </div>

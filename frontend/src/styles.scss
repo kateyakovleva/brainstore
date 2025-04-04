@@ -568,3 +568,13 @@ markdown.text-title, markdown.d-inline {
 .w-auto {
   width: auto !important;
 }
+
+//.text-block {
+//  position: relative;
+//  white-space: nowrap;
+//
+//  &::before {
+//    content: '\200B';
+//    white-space: normal;
+//  }
+//}
