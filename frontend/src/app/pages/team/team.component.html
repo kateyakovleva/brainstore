@@ -1,16 +1,9 @@
 <div class="team-content w-100">
   <div class="d-flex direction-column a-i-start w-100 container">
-    <div class="text-title mb-400 padd w-80">Команда героев на пути своих приключений справится с любой миссией, <span>когда их
-        объединяет товарищество и зов мечты.</span> Присылай портфолио на hello{{'@'}}brainstore.agency и начни свой
-      квест!
-    </div>
-    <div class="w-50 texx">Если ты талантливый, идейный и, главное, хочешь к нам в команду, пиши на почту
-      hello{{'@'}}brainstore.agency
-    </div>
-    <img src="images/team.png" alt="picture" class="mb-60"/>
-    <div class="text-gray mb-401">Ксения Хозяева, Серега Федотов, Александ Калугин, Валиахмед Попов, Серега
-      Федотов, Ксения Хозяева, Александ Калугин, Валиахмед Попов, Ксения Хозяева
-    </div>
+    <markdown class="text-title mb-400 padd w-80" [data]="settings.settings?.team_description"></markdown>
+    <markdown class="w-50 texx" [data]="settings.settings?.team_sub_description"></markdown>
+    <img [src]="settings.settings?.team_image_url" alt="picture" class="mb-60"/>
+    <markdown class="text-gray mb-401" [data]="settings.settings?.team_image_description"></markdown>
   </div>
   <app-manifesto></app-manifesto>
   <app-works></app-works>
