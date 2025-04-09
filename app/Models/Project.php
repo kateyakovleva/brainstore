@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -53,6 +53,20 @@ class Project extends Model
         'advs',
         'image_url'
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('order', function ($query) {
+            $query->orderBy('order');
+        });
+    }
+
+    public function setOrderAttribute($value)
+    {
+        $this->attributes['order'] = (int)$value;
+    }
 
     public function getBlocksAttribute()
     {
