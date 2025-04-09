@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- *
+ * 
  *
  * @property int $id
  * @property string|null $image
@@ -21,7 +21,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property int|null $time
  * @property string|null $image_mob
  * @property string|null $video_mob
+ * @property-read mixed $image_mob_url
  * @property-read mixed $image_url
+ * @property-read mixed $video_mob_url
  * @property-read mixed $video_url
  * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|HomeSlide newQuery()

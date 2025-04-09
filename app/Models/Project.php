@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $seo_alias
  * @property array $advantages
  * @property string|null $advantage_title
+ * @property int $order
  * @property-read mixed $advs
  * @property-read mixed $blocks
  * @property-read mixed $image_url

@@ -41,6 +41,11 @@ class ProjectResource extends Resource
                     ->required()
                     ->validationMessages(['unique' => 'Проект с таким url уже существует'])
                     ->maxLength(255),
+                Forms\Components\TextInput::make('order')
+                    ->label('Позиция')
+                    ->numeric()
+                    ->hint('Сортировка(0 - первый элемент списка)')
+                    ->maxLength(255),
                 Forms\Components\MarkdownEditor::make('short_description')
                     ->label('Краткое описание')
                     ->maxLength(65535)
@@ -135,6 +140,7 @@ class ProjectResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
