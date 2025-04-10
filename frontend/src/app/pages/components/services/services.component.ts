@@ -1,9 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { NgForOf } from '@angular/common';
-import { SettingsStore } from '../../../services/SettingsStore';
-import { MarkdownComponent } from 'ngx-markdown';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {NgForOf} from '@angular/common';
+import {SettingsStore} from '../../../services/SettingsStore';
+import {MarkdownComponent} from 'ngx-markdown';
 
-@Component( {
+@Component({
   selector: 'app-services',
   standalone: true,
   imports: [
@@ -13,7 +13,7 @@ import { MarkdownComponent } from 'ngx-markdown';
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',
   encapsulation: ViewEncapsulation.None,
-} )
+})
 export class ServicesComponent {
 
   constructor(

@@ -1,7 +1,7 @@
 <div class="d-flex w-100 card-content direction-column" *ngIf="project|async; let project">
   <div *ngIf="(project?.blocks?.length||0); let length"
        class="container d-flex direction-column a-i-start w-100">
-    <div class="title-comp">
+    <div class="title-comp w-70">
       <markdown class="text-title d-inline">*{{project?.name}}*</markdown>
       <markdown class="text-title d-inline"> — {{project.short_description}}</markdown>
     </div>

@@ -7,6 +7,10 @@
     padding-right: 30px;
   }
 
+  img {
+    border-radius: 60px;
+  }
+
   .swipe-horizontal {
     max-width: 100%;
     overflow-x: auto;
@@ -61,7 +65,12 @@
       width: 100vw;
     }
 
+    img {
+      border-radius: 0 !important;
+    }
+
     .mob-full {
+      border-radius: 0 !important;
       width: 100vw !important;
       max-width: 100vw;
       margin-left: calc(50% - 50vw);
