@@ -66,8 +66,7 @@ class ProjectResource extends Resource
                                 Section::make()
                                     ->schema([
                                         TextInput::make('title')
-                                            ->label('Заголовок')
-                                            ->required(),
+                                            ->label('Заголовок'),
                                         Forms\Components\Textarea::make('link')
                                             ->label('Ссылка на видео'),
                                     ])->columnSpan(2),
