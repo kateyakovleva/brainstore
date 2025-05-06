@@ -18,9 +18,13 @@ export class CustomersComponent {
   ) {
   }
 
-  currentIndex = 0;
+  currentIndex: number | null = null;
 
   showDescription( index: number ) {
     this.currentIndex = index;
+  }
+
+  hideDescription() {
+    this.currentIndex = null;
   }
 }
