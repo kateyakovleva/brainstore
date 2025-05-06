@@ -6,14 +6,13 @@
         <a
           href="#" class="company"
           *ngFor="let client of settings.settings?.clients; index as i"
-          (mouseenter)="showDescription()"
-          (mouseleave)="hideDescription()"
+          (mouseenter)="showDescription(i)"
           (click)="$event.preventDefault();"
         >{{client.name}}</a>
       </div>
-      <div class="description direction-column gap-60"
-           [style.display]="isDescriptionVisible ? 'flex' : 'none'"
-           *ngFor="let client of settings.settings?.clients">
+      <div class="description d-flex direction-column gap-60"
+           *ngFor="let client of settings.settings?.clients; index as i"
+           [ngClass]="{'visible': currentIndex ===i, 'hidden': currentIndex !==i}">
         <img [src]="client.image_url" alt="logo"/>
         <div class="text-gray">{{client.description}}</div>
         <div class="d-flex direction-row flex-wrap gap-10">

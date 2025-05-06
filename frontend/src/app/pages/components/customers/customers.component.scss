@@ -27,6 +27,10 @@ img {
   &:hover {
     background-color: var(--black);
     color: var(--white);
+
+    .description {
+      display: flex;
+    }
   }
 }
 
@@ -40,6 +44,14 @@ img {
 
 .description {
   margin-left: 40px;
+  display: none;
+}
+
+.description.visible {
+  display: flex;
+}
+
+.description.hidden {
   display: none;
 }
 

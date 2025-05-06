@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {NgClass, NgForOf} from '@angular/common';
-import {SettingsStore} from '../../../services/SettingsStore';
+import { Component } from '@angular/core';
+import { NgClass, NgForOf } from '@angular/common';
+import { SettingsStore } from '../../../services/SettingsStore';
 
-@Component({
+@Component( {
   selector: 'app-customers',
   standalone: true,
   imports: [
@@ -11,20 +11,16 @@ import {SettingsStore} from '../../../services/SettingsStore';
   ],
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.scss'
-})
+} )
 export class CustomersComponent {
   constructor(
     public settings: SettingsStore
   ) {
   }
 
-  isDescriptionVisible = false;
+  currentIndex = 0;
 
-  showDescription(): void {
-    this.isDescriptionVisible = true;
-  }
-
-  hideDescription(): void {
-    this.isDescriptionVisible = false;
+  showDescription( index: number ) {
+    this.currentIndex = index;
   }
 }
