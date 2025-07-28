@@ -23,3 +23,6 @@ Route::get('/projects/{id}', [\App\Http\Controllers\Api\ProjectsController::clas
 Route::get('/settings', [\App\Http\Controllers\Api\SettingsController::class, 'get']);
 
 Route::post('/form-request', [\App\Http\Controllers\Api\FormController::class, 'form']);
+
+// Telegram webhook route
+Route::post('/telegram/webhook', [\App\Http\Controllers\Api\TelegramWebhookController::class, 'handle']);
