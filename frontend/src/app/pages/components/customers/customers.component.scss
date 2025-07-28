@@ -176,7 +176,7 @@ img {
 
   .company {
     text-align: center;
-    width: 216px;
+    //width: 216px;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
@@ -228,11 +228,11 @@ img {
 
   .border {
     border-left: 1px solid var(--black);
-    height: 525px;
+    min-height: 525px;
   }
 
   .company {
-    width: 297px;
+    //width: 297px;
     padding: 25px 55px;
     font-weight: 400;
     font-size: 30px;
@@ -284,7 +284,7 @@ img {
 
 
   .company {
-    width: 462px;
+    //width: 462px;
     font-weight: 400;
     font-size: 44px;
     line-height: 54px;
