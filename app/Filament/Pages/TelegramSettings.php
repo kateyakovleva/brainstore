@@ -39,12 +39,12 @@ class TelegramSettings extends Page
                         Forms\Components\TextInput::make('telegram_bot_token')
                             ->label('Токен бота')
                             ->required()
-                            ->autocomplete('newpassword')
+                            ->autocomplete('new-password')
                             ->helperText('Получите токен у @BotFather в Telegram')
                             ->password(),
 
                         Forms\Components\TextInput::make('telegram_chat_id')
-                            ->autocomplete('newpassword')
+                            ->autocomplete('new-password')
                             ->label('ID группы')
                             ->helperText('ID группы, куда будут отправляться сообщения (отрицательное число). Можно заполнить позже после получения ID.'),
 
