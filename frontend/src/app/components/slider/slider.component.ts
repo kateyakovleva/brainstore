@@ -1,18 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {IProject} from '../../types/types';
 import {RouterLink} from '@angular/router';
-import {NgClass, NgForOf} from '@angular/common';
+import {NgClass, NgForOf, NgIf} from '@angular/common';
 import {ProjectsStore} from '../../services/ProjectsStore';
 import {MarkdownComponent} from 'ngx-markdown';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [RouterLink, NgForOf, NgClass, MarkdownComponent],
+  imports: [RouterLink, NgForOf, NgClass, MarkdownComponent, NgIf],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
 })
 export class SliderComponent implements OnInit {
+
   constructor(
     public projectsStore: ProjectsStore
   ) {
@@ -67,5 +68,14 @@ export class SliderComponent implements OnInit {
     (event.currentTarget as HTMLElement).scrollLeft = this.scrollLeft - walk;
   }
 
+  openUrl(project: IProject) {
+    window.open(this.getUrl(project), '_blank');
+  }
 
+  getUrl(project: IProject) {
+    if(project.seo_alias && project.seo_alias.startsWith('http')) {
+      return project.seo_alias;
+    }
+    return `/projects/${project.seo_alias || project.id}`;
+  }
 }
