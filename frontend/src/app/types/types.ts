@@ -86,6 +86,7 @@ export interface ILink {
 
 export interface ISettings {
   phone: string;
+  email: string;
   address: string;
   tg: string;
   vk: string;

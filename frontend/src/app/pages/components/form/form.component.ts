@@ -24,7 +24,7 @@ export class FormComponent {
 
   isMobile = isMobile;
   loading = false;
-  success = false;
+  success = true;
 
   send( $event: Event ) {
     $event.preventDefault();
@@ -49,5 +49,9 @@ export class FormComponent {
           this.success = true;
         }
       } )
+  }
+
+  getYear() {
+    return new Date().getFullYear();
   }
 }

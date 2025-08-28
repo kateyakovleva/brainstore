@@ -370,3 +370,137 @@ textarea {
   }
 }
 
+// Success message styles
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 400px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.success-title {
+  font-family: 'WilliamTextLC', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--black);
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.success-text {
+  font-family: 'WilliamTextLC', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 300px;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Mobile styles for success message
+@media (max-width: 999px) {
+  .success-message {
+    padding: 40px 15px;
+    min-height: 300px;
+    border-radius: 15px;
+  }
+
+  .success-icon {
+    margin-bottom: 20px;
+    
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .success-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .success-text {
+    font-size: 14px;
+    max-width: 250px;
+  }
+}
+
+// Tablet styles for success message
+@media (min-width: 1351px) and (max-width: 1900px) {
+  .success-message {
+    padding: 50px 20px;
+    min-height: 350px;
+  }
+
+  .success-title {
+    font-size: 24px;
+  }
+
+  .success-text {
+    font-size: 16px;
+  }
+}
+
+// Large screen styles for success message
+@media (min-width: 1901px) and (max-width: 2700px) {
+  .success-message {
+    padding: 60px 25px;
+    min-height: 400px;
+  }
+
+  .success-title {
+    font-size: 28px;
+  }
+
+  .success-text {
+    font-size: 18px;
+  }
+}
+
+// Extra large screen styles for success message
+@media (min-width: 2701px) and (max-width: 3000px) {
+  .success-message {
+    padding: 80px 30px;
+    min-height: 500px;
+  }
+
+  .success-title {
+    font-size: 36px;
+  }
+
+  .success-text {
+    font-size: 22px;
+  }
+}
+

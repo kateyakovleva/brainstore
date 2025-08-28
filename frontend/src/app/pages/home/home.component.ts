@@ -23,7 +23,6 @@ import { AsyncPipe } from '@angular/common';
     AsyncPipe,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
 } )
 export class HomeComponent {
   constructor(
