@@ -7,6 +7,7 @@
       <a
         *ngFor="let item of settings.settings?.menu"
         [routerLink]="getLink(item)"
+        [fragment]="getFragment(item)"
         (click)="toSection(item, $event)"
       >{{item.name}}</a>
     </div>

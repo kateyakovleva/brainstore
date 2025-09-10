@@ -25,9 +25,12 @@ export const getLink = (item: IMenuItem, current_location: string) => {
   let path: any = item.link.split('#');
   path = path[0];
 
-  if (path === current_location) {
-    path = '#';
-  }
+  return path;
+}
+
+export const getFragment = (item: IMenuItem, current_location: string) => {
+  let path: any = item.link.split('#');
+  path = path[1];
 
   return path;
 }

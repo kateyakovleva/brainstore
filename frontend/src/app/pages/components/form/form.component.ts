@@ -24,7 +24,7 @@ export class FormComponent {
 
   isMobile = isMobile;
   loading = false;
-  success = true;
+  success = false;
 
   send( $event: Event ) {
     $event.preventDefault();

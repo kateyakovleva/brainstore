@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NavigationEnd, Router, RouterLink} from '@angular/router';
 import {AsyncPipe, NgForOf, NgIf} from '@angular/common';
-import {getLink, isMobile, toSection} from '../../utils/utils';
+import {getFragment, getLink, isMobile, toSection} from '../../utils/utils';
 import {MobileHeaderComponent} from '../mobile-header/mobile-header.component';
 import {SettingsStore} from '../../services/SettingsStore';
 import {IMenuItem} from '../../types/types';
@@ -43,6 +43,10 @@ export class HeaderComponent {
 
   getLink(item: IMenuItem) {
     return getLink(item, this.current_location);
+  }
+
+  getFragment(item: IMenuItem) {
+    return getFragment(item, this.current_location);
   }
 
   toSection(item: IMenuItem, event?: any) {
