@@ -11,7 +11,7 @@ import {NgIf} from '@angular/common';
     NgIf
   ],
   templateUrl: './merch.component.html',
-  styleUrl: '../../styles.scss'
+  styleUrl: '../../../styles.scss'
 })
 export class MerchComponent {
 

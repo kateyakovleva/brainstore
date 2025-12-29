@@ -28,15 +28,15 @@ class GeneralSettings extends Page implements HasForms
     public function mount(): void
     {
         $this->form->fill([
-            'header_menu' => Setting::getByCode('header_menu'),
-            'phone' => Setting::getByCode('phone'),
-            'address' => Setting::getByCode('address'),
-            'tg' => Setting::getByCode('tg'),
-            'vk' => Setting::getByCode('vk'),
-            'email' => Setting::getByCode('email'),
-            'meta_title' => Setting::getByCode('meta_title'),
-            'meta_description' => Setting::getByCode('meta_description'),
-            'meta_keywords' => Setting::getByCode('meta_keywords'),
+            'header_menu' => Setting::getByCode('header_menu') ?? [],
+            'phone' => Setting::getByCode('phone') ?? '',
+            'address' => Setting::getByCode('address') ?? '',
+            'tg' => Setting::getByCode('tg') ?? '',
+            'vk' => Setting::getByCode('vk') ?? '',
+            'email' => Setting::getByCode('email') ?? '',
+            'meta_title' => Setting::getByCode('meta_title') ?? '',
+            'meta_description' => Setting::getByCode('meta_description') ?? '',
+            'meta_keywords' => Setting::getByCode('meta_keywords') ?? '',
         ]);
     }
 
@@ -130,6 +130,12 @@ class GeneralSettings extends Page implements HasForms
         $data = $this->form->getState();
 
         foreach ($data as $key => $val) {
+            // Для header_menu оставляем массив (даже пустой), для остальных полей преобразуем NULL в пустую строку
+            if ($key === 'header_menu') {
+                $val = $val ?? [];
+            } else {
+                $val = $val ?? '';
+            }
             Setting::set($key, $val);
         }
 

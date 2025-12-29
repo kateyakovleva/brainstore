@@ -11,7 +11,7 @@ import {isMobile} from '../../utils/utils';
     NgIf,
   ],
   templateUrl: './project.component.html',
-  styleUrl: '../../styles.scss'
+  styleUrl: '../../../styles.scss'
 })
 export class ProjectComponent {
 
