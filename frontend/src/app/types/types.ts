@@ -110,6 +110,9 @@ export interface ISettings {
   team_sub_description: string;
   team_image_url: string;
   team_image_description: string;
+  meta_title?: string;
+  meta_description?: string;
+  meta_keywords?: string;
 }
 
 export interface ISettingItem {

@@ -4,6 +4,8 @@ namespace App\Filament\Pages;
 
 use App\Models\Setting;
 use Filament\Forms\Components\Builder;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Concerns\InteractsWithForms;
@@ -32,6 +34,9 @@ class GeneralSettings extends Page implements HasForms
             'tg' => Setting::getByCode('tg'),
             'vk' => Setting::getByCode('vk'),
             'email' => Setting::getByCode('email'),
+            'meta_title' => Setting::getByCode('meta_title'),
+            'meta_description' => Setting::getByCode('meta_description'),
+            'meta_keywords' => Setting::getByCode('meta_keywords'),
         ]);
     }
 
@@ -84,6 +89,29 @@ class GeneralSettings extends Page implements HasForms
             TextInput::make('vk')
                 ->label('VK')
                 ->required()
+                ->columnSpanFull(),
+            Section::make('Мета-теги')
+                ->description('Настройки для SEO оптимизации сайта')
+                ->schema([
+                    TextInput::make('meta_title')
+                        ->label('Meta Title')
+                        ->placeholder('Заголовок страницы для поисковых систем')
+                        ->maxLength(60)
+                        ->helperText('Рекомендуемая длина: 50-60 символов')
+                        ->columnSpanFull(),
+                    Textarea::make('meta_description')
+                        ->label('Meta Description')
+                        ->placeholder('Описание страницы для поисковых систем')
+                        ->rows(3)
+                        ->maxLength(160)
+                        ->helperText('Рекомендуемая длина: 150-160 символов')
+                        ->columnSpanFull(),
+                    TextInput::make('meta_keywords')
+                        ->label('Meta Keywords')
+                        ->placeholder('Ключевые слова через запятую')
+                        ->helperText('Введите ключевые слова, разделенные запятыми')
+                        ->columnSpanFull(),
+                ])
                 ->columnSpanFull(),
         ];
     }
